@@ -6,8 +6,6 @@
     <title></title>
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jSignature/2.1.3/jSignature.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
@@ -1982,78 +1980,5 @@
             </div>
         </div>
     </div>  
-    <script>
-        // <----------// Signature Area // -------->
-        $(function () {
-            $('.signature-pad').each(function (index) {
-                var uniqueId = 'signature-pad' + (index + 1);
-                $(this).attr('id', uniqueId);
-                $('#' + uniqueId).jSignature();
-
-                $('#' + uniqueId).on('change', function () {
-                    var signatureData = $(this).jSignature('getData', 'default');
-                    $(this).siblings('.signature-data-text').val(signatureData);
-
-                    var selectId = 'signOption' + (index + 1);
-                    if (signatureData && signatureData.length !== 0) {
-                        $('#' + selectId).prop('disabled', true);
-                    } else {
-                        $('#' + selectId).prop('disabled', false);
-                    }
-                });
-            });
-        })
-
-        // Reset the drawn signature
-        function resetSign(id) {
-            $('.clear-btn' + id).siblings('.signature-pad').jSignature('clear');
-            $('.clear-btn' + id).siblings('.signature-data-text').val('');
-            var selectId = 'signOption' + id;
-            $('#' + selectId).prop('disabled', false);
-        }
-
-        // Reset the uploaded signature image
-        function resetImage(id) {
-            $('#m-actual-image' + id).val('');
-            $('#actual-image-res' + id).removeAttr('src');
-            var selectId = 'signOption' + id;
-            $('#' + selectId).attr('disabled', false);
-            console.log(id)
-            console.log(selectId)
-        }
-
-        // Load image data from the file input and display it
-        function dataURLv(input, id) {
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
-
-                if (input.files[0].type.startsWith('image/')) {
-                    reader.onload = function (e) {
-                        $("#actual-image-res" + id).attr('src', e.target.result).css({
-                            "display": "block"
-                        });
-                        $("#clear-attachment-btn" + id).html(
-                            `<button class="mt-1 btn btn-flat btn-sm btn-danger" type="button" onclick="resetImage(${id})">Remove</button>`
-                        );
-                    };
-                    reader.readAsDataURL(input.files[0]);
-                }
-
-                var selectId = 'signOption' + id;
-                $('#' + selectId).prop('disabled', true);
-            } else {
-                var selectId = 'signOption' + id;
-                $('#' + selectId).prop('disabled', false);
-            }
-        }
-
-
-        function changeSigOption(id) {
-            var demovalue = $('#signOption' + id).val();
-            $('div.signature' + id).addClass('d-none');
-            $('#show' + demovalue + id).removeClass('d-none');
-        }
-        // <----------// Signature End // -------->
-    </script>
 </body>
 </html>
