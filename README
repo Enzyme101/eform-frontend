@@ -1,3 +1,5 @@
+<!--  INSTRUCTIONS -->
+
 - Create your own branch with the format of formName-frontend-yourName
 
 - Documentating your code is recommended if neccessary when creating a script function for us to understand the use of the function
@@ -5,3 +7,10 @@
 - Kindly remove commented codes and unused library links
 
 - You may also use library links if neccessary
+
+<!-- SETTING UP PROJECT TO LOCAL  -->
+
+git clone https://github.com/Enzyme101/eform-frontend.git
+cd eform-frontend
+git branch -M formName-frontend-yourName
+git push -u origin formName-frontend-yourName
