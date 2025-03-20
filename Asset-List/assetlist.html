@@ -1,0 +1,2079 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Complete Asset List</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<style type="text/css">
+    #company_logo_img {
+        object-fit: contain !important;
+    }
+
+    ::selection,
+    ::-moz-selection {
+        background-color: #E13300;
+        color: white;
+    }
+
+    body {
+        background-color: #fff;
+        margin: 40px;
+        color: #4F5155;
+    }
+
+    #container {
+        margin: 10px;
+        border: 1px solid #D0D0D0;
+        box-shadow: 0 0 8px #D0D0D0;
+        min-height: 90vh;
+    }
+
+    table {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .custom-input {
+        border-radius: 4px;
+        padding: 7px;
+        border: 1px solid #c9c9c9;
+        outline: none;
+        width: 100% !important;
+        transition: background 0.3s, box-shadow 0.3s;
+    }
+
+    .custom-input:focus {
+        background: #ffffff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        border: 1px solid #007bff;
+    }
+
+    .table {
+        border-color: #a7a7a7;
+    }
+
+    .table th, .table td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #container {
+        margin: 0 auto;
+    }
+
+    .container {
+        margin-top: 2rem;
+        max-width: 1400px;
+    }
+
+    .header-table th, .align-center {
+        text-align: center;
+        vertical-align: middle;
+    }
+    
+    @media print {
+        .d-print-none {
+            display: none !important;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .table th, .table td {
+            font-size: 12px;
+            padding: 4px;
+        }
+    }
+    
+    .search-box {
+        margin-bottom: 20px;
+    }
+    
+    .category-filter {
+        margin-bottom: 20px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div id="head">
+            <div id="body" class="pb-2">
+                <div class="table-responsive">
+                    <table class="table table-bordered header-table mt-3">
+                        <thead>
+                            <tr>
+                                <th rowspan="2" width="20%">
+                                    <img src="https://interlinkiq.com/uploads/avatar/527302%20-%20logo2.jpg" alt=""
+                                        width="200">
+                                </th>
+                                <th>
+                                    <strong>Complete Asset List</strong>
+                                </th>
+                                <th>
+                                    <span class="fw-normal">Issued Date</span> <br><strong>03/18/2025</strong>
+                                </th>
+                                <th rowspan="2">
+                                    <span class="fw-normal">Version No.</span> <br>
+                                    <strong>1</strong>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <span class="fw-normal">Code</span> <br>
+                                    <strong>AL-01-00-01-1.0</strong>
+                                </th>
+                                <th>
+                                    <span class="fw-normal">Department</span> <br>
+                                    <strong>Maintenance</strong>
+                                </th>
+                            </tr>
+                        </thead>
+                    </table>
+
+                    <div class="row d-print-none">
+                        <div class="col-md-6">
+                            <div class="search-box">
+                                <input type="text" id="searchInput" class="form-control" placeholder="Search assets...">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="category-filter d-flex justify-content-end">
+                                <select id="categoryFilter" class="form-select" style="width: auto;">
+                                    <option value="">All Categories</option>
+                                    <option value="HVAC Mechanical">HVAC Mechanical</option>
+                                    <option value="Electrical">Electrical</option>
+                                    <option value="Process">Process</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr class="bg-light text-center">
+                                <th>Asset Number</th>
+                                <th>Asset Description</th>
+                                <th>Category</th>
+                                <th>Location</th>
+                                <th>Manufacturer</th>
+                                <th>Model</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>RTU-OF-01</td>
+                                <td>ROOF TOP UNIT OFFICE</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Office</td>
+                                <td>Daikin</td>
+                                <td>DCG0480904BVBS</td>
+                            </tr>
+                            <tr>
+                                <td>RTU-PL-02</td>
+                                <td>Roof Top Unit Production</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Office</td>
+                                <td>Daikin</td>
+                                <td>DCG0480904BWXBAC</td>
+                            </tr>
+                            <tr>
+                                <td>ACU-WH-01</td>
+                                <td>Split System</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Warehouse</td>
+                                <td>DAIKEN</td>
+                                <td>FTX18NMVJU</td>
+                            </tr>
+                            <tr>
+                                <td>MAU-PL-01</td>
+                                <td>Make Up Air Handling Unit</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Office</td>
+                                <td>GREENHECK</td>
+                                <td>DGX-133-H42-HZ</td>
+                            </tr>
+                            <tr>
+                                <td>MAU-PL-02</td>
+                                <td>Make Up Air Handling Unit</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Warehouse</td>
+                                <td>Greenheck</td>
+                                <td>DGX-133-H42-HZ</td>
+                            </tr>
+                            <tr>
+                                <td>MAU-PL-03</td>
+                                <td>Make Up Air Handling Unit</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Warehouse</td>
+                                <td>Greenheck</td>
+                                <td>DGX-125-H35DB</td>
+                            </tr>
+                            <tr>
+                                <td>MAU-WH-01</td>
+                                <td>Make Up Air Handling Unit</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Warehouse</td>
+                                <td>Greenheck</td>
+                                <td>DG-120-H30DB</td>
+                            </tr>
+                            <tr>
+                                <td>RTU-OF-02</td>
+                                <td>Roof Top Unit Office</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Office</td>
+                                <td>Daikin</td>
+                                <td>DP16HM2441AB</td>
+                            </tr>
+                            <tr>
+                                <td>RTU-OF-03</td>
+                                <td>Roof Top Unit Office</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Office</td>
+                                <td>Daikin</td>
+                                <td>DP15HM2441AB</td>
+                            </tr>
+                            <tr>
+                                <td>RTU-OF-04</td>
+                                <td>Roof Top Unit Office</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Office</td>
+                                <td>Daikin</td>
+                                <td>DP15HM2441</td>
+                            </tr>
+                            <tr>
+                                <td>RTU-OF-05</td>
+                                <td>Roof Top Unit Office</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Office</td>
+                                <td>Daikin</td>
+                                <td>DCG0902104BWXBAC</td>
+                            </tr>
+                            <tr>
+                                <td>RTU-PL-01</td>
+                                <td>Roof Top Unit Office</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Office</td>
+                                <td>Daikin</td>
+                                <td>DP16HM2441AB</td>
+                            </tr>
+                            <tr>
+                                <td>RTU-WH-01</td>
+                                <td>Roof Top Unit Office</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Office</td>
+                                <td>Daikin</td>
+                                <td>DP16HM2441AB</td>
+                            </tr>
+                            <tr>
+                                <td>EF-OF-01</td>
+                                <td>Exhaust Fan</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Office</td>
+                                <td>Greenheck</td>
+                                <td>GB-081-6-X</td>
+                            </tr>
+                            <tr>
+                                <td>EF-OF-02</td>
+                                <td>Exhaust Fan</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Office</td>
+                                <td>Greenheck</td>
+                                <td>GB-081-6-X</td>
+                            </tr>
+                            <tr>
+                                <td>EF-OF-03</td>
+                                <td>Exhaust Fan</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Office</td>
+                                <td>Greenheck</td>
+                                <td>SP-B150</td>
+                            </tr>
+                            <tr>
+                                <td>EF-PL-01</td>
+                                <td>Exhaust Fan</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Process</td>
+                                <td>Greenheck</td>
+                                <td>CUBE-360-75-X</td>
+                            </tr>
+                            <tr>
+                                <td>EF-PL-02</td>
+                                <td>Exhaust Fan</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Process</td>
+                                <td>Greenheck</td>
+                                <td>CUE-121-A-X</td>
+                            </tr>
+                            <tr>
+                                <td>EF-PL-03</td>
+                                <td>Exhaust Fan</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Process</td>
+                                <td>Greenheck</td>
+                                <td>CUE-180-B-X</td>
+                            </tr>
+                            <tr>
+                                <td>EF-PL-04</td>
+                                <td>Exhaust Fan</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Process</td>
+                                <td>Greenheck</td>
+                                <td>RBE-2L30-15-X</td>
+                            </tr>
+                            <tr>
+                                <td>EF-PL-05</td>
+                                <td>Exhaust Fan</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Process</td>
+                                <td>Greenheck</td>
+                                <td>CUBE-300-50-X</td>
+                            </tr>
+                            <tr>
+                                <td>EF-PL-06</td>
+                                <td>Exhaust Fan</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Process</td>
+                                <td>Greenheck</td>
+                                <td>27-CSW-BI-41-10-0-5</td>
+                            </tr>
+                            <tr>
+                                <td>EF-PL-07</td>
+                                <td>Exhaust Fan</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Process</td>
+                                <td>Greenheck</td>
+                                <td>20-CSW-x-10-CW-TH-0-A20</td>
+                            </tr>
+                            <tr>
+                                <td>EF-PL-08</td>
+                                <td>Exhaust Fan</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Process</td>
+                                <td>Greenheck</td>
+                                <td>30-CSW-X-10-CW-TH-1A150</td>
+                            </tr>
+                            <tr>
+                                <td>EF-PL-09</td>
+                                <td>Exhaust Fan</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Process</td>
+                                <td>Greenheck</td>
+                                <td>RBE-2L36-30</td>
+                            </tr>
+                            <tr>
+                                <td>EF-PL-10</td>
+                                <td>Exhaust Fan</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Process</td>
+                                <td>Greenheck</td>
+                                <td>RBE-2L36-30-X</td>
+                            </tr>
+                            <tr>
+                                <td>EF-PL-11</td>
+                                <td>Exhaust Fan</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Process</td>
+                                <td>Greenheck</td>
+                                <td>CUE-099-A-X</td>
+                            </tr>
+                            <tr>
+                                <td>EF-PL-12</td>
+                                <td>Exhaust Fan</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Process</td>
+                                <td>Greenheck</td>
+                                <td>GB-081-6-X</td>
+                            </tr>
+                            <tr>
+                                <td>EF-PL-13</td>
+                                <td>Exhaust Fan</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Process</td>
+                                <td>Greenheck</td>
+                                <td>SP-B110</td>
+                            </tr>
+                            <tr>
+                                <td>EF-PL-14</td>
+                                <td>Exhaust Fan</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Process</td>
+                                <td>Greenheck</td>
+                                <td>RBE-2L36-30-X</td>
+                            </tr>
+                            <tr>
+                                <td>EF-PL-15</td>
+                                <td>Exhaust Fan</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Process</td>
+                                <td>Greenheck</td>
+                                <td>RBE-1L20-7-X</td>
+                            </tr>
+                            <tr>
+                                <td>EF-PL-16</td>
+                                <td>Exhaust Fan</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Process</td>
+                                <td>Greenheck</td>
+                                <td>GB-081-6-X</td>
+                            </tr>
+                            <tr>
+                                <td>EF-PL-17</td>
+                                <td>Exhaust Fan</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Process</td>
+                                <td>Greenheck</td>
+                                <td>SP-C50</td>
+                            </tr>
+                            <tr>
+                                <td>EF-PL-18</td>
+                                <td>Exhaust Fan</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Process</td>
+                                <td>Greenheck</td>
+                                <td>G-097-A-X</td>
+                            </tr>
+                            <tr>
+                                <td>EF-WH-01</td>
+                                <td>Exhaust Fan</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Warehouse</td>
+                                <td>Greenheck</td>
+                                <td>RBE-3L30-15-X</td>
+                            </tr>
+                            <tr>
+                                <td>EF-WH-02</td>
+                                <td>Exhaust Fan</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Warehouse</td>
+                                <td>Greenheck</td>
+                                <td>RBE-3L30-15-X</td>
+                            </tr>
+                            <tr>
+                                <td>EF-WH-03</td>
+                                <td>Exhaust Fan</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Warehouse</td>
+                                <td>Greenheck</td>
+                                <td>SP-C50</td>
+                            </tr>
+                            <tr>
+                                <td>EF-WH-04</td>
+                                <td>Exhaust Fan</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Warehouse</td>
+                                <td>Greenheck</td>
+                                <td>GB-081-6-X</td>
+                            </tr>
+                            <tr>
+                                <td>EF-WH-05</td>
+                                <td>Exhaust Fan</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Warehouse</td>
+                                <td>Greenheck</td>
+                                <td>GB-071-6-X</td>
+                            </tr>
+                            <tr>
+                                <td>EF-WH-06</td>
+                                <td>Exhaust Fan</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Warehouse</td>
+                                <td>Greenheck</td>
+                                <td>G-097-A-X</td>
+                            </tr>
+                            <tr>
+                                <td>SF-PL-01</td>
+                                <td>SUPPLY FAN</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Process</td>
+                                <td>Greenheck</td>
+                                <td>RBS-2L24-10-X</td>
+                            </tr>
+                            <tr>
+                                <td>GUH-PL-01</td>
+                                <td>GAS UNIT HEATER</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Process</td>
+                                <td>TRANE</td>
+                                <td>HDS100AS0111FBAN</td>
+                            </tr>
+                            <tr>
+                                <td>GUH-PL-02</td>
+                                <td>GAS UNIT HEATER</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Process</td>
+                                <td>TRANE</td>
+                                <td>PTS175AS0111SBAN</td>
+                            </tr>
+                            <tr>
+                                <td>GUH-PL-03</td>
+                                <td>GAS UNIT HEATER</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Process</td>
+                                <td>TRANE</td>
+                                <td>HDS100AS0111FBAN</td>
+                            </tr>
+                            <tr>
+                                <td>EUH-PL-01</td>
+                                <td>GAS UNIT HEATER</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Process</td>
+                                <td>TPI CORPORATION</td>
+                                <td>F1F5103N</td>
+                            </tr>
+                            <tr>
+                                <td>EUH-PL-02</td>
+                                <td>GAS UNIT HEATER</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Process</td>
+                                <td>TPI CORPORATION</td>
+                                <td>F1F5103N</td>
+                            </tr>
+                            <tr>
+                                <td>OAL-PL-01</td>
+                                <td>OUTSIDE AIR LOUVER/DAMPER</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Process</td>
+                                <td>GREENHECK EDD</td>
+                                <td>EDD-401 / VCD-23</td>
+                            </tr>
+                            <tr>
+                                <td>OAL-PL-02</td>
+                                <td>OUTSIDE AIR LOUVER/DAMPER</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Process</td>
+                                <td>GREENHECK</td>
+                                <td>FGI-46X46-GIS</td>
+                            </tr>
+                            <tr>
+                                <td>ACC-PL-01</td>
+                                <td>AIR COOLED CHILLER</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Process</td>
+                                <td>Daiken</td>
+                                <td>AGZ120EPMVH-ER00</td>
+                            </tr>
+                            <tr>
+                                <td>HEX-PL-01</td>
+                                <td>HEAT EXCHANGER</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Process</td>
+                                <td>BELL & GOSSETT</td>
+                                <td>SU104-2</td>
+                            </tr>
+                            <tr>
+                                <td>CWAS-PL-01</td>
+                                <td>AIR SEPARATOR</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Process</td>
+                                <td>BELL & GOSSETT ROLAIRTROL B&G</td>
+                                <td>BY536006F12003</td>
+                            </tr>
+                            <tr>
+                                <td>HWAS-PL-01</td>
+                                <td>AIR SEPARATOR</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Process</td>
+                                <td>BELL & GOSSETT R-4FB</td>
+                                <td>BY536304F12003</td>
+                            </tr>
+                            <tr>
+                                <td>BFT-PL-01</td>
+                                <td>BOILER FEED WATER TANK AND PUMP</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Process</td>
+                                <td>MIURA</td>
+                                <td>HT-400s</td>
+                            </tr>
+                            <tr>
+                                <td>AC-PL-01</td>
+                                <td>AIR-COOLED AIR COMPRESSOR</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Process</td>
+                                <td>Ingersoll Rand</td>
+                                <td>IRN50H-OF</td>
+                            </tr>
+                            <tr>
+                                <td>AR-PL-01</td>
+                                <td>AIR RECEIVER TANK</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Process</td>
+                                <td>INGERSOLL RAND</td>
+                                <td>VERT 200G</td>
+                            </tr>
+                            <tr>
+                                <td>CT-FT2-13</td>
+                                <td>FLOW METER FOR AIR</td>
+                                <td>HVAC Mechanical</td>
+                                <td>Process</td>
+                                <td>KROHNE</td>
+                                <td>H250</td>
+                            </tr>
+                            <tr>
+                                <td>MSB</td>
+                                <td>MAIN SWITCH BOARD</td>
+                                <td>Electrical</td>
+                                <td>Office</td>
+                                <td>EATON</td>
+                                <td>LAT0015862</td>
+                            </tr>
+                            <tr>
+                                <td>DP-P1</td>
+                                <td>DISTRIBUTION PANEL</td>
+                                <td>Electrical</td>
+                                <td>Office</td>
+                                <td>EATON</td>
+                                <td>PRL4</td>
+                            </tr>
+                            <tr>
+                                <td>DP-WH1</td>
+                                <td>DISTRIBUTION PANEL</td>
+                                <td>Electrical</td>
+                                <td>Warehouse</td>
+                                <td>EATON</td>
+                                <td>PRL4</td>
+                            </tr>
+                            <tr>
+                                <td>RP-01</td>
+                                <td>DISTRIBUTION PANEL</td>
+                                <td>Electrical</td>
+                                <td>Office</td>
+                                <td>EATON</td>
+                                <td>PRL1A</td>
+                            </tr>
+                            <tr>
+                                <td>LP-O1</td>
+                                <td>DISTRIBUTION PANEL</td>
+                                <td>Electrical</td>
+                                <td>Office</td>
+                                <td>EATON</td>
+                                <td>PRL3A</td>
+                            </tr>
+                            <tr>
+                                <td>RP-P1</td>
+                                <td>RECEPTACLE PANEL</td>
+                                <td>Electrical</td>
+                                <td>Office</td>
+                                <td>EATON</td>
+                                <td>PRL1A</td>
+                            </tr>
+                            <tr>
+                                <td>RP-P2</td>
+                                <td>RECEPTACLE PANEL</td>
+                                <td>Electrical</td>
+                                <td>Process</td>
+                                <td>EATON</td>
+                                <td>PRL1A</td>
+                            </tr>
+                            <tr>
+                                <td>LP-WH1</td>
+                                <td>LIGHTING PANEL</td>
+                                <td>Electrical</td>
+                                <td>Warehouse</td>
+                                <td>EATON</td>
+                                <td>PRL2A</td>
+                            </tr>
+                            <tr>
+                                <td>RP-WH1</td>
+                                <td>RECEPTACLE PANEL</td>
+                                <td>Electrical</td>
+                                <td>Warehouse</td>
+                                <td>EATON</td>
+                                <td>PRL1A</td>
+                            </tr>
+                            <tr>
+                                <td>PP-480-VF</td>
+                                <td>POWER PANEL</td>
+                                <td>Electrical</td>
+                                <td>Process</td>
+                                <td>EATON</td>
+                                <td>PRL3A</td>
+                            </tr>
+                            <tr>
+                                <td>T-01/45kVA</td>
+                                <td>Tranformer</td>
+                                <td>Electrical</td>
+                                <td>Process</td>
+                                <td>EATON</td>
+                                <td>V45DC001</td>
+                            </tr>
+                            <tr>
+                                <td>T-WH1/45kVA</td>
+                                <td>Tranformer</td>
+                                <td>Electrical</td>
+                                <td>Process</td>
+                                <td>EATON</td>
+                                <td>V45DC001</td>
+                            </tr>
+                            <tr>
+                                <td>T-208-2/45kVA</td>
+                                <td>Tranformer</td>
+                                <td>Electrical</td>
+                                <td>Process</td>
+                                <td>EATON</td>
+                                <td>V75DC001</td>
+                            </tr>
+                            <tr>
+                                <td>T-208-1/45kVA</td>
+                                <td>Tranformer</td>
+                                <td>Electrical</td>
+                                <td>Process</td>
+                                <td>EATON</td>
+                                <td>V45DC001</td>
+                            </tr>
+                            <tr>
+                                <td>T-240-2/75kVA</td>
+                                <td>Tranformer</td>
+                                <td>Electrical</td>
+                                <td>Process</td>
+                                <td>EATON</td>
+                                <td>V75DC019</td>
+                            </tr>
+                            <tr>
+                                <td>T-P1/75kVA</td>
+                                <td>Tranformer</td>
+                                <td>Electrical</td>
+                                <td>Process</td>
+                                <td>EATON</td>
+                                <td>V75DC001</td>
+                            </tr>
+                            <tr>
+                                <td>T-P2/75kVA</td>
+                                <td>Tranformer</td>
+                                <td>Electrical</td>
+                                <td>Process</td>
+                                <td>EATON</td>
+                                <td>V75DC001</td>
+                            </tr>
+                            <tr>
+                                <td>EWH-OF-01</td>
+                                <td>ELECTRIC WATER HEATER</td>
+                                <td>Electrical</td>
+                                <td>Office</td>
+                                <td>RHEEM</td>
+                                <td>EGSP6</td>
+                            </tr>
+                            <tr>
+                                <td>EWH-PL-01</td>
+                                <td>ELECTRIC WATER HEATER</td>
+                                <td>Electrical</td>
+                                <td>Process</td>
+                                <td>EEMAX</td>
+                                <td>ED079480T12EFD</td>
+                            </tr>
+                            <tr>
+                                <td>EWH-PL-02</td>
+                                <td>ELECTRIC WATER HEATER</td>
+                                <td>Electrical</td>
+                                <td>Process</td>
+                                <td>EEMAX</td>
+                                <td>ED079480T12EFD</td>
+                            </tr>
+                            <tr>
+                                <td>EWH-WH-01</td>
+                                <td>ELECTRIC WATER HEATER</td>
+                                <td>Electrical</td>
+                                <td>Warehouse</td>
+                                <td>EEMAX</td>
+                                <td>EX60T</td>
+                            </tr>
+                            <tr>
+                                <td>EWH-WH-02</td>
+                                <td>ELECTRIC WATER HEATER</td>
+                                <td>Electrical</td>
+                                <td>Warehouse</td>
+                                <td>EEMAX</td>
+                                <td>ED079480T12EFD</td>
+                            </tr>
+                            <tr>
+                                <td>HWP-OF-01</td>
+                                <td>CIRCULATION PUMP</td>
+                                <td>Electrical</td>
+                                <td>Office</td>
+                                <td>BELL & GOSSETT</td>
+                                <td>E^3-4</td>
+                            </tr>
+                            <tr>
+                                <td>ATS1</td>
+                                <td>AUTOMATIC TRANSFER SWITCH</td>
+                                <td>Electrical</td>
+                                <td>Office</td>
+                                <td>EATON</td>
+                                <td>ATC3C3X30400XSU</td>
+                            </tr>
+                            <tr>
+                                <td>TVSS</td>
+                                <td>TRANSIENT VOLTAGE SURGE SUPRESSOR</td>
+                                <td>Electrical</td>
+                                <td>Office</td>
+                                <td>EATON</td>
+                                <td>SPD300480Y3C</td>
+                            </tr>
+                            <tr>
+                                <td>DP-UT1</td>
+                                <td>DISTRIBUTION PANEL</td>
+                                <td>Electrical</td>
+                                <td>Office</td>
+                                <td>EATON</td>
+                                <td>PRL3A</td>
+                            </tr>
+                            <tr>
+                                <td>PP-480-2</td>
+                                <td>POWER PANEL</td>
+                                <td>Electrical</td>
+                                <td>Process</td>
+                                <td>EATON</td>
+                                <td>PRL4</td>
+                            </tr>
+                            <tr>
+                                <td>PP-480-1</td>
+                                <td>POWER PANEL</td>
+                                <td>Electrical</td>
+                                <td>Process</td>
+                                <td>EATON</td>
+                                <td>PRL4</td>
+                            </tr>
+                            <tr>
+                                <td>LP-P1</td>
+                                <td>LIGHTING PANEL</td>
+                                <td>Electrical</td>
+                                <td>Office</td>
+                                <td>EATON</td>
+                                <td>PRL3A</td>
+                            </tr>
+                            <tr>
+                                <td>LCP-P1</td>
+                                <td>LIGHTING CONTROL PANEL</td>
+                                <td>Electrical</td>
+                                <td>Office</td>
+                                <td>HUBBELL</td>
+                                <td>LXIN483600</td>
+                            </tr>
+                            <tr>
+                                <td>LCP-01</td>
+                                <td>LIGHTING CONTROL PANEL</td>
+                                <td>Electrical</td>
+                                <td>Office</td>
+                                <td>HUBBELL</td>
+                                <td>LXIN322800</td>
+                            </tr>
+                            <tr>
+                                <td>LCP-WH1</td>
+                                <td>LIGHTING CONTROL PANEL</td>
+                                <td>Electrical</td>
+                                <td>Warehouse</td>
+                                <td>HUBBELL</td>
+                                <td>LXIN323200</td>
+                            </tr>
+                            <tr>
+                                <td>PP-208-2</td>
+                                <td>POWER PANEL</td>
+                                <td>Electrical</td>
+                                <td>Process</td>
+                                <td>EATON</td>
+                                <td>PRL1A</td>
+                            </tr>
+                            <tr>
+                                <td>PP-240-2</td>
+                                <td>POWER PANEL</td>
+                                <td>Electrical</td>
+                                <td>Process</td>
+                                <td>EATON</td>
+                                <td>PRL1A</td>
+                            </tr>
+                            <tr>
+                                <td>PP-208-01</td>
+                                <td>POWER PANEL</td>
+                                <td>Electrical</td>
+                                <td>Process</td>
+                                <td>EATON</td>
+                                <td>PRL1A</td>
+                            </tr>
+                            <tr>
+                                <td>WS-PL-01</td>
+                                <td>Expansion Tank</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>MIURA</td>
+                                <td>MW015OU</td>
+                            </tr>
+                            <tr>
+                                <td>HWT-PL-01</td>
+                                <td>HOT WATER TANK</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>CHEMLINE</td>
+                                <td>V1190SEB-4F-SP-EPOXT</td>
+                            </tr>
+                            <tr>
+                                <td>BDS-PL-01</td>
+                                <td>BLOWDOWN SEPARATOR</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>MIURA</td>
+                                <td>BS-16/5</td>
+                            </tr>
+                            <tr>
+                                <td>AD-PL-01</td>
+                                <td>Air Dryer</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>INGERSOLL RAND / NIRVANNA</td>
+                                <td>NVC300A40N</td>
+                            </tr>
+                            <tr>
+                                <td>CWP-PL-01</td>
+                                <td>CHILLED WATER PUMP</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>BELL & GOSSETT</td>
+                                <td>E-1510 3AD 254T</td>
+                            </tr>
+                            <tr>
+                                <td>CWP-PL-02</td>
+                                <td>CHILLED WATER PUMP</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>BELL & GOSSETT</td>
+                                <td>E-1510 3AD 254T</td>
+                            </tr>
+                            <tr>
+                                <td>HWP-PL-01</td>
+                                <td>PROCESS HOT WATER PUMP</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>BELL & GOSSETT</td>
+                                <td>E-1510 2AD 213T</td>
+                            </tr>
+                            <tr>
+                                <td>HWP-PL-02</td>
+                                <td>PROCESS HOT WATER PUMP</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>BELL & GOSSETT</td>
+                                <td>E-1510 2AD 213T</td>
+                            </tr>
+                            <tr>
+                                <td>HWP-PL-03</td>
+                                <td>PROCESS HOT WATER PUMP</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>BELL & GOSSETT</td>
+                                <td>E-90 1AAB</td>
+                            </tr>
+                            <tr>
+                                <td>MCC-1</td>
+                                <td>MOTOR CONTROL CENTER</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>EATON</td>
+                                <td>V75DC001</td>
+                            </tr>
+                            <tr>
+                                <td>PT-PL-1</td>
+                                <td>PUMPING TRAP - HEX-PL-01</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>KADANT</td>
+                                <td>LMHT-1610</td>
+                            </tr>
+                            <tr>
+                                <td>PT-PL-2</td>
+                                <td>PUMPING TRAP - HEX-PL-01</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>KADANT</td>
+                                <td>LMHT-1615</td>
+                            </tr>
+                            <tr>
+                                <td>FM-1</td>
+                                <td>FLOW METER for CHILLED WATER</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>ONICON</td>
+                                <td>F-1210</td>
+                            </tr>
+                            <tr>
+                                <td>FM-2</td>
+                                <td>FLOW METER for CHILLED WATER</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>ONICON</td>
+                                <td>F-1210</td>
+                            </tr>
+                            <tr>
+                                <td>FM-3</td>
+                                <td>FLOW METER for STEAM</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>ONICON</td>
+                                <td>F-2600</td>
+                            </tr>
+                            <tr>
+                                <td>FM-4</td>
+                                <td>FLOW METER for STEAM</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>ONICON</td>
+                                <td>F-2600</td>
+                            </tr>
+                            <tr>
+                                <td>FM-5</td>
+                                <td>FLOW METER for STEAM</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>ONICON</td>
+                                <td>F-2600</td>
+                            </tr>
+                            <tr>
+                                <td>FM-6</td>
+                                <td>FLOW METER for PROCESS HOT WATER</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>ONICON</td>
+                                <td>F-1210</td>
+                            </tr>
+                            <tr>
+                                <td>FM-7</td>
+                                <td>FLOW METER for COMPRESSED AIR</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>ONICON</td>
+                                <td>F-510</td>
+                            </tr>
+                            <tr>
+                                <td>MCC-P1</td>
+                                <td>MOTOR CONTROL CENTER</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>EATON</td>
+                                <td>F2100</td>
+                            </tr>
+                            <tr>
+                                <td>MCC-P2</td>
+                                <td>MOTOR CONTROL CENTER</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>EATON</td>
+                                <td>F2100</td>
+                            </tr>
+                            <tr>
+                                <td>T-311</td>
+                                <td>RECEIVING TANK 1</td>
+                                <td>Process</td>
+                                <td>Tank Yard</td>
+                                <td>GPI Corporation</td>
+                                <td>FRP</td>
+                            </tr>
+                            <tr>
+                                <td>T-312</td>
+                                <td>RECEIVING TANK 2</td>
+                                <td>Process</td>
+                                <td>Tank Yard</td>
+                                <td>GPI Corporation</td>
+                                <td>FRP</td>
+                            </tr>
+                            <tr>
+                                <td>T-313</td>
+                                <td>RECEIVING TANK 2</td>
+                                <td>Process</td>
+                                <td>Tank Yard</td>
+                                <td>GPI Corporation</td>
+                                <td>FRP</td>
+                            </tr>
+                            <tr>
+                                <td>T-501</td>
+                                <td>DISCHARGE TANK 7%</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>GPI Corporation</td>
+                                <td>FRP</td>
+                            </tr>
+                            <tr>
+                                <td>T-502</td>
+                                <td>DISCHARGE TANK 12%</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>GPI Corporation</td>
+                                <td>FRP</td>
+                            </tr>
+                            <tr>
+                                <td>T-631</td>
+                                <td>PROCESS TANK</td>
+                                <td>Process</td>
+                                <td>Tank Yard</td>
+                                <td>GPI Corporation</td>
+                                <td>FRP</td>
+                            </tr>
+                            <tr>
+                                <td>T-701</td>
+                                <td>PROCESS TANK</td>
+                                <td>Process</td>
+                                <td>Tank Yard</td>
+                                <td>GPI Corporation</td>
+                                <td>FRP</td>
+                            </tr>
+                            <tr>
+                                <td>T-702</td>
+                                <td>PROCESS TANK</td>
+                                <td>Process</td>
+                                <td>Tank Yard</td>
+                                <td>GPI Corporation</td>
+                                <td>FRP</td>
+                            </tr>
+                            <tr>
+                                <td>T-731</td>
+                                <td>PROCESS TANK</td>
+                                <td>Process</td>
+                                <td>Tank Yard</td>
+                                <td>WATSON METAL MASTER</td>
+                                <td>SS CUSTOM TANK</td>
+                            </tr>
+                            <tr>
+                                <td>T-733</td>
+                                <td>PROCESS TANK</td>
+                                <td>Process</td>
+                                <td>Tank Yard</td>
+                                <td>WATSON METAL MASTER</td>
+                                <td>SS CUSTOM TANK</td>
+                            </tr>
+                            <tr>
+                                <td>T-751</td>
+                                <td>FRP Tank</td>
+                                <td>Process</td>
+                                <td>Tank Yard</td>
+                                <td>GPI Corporation</td>
+                                <td>FRP</td>
+                            </tr>
+                            <tr>
+                                <td>T-951</td>
+                                <td>Stainless Holding Tank Drum/Tote</td>
+                                <td>Process</td>
+                                <td>Warehouse</td>
+                                <td>WATSON METAL MASTER</td>
+                                <td>SS CUSTOM TANK</td>
+                            </tr>
+                            <tr>
+                                <td>NG-RS-01</td>
+                                <td>RICE MIX TANK</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>NAGATA</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>NG-RS-02</td>
+                                <td>RICE TRANSFER PUMP</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>NAGATA</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>NG-RS-03</td>
+                                <td>RICE SEPARATOR</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>NAGATA</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>NG-RS-04</td>
+                                <td>SOAKING TANK</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>NAGATA</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>NG-RS-05</td>
+                                <td>SOAKING TANK</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>NAGATA</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>NG-RS-06</td>
+                                <td>SOAKING TANK</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>NAGATA</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>NG-RS-07</td>
+                                <td>SOAKING TANK</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>NAGATA</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>NG-RS-08</td>
+                                <td>TRANSFER CONVEYER 1 HORIZONTAL</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>NAGATA</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>NG-RS-09</td>
+                                <td>TRANSFER CONVEYER 2 SLOPED</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>NAGATA</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>NG-RS-10</td>
+                                <td>STEAM SOFTNER</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>NAGATA</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>NG-RS-11</td>
+                                <td>RICE STEAMER</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>NAGATA</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>NG-RS-12</td>
+                                <td>COOLING MACHINE</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>NAGATA</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>NG-RS-13</td>
+                                <td>SEED CUTTER</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>NAGATA</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>NG-RS-14</td>
+                                <td>ROCKER VALVE</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>NAGATA</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>NG-RS-15</td>
+                                <td>BLOWER</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>NAGATA</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>NG-RS-16</td>
+                                <td>KOJI MACHINE</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>NAGATA</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>CT-FT1-01</td>
+                                <td>FERMENTER TANKS</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>RIEGER BEHALTERBAU</td>
+                                <td>F250</td>
+                            </tr>
+                            <tr>
+                                <td>CT-FT1-02</td>
+                                <td>AERATOR</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>CETOTEC</td>
+                                <td>F250</td>
+                            </tr>
+                            <tr>
+                                <td>CT-FT1-03</td>
+                                <td>AERATOR MOTOR</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>EMOD MOTOREN</td>
+                                <td>MOTOR FOR F20</td>
+                            </tr>
+                            <tr>
+                                <td>CT-FT1-04</td>
+                                <td>FOAM SYSTEM</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>CETOTEC</td>
+                                <td>F250</td>
+                            </tr>
+                            <tr>
+                                <td>CT-FT1-05</td>
+                                <td>FOAM SYSTEM PUMP</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>SAWA</td>
+                                <td>HD140-MM</td>
+                            </tr>
+                            <tr>
+                                <td>CT-FT1-06</td>
+                                <td>CONTROL CABINETS FOR FERMENTERS</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>CETOTEC AD SCHOLL</td>
+                                <td>F250/AW-300</td>
+                            </tr>
+                            <tr>
+                                <td>CT-FT1-07</td>
+                                <td>ACETOLINE SYSTEM</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>UNISENSOR AND CETOTEC</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>CT-FT1-08</td>
+                                <td>CHARGE PUMPS</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>CETOTEC</td>
+                                <td>UNI140</td>
+                            </tr>
+                            <tr>
+                                <td>CT-FT1-09</td>
+                                <td>DISCHARGE PUMPS</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>SAWA</td>
+                                <td>LE170-0/40-MI</td>
+                            </tr>
+                            <tr>
+                                <td>CT-FT1-10</td>
+                                <td>AIR SCRUBBER (WHOLE SYSTEM)</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>CETOTEC</td>
+                                <td>AW-300</td>
+                            </tr>
+                            <tr>
+                                <td>CT-FT1-11</td>
+                                <td>AIR SCRUBBER PUMPS</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>CETOTEC</td>
+                                <td>UNI120</td>
+                            </tr>
+                            <tr>
+                                <td>CF-FT1-11</td>
+                                <td>AIR SCRUBBER PUMPS</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>CETOTEC</td>
+                                <td>UNI120</td>
+                            </tr>
+                            <tr>
+                                <td>CT-FT1-12</td>
+                                <td>COOLING WATER VALVES</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>SCHUBERT & SALZER</td>
+                                <td>7110/050V1H20R13-N-S1</td>
+                            </tr>
+                            <tr>
+                                <td>CT-FT1-13</td>
+                                <td>FLOW METER FOR AIR</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>KROHNE</td>
+                                <td>H250</td>
+                            </tr>
+                            <tr>
+                                <td>CT-FT1-14</td>
+                                <td>CONDENSORS</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>CETOTEC</td>
+                                <td>C-300</td>
+                            </tr>
+                            <tr>
+                                <td>CT-FT2-01</td>
+                                <td>FERMENTER TANKS</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>RIEGER BEHALTERBAU</td>
+                                <td>F250</td>
+                            </tr>
+                            <tr>
+                                <td>CT-FT2-02</td>
+                                <td>AERATOR</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>CETOTEC</td>
+                                <td>F250</td>
+                            </tr>
+                            <tr>
+                                <td>CT-FT2-03</td>
+                                <td>AERATOR MOTOR</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>EMOD MOTOREN</td>
+                                <td>MOTOR FOR F250</td>
+                            </tr>
+                            <tr>
+                                <td>CT-FT2-04</td>
+                                <td>FOAM SYSTEM</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>CETOTEC</td>
+                                <td>F250</td>
+                            </tr>
+                            <tr>
+                                <td>CT-FT2-05</td>
+                                <td>FOAM SYSTEM PUMP</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>SAWA</td>
+                                <td>HD140-MM</td>
+                            </tr>
+                            <tr>
+                                <td>CT-FT2-06</td>
+                                <td>CONTROL CABINETS FOR FERMENTERS</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>CETOTEC AND SCHOLL</td>
+                                <td>F250/AW-300</td>
+                            </tr>
+                            <tr>
+                                <td>CT-FT2-07</td>
+                                <td>ACETONLINE SYSTEM</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>UNISENSOR AND CETOTEC</td>
+                                <td>F250/AW-300</td>
+                            </tr>
+                            <tr>
+                                <td>CT-FT2-08</td>
+                                <td>CHARGE PUMPS</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>CETOTEC</td>
+                                <td>UNI140</td>
+                            </tr>
+                            <tr>
+                                <td>CT-FT2-09</td>
+                                <td>DISCHARGE PUMPS</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>SAWA</td>
+                                <td>LE170-50/40-MI</td>
+                            </tr>
+                            <tr>
+                                <td>CT-FT2-10</td>
+                                <td>AIR SCRUBBER (WHOLE SYSTEM)</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>CETOTEC</td>
+                                <td>AW-300</td>
+                            </tr>
+                            <tr>
+                                <td>CT-FT2-11</td>
+                                <td>AIR SCRUBBER PUMPS</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>CETOTEC</td>
+                                <td>UNI120</td>
+                            </tr>
+                            <tr>
+                                <td>CT-FT2-12</td>
+                                <td>COOLING WATER VALVES</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>SCHUBERT & SALZER</td>
+                                <td>7110/050V1H20R13-N-S1</td>
+                            </tr>
+                            <tr>
+                                <td>CT-FT2-14</td>
+                                <td>CONDENSERS</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>CETOTEC</td>
+                                <td>C-300</td>
+                            </tr>
+                            <tr>
+                                <td>NSK-PM3-01</td>
+                                <td>PRESS MACHINE</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>NSK</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>NSK-PM3-02</td>
+                                <td>PUMP</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>NSK</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>NSK-PM3-03</td>
+                                <td>PISTON PUMP</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>NSK</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>NSK-PM3-04</td>
+                                <td>TANK UNIT</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>NSK</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>NSK-PM3-05</td>
+                                <td>OIL CYLINDER PUMP</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>NSK</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>NSK-FM7-01</td>
+                                <td>FILTER MACHINE</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>NSK</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>NSK-FM7-02</td>
+                                <td>PUMP</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>NSK</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>NSK-FM7-03</td>
+                                <td>PISTON PUMP</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>NSK</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>NSK-FM7-04</td>
+                                <td>TANK UNIT</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>NSK</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>NSK-FM7-05</td>
+                                <td>OIL CYLINDER PUMP</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>NSK</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>MCB-BRA-01</td>
+                                <td>ORBIT BOTTLE CLEANER / BOTTLE RINSER</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>MCBRADY ENGINEERING</td>
+                                <td>2000RBIT CLEANER</td>
+                            </tr>
+                            <tr>
+                                <td>IFS-FL-01</td>
+                                <td>FILLER COMPONENT</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>INLINE FILLING SYSTEM</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>IFS-CP-01</td>
+                                <td>CAPPER COMPONENT</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>INLINE FILLING SYSTEM</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>SCPE-BL-01</td>
+                                <td>PLASTIC BOTTLE LABELER</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>SOUTHERN CALIFORNIA PACKAGING EQUIPMENT</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>PCS-CV-01A</td>
+                                <td>CONVEYOR</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>PACIFIC CONVEYOR SYSTEM</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>PCS-CV-01B</td>
+                                <td>CONVEYOR</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>PACIFIC CONVEYOR SYSTEM</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>PCS-CV-02</td>
+                                <td>CONVEYOR</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>PACIFIC CONVEYOR SYSTEM</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>PCS-CV-03</td>
+                                <td>CONVEYOR</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>PACIFIC CONVEYOR SYSTEM</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>PCS-CV-04</td>
+                                <td>CONVEYOR</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>PACIFIC CONVEYOR SYSTEM</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>PCS-CV-05</td>
+                                <td>CONVEYOR</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>PACIFIC CONVEYOR SYSTEM</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>PCS-CV-06</td>
+                                <td>CONVEYOR</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>PACIFIC CONVEYOR SYSTEM</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>PCS-CV-07</td>
+                                <td>CONVEYOR</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>PACIFIC CONVEYOR SYSTEM</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>PCS-BRW-01</td>
+                                <td>BOTTLE RINSER WITH WATER</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>PACIFIC CONVEYOR SYSTEM</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>PCS-BD-01</td>
+                                <td>BOTTLE DRYER</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>PACIFIC CONVEYOR SYSTEM</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>PCS-BS-01</td>
+                                <td>BOTTLER SCRAMBLER</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>PACIFIC CONVEYOR SYSTEM</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>CMB-CE-01</td>
+                                <td>CASE ERECTOR/SEALER</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>COMBI</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>LAN-GBL-01</td>
+                                <td>GLASS BOTTLE LABELER</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>LANGGUTH</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>KEY-DCBT-01</td>
+                                <td>DATE CODER BOTTLE</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>KEYENCE</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>MAR-DCBX-01</td>
+                                <td>DATE CODER BOX</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>MARKEM-IMAJE</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>EH-101</td>
+                                <td>HOIST</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>PCP-1</td>
+                                <td>CONTROL PANEL</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>HEX-221</td>
+                                <td>COOLING HX</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>HEX-222</td>
+                                <td>HEATING HX</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>MX-311</td>
+                                <td>AGITATOR</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>SHARPE MIXERS</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>MX-312</td>
+                                <td>AGITATOR</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>SHARPE MIXERS</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>MX-313</td>
+                                <td>AGITATOR</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>SHARPE MIXERS</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>T-811</td>
+                                <td>Mixing / Product Tank 1</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>Watson metal master</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>T-812</td>
+                                <td>Mixing / Product Tank 2</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>Watson metal master</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>T-813</td>
+                                <td>Mixing / Product Tank 3</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>Watson metal master</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>T-817</td>
+                                <td>Mixing / Product Tank 7</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td>Watson metal master</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>T-931</td>
+                                <td>Holding Tank  1 Gal / Bottle</td>
+                                <td>Process</td>
+                                <td>Warehouse</td>
+                                <td>Watson metal master</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>MX-501</td>
+                                <td>AGITATOR</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>MX-502</td>
+                                <td>AGITATOR 12%</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>MX-701</td>
+                                <td>AGITATOR -1</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>MX-702</td>
+                                <td>AGITATOR -2</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>MX-731</td>
+                                <td>Agitator - Pre-coat Tank</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>MX-733</td>
+                                <td>Agitator - Body-feed Tank</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>MX-811</td>
+                                <td>Agitator - Mixing / Product Tank 1</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>MX-812</td>
+                                <td>Agitator - Mixing / Product Tank 2</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>MX-813</td>
+                                <td>Agitator - Mixing / Product Tank 3</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>MX-817</td>
+                                <td>Agitator - Mixing / Product Tank 7</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>P-511</td>
+                                <td>TRANSFER PUMP 1</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>P-641</td>
+                                <td>Transferring Pump - 2</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>P-642</td>
+                                <td>Transferring Pump - 3-1 12%RV</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>P-651</td>
+                                <td>Sucrose Syrup Transfer Pump</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>P-732</td>
+                                <td>Filtrate-in Pump</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>P-734</td>
+                                <td>Body-feed Pump</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>P-752</td>
+                                <td>Transferring Pump</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>P-831</td>
+                                <td>Filtrate / Transferring Pump 1</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>P-832</td>
+                                <td>Filtrate / Transferring Pump 2</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>P-833</td>
+                                <td>Filtrate / Transferring Pump 3</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>P-932</td>
+                                <td>Filling Pump  1 Gal / Bottle</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>P-952</td>
+                                <td>Filling Pump  Drum/Tote</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>PCP-2</td>
+                                <td>CONTROL PANEL</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>PCP-3</td>
+                                <td>CONTROL PANEL</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>DC-735</td>
+                                <td>Dust Collector</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>HEX-791</td>
+                                <td>HEAT EXCHANGER</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>HEX-851</td>
+                                <td>HEAT EXCHANGER -1</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>HEX-852</td>
+                                <td>HEAT EXCHANGER -2</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>HEX-853</td>
+                                <td>HEAT EXCHANGER -3</td>
+                                <td>Process</td>
+                                <td>Process</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>         

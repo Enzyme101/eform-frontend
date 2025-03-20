@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Preventative Maintenance LOG</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jSignature/2.1.3/jSignature.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<style type="text/css">
+    #company_logo_img {
+        object-fit: contain !important;
+        max-height: 60px; 
+    }
+
+    ::selection,
+    ::-moz-selection {
+        background-color: #E13300;
+        color: white;
+    }
+
+    body {
+        background-color: #fff;
+        margin: 20px; 
+        padding: 5px 10px;
+        color: #4F5155;
+        font-size: 12px; 
+    }
+
+    #container {
+        margin: 5px; 
+        border: 1px solid #D0D0D0;
+        box-shadow: 0 0 8px #D0D0D0;
+        min-height: 90vh;
+    }
+
+    .signature-pad {
+        border-radius: 2px;
+        border: 1px dashed #ccc;
+        cursor: crosshair;
+        width: 200px; 
+        height: auto;
+    }
+
+    
+    table {
+        width: 100%;
+        margin: 10px auto 5px;
+        border-collapse: collapse;
+    }
+
+    .header-table {
+        margin-bottom: 20px;
+    }
+
+    .header-table td {
+        padding: 5px;
+    }
+
+    
+    .maintenance-log-table {
+        font-size: 11px; 
+    }
+
+    .maintenance-log-table th,
+    .maintenance-log-table td {
+        padding: 2px 3px; 
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .maintenance-log-table th {
+        background-color: #f5f5f5;
+    }
+
+    .maintenance-log-table td:first-child {
+        text-align: left; 
+    }
+
+    .month-column {
+        width: 30px;
+    }
+
+    .equipment-column {
+        width: 120px;
+    }
+
+    
+    .frequency-column {
+        width: 40px;
+    }
+
+    input[type="checkbox"] {
+        width: 12px;
+        height: 12px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .custom-input {
+        border-radius: 3px;
+        padding: 4px; 
+        border: 1px solid #c9c9c9;    
+        outline: none;
+        width: 100% !important;
+        font-size: 11px; 
+    }
+
+    .custom-input:focus {
+        background: #ffffff;
+        box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
+        border: 1px solid #007bff;
+    }
+
+    .table {
+        border-color: #a7a7a7;
+    }
+
+    .container {
+        margin-top: 0.5rem; 
+        width: 100%; 
+        padding: 0 5px; 
+    }
+
+    .header-table th, .align-center {
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .signatory-table-section {
+        width: 40%;
+        margin: 0 auto;
+    }
+    
+    .signatory-table-section .table {
+        width: 100%;
+    }
+    
+    .signature-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    /* Button styles */
+    .btn-sm {
+        padding: 0.1rem 0.3rem;
+        font-size: 0.75rem;
+    }
+
+    .section-heading {
+        background-color: #f5f5f5;
+        font-weight: bold;
+        padding: 3px !important;
+    }
+
+    @media print {
+    body, html {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    #container, .container, #body {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-shadow: none !important;
+        border: none !important;
+    }
+
+    table, .table, .maintenance-log-table {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+    }
+
+    @page {
+        margin: 0.5cm 0.5cm 0.5cm 0.5cm !important; 
+        size: portrait;
+    }
+
+    .table-responsive {
+        overflow-x: visible !important;
+        width: 100% !important;
+    }
+
+    .month-column {
+        width: 18px !important;
+    }
+    
+    .equipment-column {
+        width: 90px !important;
+    }
+}
+    
+</style>
+<body>
+    <div class="container">
+        <div id="head">
+            <div id="body" class="pb-2">
+                <form autocomplete="off" method="POST" action="?" class="pb-3" id="main_form" enctype="multipart/form-data">
+                    <div class="table-responsive">
+                        <table class="table table-bordered header-table mt-5">
+                            <tr>
+                                <td rowspan="2" width="20%">
+                                    <div style="display: flex; align-items: center; justify-content: center; height: 100%;">
+                                        <img src="https://interlinkiq.com/uploads/avatar/527302%20-%20logo2.jpg" alt="Marukan Logo" width="160">
+                                    </div>
+                                </td>
+                                <td style="text-align: center; font-weight: bold; font-size: 18px;">
+                                    Preventative Maintenance Log
+                                </td>
+                                <td style="text-align: center;">
+                                    <span class="fw-normal">Issued Date</span> <br><strong>4/15/2024</strong>
+                                </td>
+                                <td style="text-align: center;">
+                                    <span class="fw-normal">Page</span> <br>
+                                    <strong>1 of 1</strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">
+                                    <span class="fw-normal">CODE</span> <br>
+                                    <strong>FO-04-00-01-10.iii</strong>
+                                </td>
+                                <td style="text-align: center;">
+                                    <span class="fw-normal">Supersedes Date</span> <br>
+                                    <strong>5/5/2021</strong>
+                                </td>
+                                <td style="text-align: center;">
+                                    <span class="fw-normal">Version No.</span> <br>
+                                    <strong>4</strong>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <table class="table table-bordered">
+                            <tr>
+                                <td colspan="2">
+                                    <strong>INSPECTED BY:</strong> <input type="text" class="custom-input" name="inspector_name" style="width: 50% !important;">
+                                </td>
+                            </tr>
+                            <tr class="bg-light">
+                                <th>Equipment/Area</th>
+                                <th>Frequency</th>
+                                <th>Jan</th>
+                                <th>Feb</th>
+                                <th>Mar</th>
+                                <th>Apr</th>
+                                <th>May</th>
+                                <th>Jun</th>
+                                <th>Jul</th>
+                                <th>Aug</th>
+                                <th>Sep</th>
+                                <th>Oct</th>
+                                <th>Nov</th>
+                                <th>Dec</th>
+                            </tr>
+                            <!-- HVAC Section -->
+                            <tr class="bg-light">
+                                <th colspan="14">HVAC</th>
+                            </tr>
+                            <tr>
+                                <td>Roof top units-PM</td>
+                                <td>2x/yr</td>
+                                <td><input type="checkbox" name="rtpm_jan"></td>
+                                <td><input type="checkbox" name="rtpm_feb"></td>
+                                <td><input type="checkbox" name="rtpm_mar"></td>
+                                <td><input type="checkbox" name="rtpm_apr"></td>
+                                <td><input type="checkbox" name="rtpm_may"></td>
+                                <td><input type="checkbox" name="rtpm_jun"></td>
+                                <td><input type="checkbox" name="rtpm_jul"></td>
+                                <td><input type="checkbox" name="rtpm_aug"></td>
+                                <td><input type="checkbox" name="rtpm_sep"></td>
+                                <td><input type="checkbox" name="rtpm_oct"></td>
+                                <td><input type="checkbox" name="rtpm_nov"></td>
+                                <td><input type="checkbox" name="rtpm_dec"></td>
+                            </tr>
+                            <tr>
+                                <td>Roof top units-filter</td>
+                                <td>4x/yr</td>
+                                <td><input type="checkbox" name="rtfilter_jan"></td>
+                                <td><input type="checkbox" name="rtfilter_feb"></td>
+                                <td><input type="checkbox" name="rtfilter_mar"></td>
+                                <td><input type="checkbox" name="rtfilter_apr"></td>
+                                <td><input type="checkbox" name="rtfilter_may"></td>
+                                <td><input type="checkbox" name="rtfilter_jun"></td>
+                                <td><input type="checkbox" name="rtfilter_jul"></td>
+                                <td><input type="checkbox" name="rtfilter_aug"></td>
+                                <td><input type="checkbox" name="rtfilter_sep"></td>
+                                <td><input type="checkbox" name="rtfilter_oct"></td>
+                                <td><input type="checkbox" name="rtfilter_nov"></td>
+                                <td><input type="checkbox" name="rtfilter_dec"></td>
+                            </tr>
+                            <tr>
+                                <td>Make up air units-PM</td>
+                                <td>2x/yr</td>
+                                <td><input type="checkbox" name="mapm_jan"></td>
+                                <td><input type="checkbox" name="mapm_feb"></td>
+                                <td><input type="checkbox" name="mapm_mar"></td>
+                                <td><input type="checkbox" name="mapm_apr"></td>
+                                <td><input type="checkbox" name="mapm_may"></td>
+                                <td><input type="checkbox" name="mapm_jun"></td>
+                                <td><input type="checkbox" name="mapm_jul"></td>
+                                <td><input type="checkbox" name="mapm_aug"></td>
+                                <td><input type="checkbox" name="mapm_sep"></td>
+                                <td><input type="checkbox" name="mapm_oct"></td>
+                                <td><input type="checkbox" name="mapm_nov"></td>
+                                <td><input type="checkbox" name="mapm_dec"></td>
+                            </tr>
+                            <tr>
+                                <td>Make up air units-filter</td>
+                                <td>4x/yr</td>
+                                <td><input type="checkbox" name="mafilter_jan"></td>
+                                <td><input type="checkbox" name="mafilter_feb"></td>
+                                <td><input type="checkbox" name="mafilter_mar"></td>
+                                <td><input type="checkbox" name="mafilter_apr"></td>
+                                <td><input type="checkbox" name="mafilter_may"></td>
+                                <td><input type="checkbox" name="mafilter_jun"></td>
+                                <td><input type="checkbox" name="mafilter_jul"></td>
+                                <td><input type="checkbox" name="mafilter_aug"></td>
+                                <td><input type="checkbox" name="mafilter_sep"></td>
+                                <td><input type="checkbox" name="mafilter_oct"></td>
+                                <td><input type="checkbox" name="mafilter_nov"></td>
+                                <td><input type="checkbox" name="mafilter_dec"></td>
+                            </tr>
+                            <tr>
+                                <td>Exhaust fans</td>
+                                <td>2x/yr</td>
+                                <td><input type="checkbox" name="exhaust_jan"></td>
+                                <td><input type="checkbox" name="exhaust_feb"></td>
+                                <td><input type="checkbox" name="exhaust_mar"></td>
+                                <td><input type="checkbox" name="exhaust_apr"></td>
+                                <td><input type="checkbox" name="exhaust_may"></td>
+                                <td><input type="checkbox" name="exhaust_jun"></td>
+                                <td><input type="checkbox" name="exhaust_jul"></td>
+                                <td><input type="checkbox" name="exhaust_aug"></td>
+                                <td><input type="checkbox" name="exhaust_sep"></td>
+                                <td><input type="checkbox" name="exhaust_oct"></td>
+                                <td><input type="checkbox" name="exhaust_nov"></td>
+                                <td><input type="checkbox" name="exhaust_dec"></td>
+                            </tr>
+
+                            <tr class="bg-light">
+                                <th colspan="14">Boiler Room</th>
+                            </tr>
+
+                            <tr>
+                                <td>Boiler PM</td>
+                                <td>2x/yr</td>
+                                <td><input type="checkbox" name="boiler_pm_jan"></td>
+                                <td><input type="checkbox" name="boiler_pm_feb"></td>
+                                <td><input type="checkbox" name="boiler_pm_mar"></td>
+                                <td><input type="checkbox" name="boiler_pm_apr"></td>
+                                <td><input type="checkbox" name="boiler_pm_may"></td>
+                                <td><input type="checkbox" name="boiler_pm_jun"></td>
+                                <td><input type="checkbox" name="boiler_pm_jul"></td>
+                                <td><input type="checkbox" name="boiler_pm_aug"></td>
+                                <td><input type="checkbox" name="boiler_pm_sep"></td>
+                                <td><input type="checkbox" name="boiler_pm_oct"></td>
+                                <td><input type="checkbox" name="boiler_pm_nov"></td>
+                                <td><input type="checkbox" name="boiler_pm_dec"></td>
+                            </tr>
+                            <tr class="bg-light">
+                                <th colspan="14">Chilled Water</th>
+                            </tr>
+                            <tr>
+                                <td>Chiller PM</td>
+                                <td>4x/yr</td>
+                                <td><input type="checkbox" name="chiller_pm_jan"></td>
+                                <td><input type="checkbox" name="chiller_pm_feb"></td>
+                                <td><input type="checkbox" name="chiller_pm_mar"></td>
+                                <td><input type="checkbox" name="chiller_pm_apr"></td>
+                                <td><input type="checkbox" name="chiller_pm_may"></td>
+                                <td><input type="checkbox" name="chiller_pm_jun"></td>
+                                <td><input type="checkbox" name="chiller_pm_jul"></td>
+                                <td><input type="checkbox" name="chiller_pm_aug"></td>
+                                <td><input type="checkbox" name="chiller_pm_sep"></td>
+                                <td><input type="checkbox" name="chiller_pm_oct"></td>
+                                <td><input type="checkbox" name="chiller_pm_nov"></td>
+                                <td><input type="checkbox" name="chiller_pm_dec"></td>
+                            </tr>
+                            <tr class="bg-light">
+                                <th colspan="14">Compressed Air</th>
+                            </tr>
+                            <tr>
+                                <td>Air compressor</td>
+                                <td>2000 hrs</td>
+                                <td><input type="checkbox" name="air_compressor_jan"></td>
+                                <td><input type="checkbox" name="air_compressor_feb"></td>
+                                <td><input type="checkbox" name="air_compressor_mar"></td>
+                                <td><input type="checkbox" name="air_compressor_apr"></td>
+                                <td><input type="checkbox" name="air_compressor_may"></td>
+                                <td><input type="checkbox" name="air_compressor_jun"></td>
+                                <td><input type="checkbox" name="air_compressor_jul"></td>
+                                <td><input type="checkbox" name="air_compressor_aug"></td>
+                                <td><input type="checkbox" name="air_compressor_sep"></td>
+                                <td><input type="checkbox" name="air_compressor_oct"></td>
+                                <td><input type="checkbox" name="air_compressor_nov"></td>
+                                <td><input type="checkbox" name="air_compressor_dec"></td>
+                            </tr>
+                            
+                            <!-- Rice Cooking Section -->
+                            <tr class="bg-light">
+                                <th colspan="14">Rice Cooking</th>
+                            </tr>
+                            <tr>
+                                <td>Rice cooker</td>
+                                <td>1x/Month</td>
+                                <td><input type="checkbox" name="rice_cooker_jan"></td>
+                                <td><input type="checkbox" name="rice_cooker_feb"></td>
+                                <td><input type="checkbox" name="rice_cooker_mar"></td>
+                                <td><input type="checkbox" name="rice_cooker_apr"></td>
+                                <td><input type="checkbox" name="rice_cooker_may"></td>
+                                <td><input type="checkbox" name="rice_cooker_jun"></td>
+                                <td><input type="checkbox" name="rice_cooker_jul"></td>
+                                <td><input type="checkbox" name="rice_cooker_aug"></td>
+                                <td><input type="checkbox" name="rice_cooker_sep"></td>
+                                <td><input type="checkbox" name="rice_cooker_oct"></td>
+                                <td><input type="checkbox" name="rice_cooker_nov"></td>
+                                <td><input type="checkbox" name="rice_cooker_dec"></td>
+                            </tr>
+                            <tr>
+                                <td>Cooling conveyor</td>
+                                <td>1x/Month</td>
+                                <td><input type="checkbox" name="cooling_conveyor_jan"></td>
+                                <td><input type="checkbox" name="cooling_conveyor_feb"></td>
+                                <td><input type="checkbox" name="cooling_conveyor_mar"></td>
+                                <td><input type="checkbox" name="cooling_conveyor_apr"></td>
+                                <td><input type="checkbox" name="cooling_conveyor_may"></td>
+                                <td><input type="checkbox" name="cooling_conveyor_jun"></td>
+                                <td><input type="checkbox" name="cooling_conveyor_jul"></td>
+                                <td><input type="checkbox" name="cooling_conveyor_aug"></td>
+                                <td><input type="checkbox" name="cooling_conveyor_sep"></td>
+                                <td><input type="checkbox" name="cooling_conveyor_oct"></td>
+                                <td><input type="checkbox" name="cooling_conveyor_nov"></td>
+                                <td><input type="checkbox" name="cooling_conveyor_dec"></td>
+                            </tr>
+                            <tr>
+                                <td>Koji Conveyor</td>
+                                <td>1x/Month</td>
+                                <td><input type="checkbox" name="koji_conveyor_jan"></td>
+                                <td><input type="checkbox" name="koji_conveyor_feb"></td>
+                                <td><input type="checkbox" name="koji_conveyor_mar"></td>
+                                <td><input type="checkbox" name="koji_conveyor_apr"></td>
+                                <td><input type="checkbox" name="koji_conveyor_may"></td>
+                                <td><input type="checkbox" name="koji_conveyor_jun"></td>
+                                <td><input type="checkbox" name="koji_conveyor_jul"></td>
+                                <td><input type="checkbox" name="koji_conveyor_aug"></td>
+                                <td><input type="checkbox" name="koji_conveyor_sep"></td>
+                                <td><input type="checkbox" name="koji_conveyor_oct"></td>
+                                <td><input type="checkbox" name="koji_conveyor_nov"></td>
+                                <td><input type="checkbox" name="koji_conveyor_dec"></td>
+                            </tr>
+                            <tr>
+                                <td>Rice blower</td>
+                                <td>1x/Month</td>
+                                <td><input type="checkbox" name="rice_blower_jan"></td>
+                                <td><input type="checkbox" name="rice_blower_feb"></td>
+                                <td><input type="checkbox" name="rice_blower_mar"></td>
+                                <td><input type="checkbox" name="rice_blower_apr"></td>
+                                <td><input type="checkbox" name="rice_blower_may"></td>
+                                <td><input type="checkbox" name="rice_blower_jun"></td>
+                                <td><input type="checkbox" name="rice_blower_jul"></td>
+                                <td><input type="checkbox" name="rice_blower_aug"></td>
+                                <td><input type="checkbox" name="rice_blower_sep"></td>
+                                <td><input type="checkbox" name="rice_blower_oct"></td>
+                                <td><input type="checkbox" name="rice_blower_nov"></td>
+                                <td><input type="checkbox" name="rice_blower_dec"></td>
+                            </tr>
+                            <tr>
+                                <td>Rotary valve</td>
+                                <td>1x/Month</td>
+                                <td><input type="checkbox" name="rotary_valve_jan"></td>
+                                <td><input type="checkbox" name="rotary_valve_feb"></td>
+                                <td><input type="checkbox" name="rotary_valve_mar"></td>
+                                <td><input type="checkbox" name="rotary_valve_apr"></td>
+                                <td><input type="checkbox" name="rotary_valve_may"></td>
+                                <td><input type="checkbox" name="rotary_valve_jun"></td>
+                                <td><input type="checkbox" name="rotary_valve_jul"></td>
+                                <td><input type="checkbox" name="rotary_valve_aug"></td>
+                                <td><input type="checkbox" name="rotary_valve_sep"></td>
+                                <td><input type="checkbox" name="rotary_valve_oct"></td>
+                                <td><input type="checkbox" name="rotary_valve_nov"></td>
+                                <td><input type="checkbox" name="rotary_valve_dec"></td>
+                            </tr>
+                            <tr>
+                                <td>Koji Machine</td>
+                                <td>1x/Month</td>
+                                <td><input type="checkbox" name="koji_machine_jan"></td>
+                                <td><input type="checkbox" name="koji_machine_feb"></td>
+                                <td><input type="checkbox" name="koji_machine_mar"></td>
+                                <td><input type="checkbox" name="koji_machine_apr"></td>
+                                <td><input type="checkbox" name="koji_machine_may"></td>
+                                <td><input type="checkbox" name="koji_machine_jun"></td>
+                                <td><input type="checkbox" name="koji_machine_jul"></td>
+                                <td><input type="checkbox" name="koji_machine_aug"></td>
+                                <td><input type="checkbox" name="koji_machine_sep"></td>
+                                <td><input type="checkbox" name="koji_machine_oct"></td>
+                                <td><input type="checkbox" name="koji_machine_nov"></td>
+                                <td><input type="checkbox" name="koji_machine_dec"></td>
+                            </tr>
+                            
+                            <!-- Fermentation Section -->
+                            <tr class="bg-light">
+                                <th colspan="14">Fermentation</th>
+                            </tr>
+                            <tr>
+                                <td>Tank agitators</td>
+                                <td>4x/yr</td>
+                                <td><input type="checkbox" name="ferm_tank_agitators_jan"></td>
+                                <td><input type="checkbox" name="ferm_tank_agitators_feb"></td>
+                                <td><input type="checkbox" name="ferm_tank_agitators_mar"></td>
+                                <td><input type="checkbox" name="ferm_tank_agitators_apr"></td>
+                                <td><input type="checkbox" name="ferm_tank_agitators_may"></td>
+                                <td><input type="checkbox" name="ferm_tank_agitators_jun"></td>
+                                <td><input type="checkbox" name="ferm_tank_agitators_jul"></td>
+                                <td><input type="checkbox" name="ferm_tank_agitators_aug"></td>
+                                <td><input type="checkbox" name="ferm_tank_agitators_sep"></td>
+                                <td><input type="checkbox" name="ferm_tank_agitators_oct"></td>
+                                <td><input type="checkbox" name="ferm_tank_agitators_nov"></td>
+                                <td><input type="checkbox" name="ferm_tank_agitators_dec"></td>
+                            </tr>
+                            
+                            <!-- Sake Storage Section -->
+                            <tr class="bg-light">
+                                <th colspan="14">Sake Storage</th>
+                            </tr>
+                            <tr>
+                                <td>Tank agitators</td>
+                                <td>4x/yr</td>
+                                <td><input type="checkbox" name="sake_tank_agitators_jan"></td>
+                                <td><input type="checkbox" name="sake_tank_agitators_feb"></td>
+                                <td><input type="checkbox" name="sake_tank_agitators_mar"></td>
+                                <td><input type="checkbox" name="sake_tank_agitators_apr"></td>
+                                <td><input type="checkbox" name="sake_tank_agitators_may"></td>
+                                <td><input type="checkbox" name="sake_tank_agitators_jun"></td>
+                                <td><input type="checkbox" name="sake_tank_agitators_jul"></td>
+                                <td><input type="checkbox" name="sake_tank_agitators_aug"></td>
+                                <td><input type="checkbox" name="sake_tank_agitators_sep"></td>
+                                <td><input type="checkbox" name="sake_tank_agitators_oct"></td>
+                                <td><input type="checkbox" name="sake_tank_agitators_nov"></td>
+                                <td><input type="checkbox" name="sake_tank_agitators_dec"></td>
+                            </tr>
+                            
+                            <!-- Vinegar Fermentation Section -->
+                            <tr class="bg-light">
+                                <th colspan="14">Vinegar Fermentation</th>
+                            </tr>
+                            <tr>
+                                <td>Discharge tanks agitators</td>
+                                <td>4x/yr</td>
+                                <td><input type="checkbox" name="discharge_tank_agitators_jan"></td>
+                                <td><input type="checkbox" name="discharge_tank_agitators_feb"></td>
+                                <td><input type="checkbox" name="discharge_tank_agitators_mar"></td>
+                                <td><input type="checkbox" name="discharge_tank_agitators_apr"></td>
+                                <td><input type="checkbox" name="discharge_tank_agitators_may"></td>
+                                <td><input type="checkbox" name="discharge_tank_agitators_jun"></td>
+                                <td><input type="checkbox" name="discharge_tank_agitators_jul"></td>
+                                <td><input type="checkbox" name="discharge_tank_agitators_aug"></td>
+                                <td><input type="checkbox" name="discharge_tank_agitators_sep"></td>
+                                <td><input type="checkbox" name="discharge_tank_agitators_oct"></td>
+                                <td><input type="checkbox" name="discharge_tank_agitators_nov"></td>
+                                <td><input type="checkbox" name="discharge_tank_agitators_dec"></td>
+                            </tr>
+                            
+                            <!-- Filtration Section -->
+                            <tr class="bg-light">
+                                <th colspan="14">Filtration</th>
+                            </tr>
+                            <tr>
+                                <td>Tank agitators</td>
+                                <td>4x/yr</td>
+                                <td><input type="checkbox" name="filtration_tank_agitators_jan"></td>
+                                <td><input type="checkbox" name="filtration_tank_agitators_feb"></td>
+                                <td><input type="checkbox" name="filtration_tank_agitators_mar"></td>
+                                <td><input type="checkbox" name="filtration_tank_agitators_apr"></td>
+                                <td><input type="checkbox" name="filtration_tank_agitators_may"></td>
+                                <td><input type="checkbox" name="filtration_tank_agitators_jun"></td>
+                                <td><input type="checkbox" name="filtration_tank_agitators_jul"></td>
+                                <td><input type="checkbox" name="filtration_tank_agitators_aug"></td>
+                                <td><input type="checkbox" name="filtration_tank_agitators_sep"></td>
+                                <td><input type="checkbox" name="filtration_tank_agitators_oct"></td>
+                                <td><input type="checkbox" name="filtration_tank_agitators_nov"></td>
+                                <td><input type="checkbox" name="filtration_tank_agitators_dec"></td>
+                            </tr>
+                            
+                            <!-- Blending Section -->
+                            <tr class="bg-light">
+                                <th colspan="14">Blending</th>
+                            </tr>
+                            <tr>
+                                <td>Tank agitators</td>
+                                <td>4x/yr</td>
+                                <td><input type="checkbox" name="blending_tank_agitators_jan"></td>
+                                <td><input type="checkbox" name="blending_tank_agitators_feb"></td>
+                                <td><input type="checkbox" name="blending_tank_agitators_mar"></td>
+                                <td><input type="checkbox" name="blending_tank_agitators_apr"></td>
+                                <td><input type="checkbox" name="blending_tank_agitators_may"></td>
+                                <td><input type="checkbox" name="blending_tank_agitators_jun"></td>
+                                <td><input type="checkbox" name="blending_tank_agitators_jul"></td>
+                                <td><input type="checkbox" name="blending_tank_agitators_aug"></td>
+                                <td><input type="checkbox" name="blending_tank_agitators_sep"></td>
+                                <td><input type="checkbox" name="blending_tank_agitators_oct"></td>
+                                <td><input type="checkbox" name="blending_tank_agitators_nov"></td>
+                                <td><input type="checkbox" name="blending_tank_agitators_dec"></td>
+                            </tr>
+                            
+                            <!-- Filling Section -->
+                            <tr class="bg-light">
+                                <th colspan="14">Filling</th>
+                            </tr>
+                            <tr>
+                                <td>Conveyor</td>
+                                <td>1x/Month</td>
+                                <td><input type="checkbox" name="filling_conveyor_jan"></td>
+                                <td><input type="checkbox" name="filling_conveyor_feb"></td>
+                                <td><input type="checkbox" name="filling_conveyor_mar"></td>
+                                <td><input type="checkbox" name="filling_conveyor_apr"></td>
+                                <td><input type="checkbox" name="filling_conveyor_may"></td>
+                                <td><input type="checkbox" name="filling_conveyor_jun"></td>
+                                <td><input type="checkbox" name="filling_conveyor_jul"></td>
+                                <td><input type="checkbox" name="filling_conveyor_aug"></td>
+                                <td><input type="checkbox" name="filling_conveyor_sep"></td>
+                                <td><input type="checkbox" name="filling_conveyor_oct"></td>
+                                <td><input type="checkbox" name="filling_conveyor_nov"></td>
+                                <td><input type="checkbox" name="filling_conveyor_dec"></td>
+                            </tr>
+                            <tr>
+                                <td>Bottle air rinser</td>
+                                <td>1x/Month</td>
+                                <td><input type="checkbox" name="bottle_rinser_jan"></td>
+                                <td><input type="checkbox" name="bottle_rinser_feb"></td>
+                                <td><input type="checkbox" name="bottle_rinser_mar"></td>
+                                <td><input type="checkbox" name="bottle_rinser_apr"></td>
+                                <td><input type="checkbox" name="bottle_rinser_may"></td>
+                                <td><input type="checkbox" name="bottle_rinser_jun"></td>
+                                <td><input type="checkbox" name="bottle_rinser_jul"></td>
+                                <td><input type="checkbox" name="bottle_rinser_aug"></td>
+                                <td><input type="checkbox" name="bottle_rinser_sep"></td>
+                                <td><input type="checkbox" name="bottle_rinser_oct"></td>
+                                <td><input type="checkbox" name="bottle_rinser_nov"></td>
+                                <td><input type="checkbox" name="bottle_rinser_dec"></td>
+                            </tr>
+                            <tr>
+                                <td>Filling machine (3)</td>
+                                <td>1x/Month</td>
+                                <td><input type="checkbox" name="filling_machine_jan"></td>
+                                <td><input type="checkbox" name="filling_machine_feb"></td>
+                                <td><input type="checkbox" name="filling_machine_mar"></td>
+                                <td><input type="checkbox" name="filling_machine_apr"></td>
+                                <td><input type="checkbox" name="filling_machine_may"></td>
+                                <td><input type="checkbox" name="filling_machine_jun"></td>
+                                <td><input type="checkbox" name="filling_machine_jul"></td>
+                                <td><input type="checkbox" name="filling_machine_aug"></td>
+                                <td><input type="checkbox" name="filling_machine_sep"></td>
+                                <td><input type="checkbox" name="filling_machine_oct"></td>
+                                <td><input type="checkbox" name="filling_machine_nov"></td>
+                                <td><input type="checkbox" name="filling_machine_dec"></td>
+                            </tr>
+                            <tr>
+                                <td>Capper</td>
+                                <td>1x/Month</td>
+                                <td><input type="checkbox" name="capper_jan"></td>
+                                <td><input type="checkbox" name="capper_feb"></td>
+                                <td><input type="checkbox" name="capper_mar"></td>
+                                <td><input type="checkbox" name="capper_apr"></td>
+                                <td><input type="checkbox" name="capper_may"></td>
+                                <td><input type="checkbox" name="capper_jun"></td>
+                                <td><input type="checkbox" name="capper_jul"></td>
+                                <td><input type="checkbox" name="capper_aug"></td>
+                                <td><input type="checkbox" name="capper_sep"></td>
+                                <td><input type="checkbox" name="capper_oct"></td>
+                                <td><input type="checkbox" name="capper_nov"></td>
+                                <td><input type="checkbox" name="capper_dec"></td>
+                            </tr>
+                            <tr>
+                                <td>Gallon Labeler</td>
+                                <td>as needed</td>
+                                <td><input type="checkbox" name="gallon_labeler_jan"></td>
+                                <td><input type="checkbox" name="gallon_labeler_feb"></td>
+                                <td><input type="checkbox" name="gallon_labeler_mar"></td>
+                                <td><input type="checkbox" name="gallon_labeler_apr"></td>
+                                <td><input type="checkbox" name="gallon_labeler_may"></td>
+                                <td><input type="checkbox" name="gallon_labeler_jun"></td>
+                                <td><input type="checkbox" name="gallon_labeler_jul"></td>
+                                <td><input type="checkbox" name="gallon_labeler_aug"></td>
+                                <td><input type="checkbox" name="gallon_labeler_sep"></td>
+                                <td><input type="checkbox" name="gallon_labeler_oct"></td>
+                                <td><input type="checkbox" name="gallon_labeler_nov"></td>
+                                <td><input type="checkbox" name="gallon_labeler_dec"></td>
+                            </tr>
+                            <tr>
+                                <td>Glass labeler</td>
+                                <td>as needed</td>
+                                <td><input type="checkbox" name="glass_labeler_jan"></td>
+                                <td><input type="checkbox" name="glass_labeler_feb"></td>
+                                <td><input type="checkbox" name="glass_labeler_mar"></td>
+                                <td><input type="checkbox" name="glass_labeler_apr"></td>
+                                <td><input type="checkbox" name="glass_labeler_may"></td>
+                                <td><input type="checkbox" name="glass_labeler_jun"></td>
+                                <td><input type="checkbox" name="glass_labeler_jul"></td>
+                                <td><input type="checkbox" name="glass_labeler_aug"></td>
+                                <td><input type="checkbox" name="glass_labeler_sep"></td>
+                                <td><input type="checkbox" name="glass_labeler_oct"></td>
+                                <td><input type="checkbox" name="glass_labeler_nov"></td>
+                                <td><input type="checkbox" name="glass_labeler_dec"></td>
+                            </tr>
+                            <tr>
+                                <td>5 Gal Line Conveyors</td>
+                                <td>as needed</td>
+                                <td><input type="checkbox" name="gal5_conveyor_jan"></td>
+                                <td><input type="checkbox" name="gal5_conveyor_feb"></td>
+                                <td><input type="checkbox" name="gal5_conveyor_mar"></td>
+                                <td><input type="checkbox" name="gal5_conveyor_apr"></td>
+                                <td><input type="checkbox" name="gal5_conveyor_may"></td>
+                                <td><input type="checkbox" name="gal5_conveyor_jun"></td>
+                                <td><input type="checkbox" name="gal5_conveyor_jul"></td>
+                                <td><input type="checkbox" name="gal5_conveyor_aug"></td>
+                                <td><input type="checkbox" name="gal5_conveyor_sep"></td>
+                                <td><input type="checkbox" name="gal5_conveyor_oct"></td>
+                                <td><input type="checkbox" name="gal5_conveyor_nov"></td>
+                                <td><input type="checkbox" name="gal5_conveyor_dec"></td>
+                            </tr>
+                            <tr>
+                                <td>5 Gal Line Carton Sealer</td>
+                                <td>as needed</td>
+                                <td><input type="checkbox" name="gal5_carton_sealer_jan"></td>
+                                <td><input type="checkbox" name="gal5_carton_sealer_feb"></td>
+                                <td><input type="checkbox" name="gal5_carton_sealer_mar"></td>
+                                <td><input type="checkbox" name="gal5_carton_sealer_apr"></td>
+                                <td><input type="checkbox" name="gal5_carton_sealer_may"></td>
+                                <td><input type="checkbox" name="gal5_carton_sealer_jun"></td>
+                                <td><input type="checkbox" name="gal5_carton_sealer_jul"></td>
+                                <td><input type="checkbox" name="gal5_carton_sealer_aug"></td>
+                                <td><input type="checkbox" name="gal5_carton_sealer_sep"></td>
+                                <td><input type="checkbox" name="gal5_carton_sealer_oct"></td>
+                                <td><input type="checkbox" name="gal5_carton_sealer_nov"></td>
+                                <td><input type="checkbox" name="gal5_carton_sealer_dec"></td>
+                            </tr>
+                            <tr class="bg-light">
+                                <th colspan="14">Material Handling</th>
+                            </tr>
+                            <tr>
+                                <td>Forklifts</td>
+                                <td>1x/yr</td>
+                                <td><input type="checkbox" name="forklifts_jan"></td>
+                                <td><input type="checkbox" name="forklifts_feb"></td>
+                                <td><input type="checkbox" name="forklifts_mar"></td>
+                                <td><input type="checkbox" name="forklifts_apr"></td>
+                                <td><input type="checkbox" name="forklifts_may"></td>
+                                <td><input type="checkbox" name="forklifts_jun"></td>
+                                <td><input type="checkbox" name="forklifts_jul"></td>
+                                <td><input type="checkbox" name="forklifts_aug"></td>
+                                <td><input type="checkbox" name="forklifts_sep"></td>
+                                <td><input type="checkbox" name="forklifts_oct"></td>
+                                <td><input type="checkbox" name="forklifts_nov"></td>
+                                <td><input type="checkbox" name="forklifts_dec"></td>
+                            </tr>
+                            </table>
+
+    
+                        <div class="signatory-table-section">
+                            <table class="table table-bordered">
+                                <tr class="custom-bg bg-light">
+                                    <th class="text-center">Reviewed By</th>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <div class="m-3 mb-5" style="display:flex; justify-content:center;">
+                                            <div>
+                                                <select id="signOption2" onchange="changeSigOption(2)"
+                                                    class="mb-3 p-2 d-print-none">
+                                                    <option value="D">Select Signature Option</option>
+                                                    <option value="D">Draw Signature</option>
+                                                    <option value="U">Upload Signature</option>
+                                                </select>
+                                                <div id="showD2" class="signature2"
+                                                    style="display:flex; justify-content:center;margin-bottom: 10px;">
+                                                    <div class="signature-pad-container">
+                                                        <div class="signature-pad" id="signature-pad2"></div><br>
+                                                        <button type="button"
+                                                            class="btn btn-flat btn-sm clear-btn2 d-print-none sig-clearBtn"
+                                                            onclick="resetSign(2)">Clear</button>
+                                                        <textarea class="signature-data-text d-none"
+                                                            name="reviewer_draw_sign" value="" readonly></textarea>
+                                                    </div>
+                                                </div>
+                                                <div id="showU2" class="signature2 d-none mb-2">
+                                                    <input type="file" id="m-actual-image2" name="reviewer_img_sign"
+                                                        onchange="dataURLv(this, 2)" style="margin-bottom:7px;"
+                                                        accept="image/png, image/jpeg" /><br>
+                                                    <img id="actual-image-res2" width="220" height="80" src="#" /><br>
+                                                    <button class="btn btn-flat btn-sm btn-danger mt-1" type="button"
+                                                        onclick="resetImage(2)">Remove</button>
+                                                </div>
+    
+                                                <div class="input-group input-group-sm">
+                                                    <input type="text" class="custom-input mb-1" name="reviewer_name"
+                                                        placeholder="Name">
+                                                </div>
+                                                <div class="input-group input-group-sm">
+                                                    <input type="date" class="custom-input" name="reviewed_date">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="text-center d-print-none" id="draft_record_buttons">
+                        <div class="d-flex justify-content-center">
+                            <select name="record_status" class="form-select-sm mx-2 fs-5 my-3">
+                                <option value="0" selected>Save as - <span class="text-danger">Draft</span></option>
+                                <option value="1">Save as - <span class="text-primary">Final</span></option>
+                            </select>
+                            <button type="button" class="btn btn-success my-3 fs-5" name="submit_form">Save Record</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>    
+    <script>
+        // <----------// Signature Area // -------->
+        $(function () {
+            $('.signature-pad').each(function (index) {
+                var uniqueId = 'signature-pad' + (index + 1);
+                $(this).attr('id', uniqueId);
+                $('#' + uniqueId).jSignature();
+
+                $('#' + uniqueId).on('change', function () {
+                    var signatureData = $(this).jSignature('getData', 'default');
+                    $(this).siblings('.signature-data-text').val(signatureData);
+
+                    var selectId = 'signOption' + (index + 1);
+                    if (signatureData && signatureData.length !== 0) {
+                        $('#' + selectId).prop('disabled', true);
+                    } else {
+                        $('#' + selectId).prop('disabled', false);
+                    }
+                });
+            });
+        })
+
+        // Reset the drawn signature
+        function resetSign(id) {
+            $('.clear-btn' + id).siblings('.signature-pad').jSignature('clear');
+            $('.clear-btn' + id).siblings('.signature-data-text').val('');
+            var selectId = 'signOption' + id;
+            $('#' + selectId).prop('disabled', false);
+        }
+
+        // Reset the uploaded signature image
+        function resetImage(id) {
+            $('#m-actual-image' + id).val('');
+            $('#actual-image-res' + id).removeAttr('src');
+            var selectId = 'signOption' + id;
+            $('#' + selectId).attr('disabled', false);
+        }
+
+        // Load image data from the file input and display it
+        function dataURLv(input, id) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                if (input.files[0].type.startsWith('image/')) {
+                    reader.onload = function (e) {
+                        $("#actual-image-res" + id).attr('src', e.target.result).css({
+                            "display": "block"
+                        });
+                        $("#clear-attachment-btn" + id).html(
+                            `<button class="mt-1 btn btn-flat btn-sm btn-danger" type="button" onclick="resetImage(${id})">Remove</button>`
+                        );
+                    };
+                    reader.readAsDataURL(input.files[0]);
+                }
+
+                var selectId = 'signOption' + id;
+                $('#' + selectId).prop('disabled', true);
+            } else {
+                var selectId = 'signOption' + id;
+                $('#' + selectId).prop('disabled', false);
+            }
+        }
+
+        function changeSigOption(id) {
+            var demovalue = $('#signOption' + id).val();
+            $('div.signature' + id).addClass('d-none');
+            $('#show' + demovalue + id).removeClass('d-none');
+        }
+        // <----------// Signature End // -------->
+    </script>
