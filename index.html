@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jSignature/2.1.3/jSignature.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<style type="text/css">
+    #company_logo_img {
+        object-fit: contain !important;
+    }
+
+    ::selection,
+    ::-moz-selection {
+        background-color: #E13300;
+        color: white;
+    }
+
+    body {
+        background-color: #fff;
+        margin: 40px;
+        color: #4F5155;
+    }
+
+    #container {
+        margin: 10px;
+        border: 1px solid #D0D0D0;
+        box-shadow: 0 0 8px #D0D0D0;
+        min-height: 90vh;
+    }
+
+    .signature-pad {
+        border-radius: 2px;
+        border: 1px dashed #ccc;
+        cursor: crosshair;
+        width: 300px;
+        height: auto;
+    }
+
+    table {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+	.custom-input{
+        /* border: none; */
+        border-radius: 4px;
+        padding: 7px;
+        border: 1px solid #c9c9c9;    
+        outline: none;
+        width: 100% !important;
+		transition: background 0.3s, box-shadow 0.3s;
+    }
+
+	.custom-input:focus {
+		background: #ffffff;
+		box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+		border: 1px solid #007bff;
+	}
+
+	.table {
+        border-color: #a7a7a7;
+    }
+
+	.table th, .table td{
+        font-size: 14.5px;
+    }
+
+	#container {
+		margin: 0 auto;
+	}
+
+	.container {
+		margin-top: 2rem;
+	}
+
+	.header-table th, .align-center {
+		text-align: center;
+		vertical-align: middle;
+	}
+	.questionaires-section-table td {
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	.signatory-table-section {
+        padding: 0px 20%;
+	}
+
+	.signatory-table-section-2 {
+        padding: 0px 30%;
+	}
+
+	.custom-input-2 {
+		width: 50px;
+		border-top: transparent;
+		border-left: transparent;
+		border-right: transparent;
+		border-bottom: 1px solid #000;
+		outline: none;
+		text-align: center;
+	}
+
+	.custom-input-3 {
+		width: 200px;
+		border-top: transparent;
+		border-left: transparent;
+		border-right: transparent;
+		border-bottom: 1px solid #000;
+		outline: none;
+	}
+
+	.purpose-section-header {
+		display: none;
+	}
+
+	input[type="radio"] {
+		cursor: pointer;
+	}
+	@media print {
+		.container, .signatory-table-section, #body {
+			margin-top: 0px !important;
+			padding: 0px !important;
+		}
+
+		.table-responsive {
+			overflow-x: hidden;
+		}
+	}
+</style>
+<body>
+    <div class="container">
+        <div id="head">
+            <div id="body" class="pb-2">
+                <form autocomplete="off" method="POST" action="?" class="pb-3" id="main_form" enctype="multipart/form-data">
+                    <div class="table-responsive">
+                        <table class="table table-bordered header-table mt-5">
+                            <thead>
+                                <tr>
+                                    <th rowspan="2" width="20%">
+                                        <img src="https://interlinkiq.com/uploads/avatar/527302%20-%20logo2.jpg" alt=""
+                                            width="200">
+                                    </th>
+                                    <th>
+                                        <strong>Food Defense Assessment</strong>
+                                    </th>
+                                    <th>
+                                        <span class="fw-normal">Issued Date</span> <br><strong>04/05/2024</strong>
+                                    </th>
+                                    <th rowspan="2">
+                                        <span class="fw-normal">Version No.</span> <br>
+                                        <strong>3</strong>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <span class="fw-normal">Code</span> <br>
+                                        <strong>FO-08-00-01-2.7.1</strong>
+                                    </th>
+                                    <th>
+                                        <span class="fw-normal">Supersedes Date</span> <br>
+                                        <strong>08/04/2017</strong>
+                                    </th>
+                                </tr>
+                            </thead>
+                        </table>
+    
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr style="background: transparent; border: transparent;">
+                                    <th colspan="4"
+                                        class="text-capitalize fw-bolder fs-5 pt-5 text-center">
+                                        <strong>Exterior Security</strong><br><br>
+                                    </th>
+                                </tr>
+    
+                                <tr style="border: transparent; padding-left: 0 !important;">
+                                    <td class="px-0 pb-3 text-start"
+                                        colspan="4">
+                                        <div id="changeThis">
+                                            1. What food defense measures does your plant have in place for the exterior of the building?
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="bg-light text-center">
+                                    <th></th>
+                                    <th width="10%">Yes</th>
+                                    <th width="10%">No</th>
+                                    <th width="10%">N/A</th>
+                                </tr>
+    
+                                <tr class="align-center">
+                                    <td></td>
+                                    <td>
+                                        <input type="radio" name="compliance[]" value="YES"> Yes <br>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="compliance[]" value="No"> No <br>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="compliance[]" value="N/A"> N/A <br>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="table table-bordered">
+                            <tbody>
+                            <tr class="bg-light">
+                                <th>Comment</th>
+                            </tr>
+                            <tr class="align-center">
+                                <td>
+                                    <textarea name="comments[]" row="3" class="custom-input"></textarea>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+    
+                        <div class="signatory-table-section">
+                            <table class="table table-bordered">
+                                <tr class="custom-bg bg-light">
+                                    <th class="text-center">Conducted By</th>
+                                    <th class="text-center">Reviewed By</th>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <div class="m-3 mb-5" style="display:flex; justify-content:center;">
+                                            <div>
+                                                <select id="signOption1" onchange="changeSigOption(1)"
+                                                    class="mb-3 p-2 d-print-none">
+                                                    <option value="D">Select Signature Option</option>
+                                                    <option value="D">Draw Signature</option>
+                                                    <option value="U">Upload Signature</option>
+                                                </select>
+                                                <div id="showD1" class="signature1"
+                                                    style="display:flex; justify-content:center;margin-bottom: 10px;">
+                                                    <div class="signature-pad-container">
+                                                        <div class="signature-pad" id="signature-pad1"></div><br>
+                                                        <button type="button"
+                                                            class="btn btn-flat btn-sm clear-btn clear-btn1 d-print-none"
+                                                            onclick="resetSign(1)">Clear</button>
+                                                        <textarea class="signature-data-text d-none"
+                                                            name="conductor_draw_sign" value="" readonly></textarea>
+                                                    </div>
+                                                </div>
+                                                <div id="showU1" class="signature1 d-none mb-2">
+                                                    <input type="file" id="m-actual-image1" name="conductor_img_sign"
+                                                        onchange="dataURLv(this, 1)" style="margin-bottom:7px;"
+                                                        accept="image/png, image/jpeg" /><br>
+                                                    <img id="actual-image-res1" width="220" height="80" src="#" /><br>
+                                                    <button class="btn btn-flat btn-sm btn-danger mt-1" id="imageRes1"
+                                                        type="button" onclick="resetImage(1)">Remove</button>
+                                                </div>
+                                                <div class="input-group input-group-sm">
+                                                    <input type="text" class="custom-input mb-1" name="conductor_name"
+                                                        placeholder="Name">
+                                                </div>
+                                                <div class="input-group input-group-sm">
+                                                    <input type="date" class="custom-input" name="conducted_date">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <div class="m-3 mb-5" style="display:flex; justify-content:center;">
+                                            <div>
+                                                <select id="signOption2" onchange="changeSigOption(2)"
+                                                    class="mb-3 p-2 d-print-none">
+                                                    <option value="D">Select Signature Option</option>
+                                                    <option value="D">Draw Signature</option>
+                                                    <option value="U">Upload Signature</option>
+                                                </select>
+                                                <div id="showD2" class="signature2"
+                                                    style="display:flex; justify-content:center;margin-bottom: 10px;">
+                                                    <div class="signature-pad-container">
+                                                        <div class="signature-pad" id="signature-pad2"></div><br>
+                                                        <button type="button"
+                                                            class="btn btn-flat btn-sm clear-btn2 d-print-none sig-clearBtn"
+                                                            onclick="resetSign(2)">Clear</button>
+                                                        <textarea class="signature-data-text d-none"
+                                                            name="reviewer_draw_sign" value="" readonly></textarea>
+                                                    </div>
+                                                </div>
+                                                <div id="showU2" class="signature2 d-none mb-2">
+                                                    <input type="file" id="m-actual-image2" name="reviewer_img_sign"
+                                                        onchange="dataURLv(this, 2)" style="margin-bottom:7px;"
+                                                        accept="image/png, image/jpeg" /><br>
+                                                    <img id="actual-image-res2" width="220" height="80" src="#" /><br>
+                                                    <button class="btn btn-flat btn-sm btn-danger mt-1" type="button"
+                                                        onclick="resetImage(2)">Remove</button>
+                                                </div>
+    
+                                                <div class="input-group input-group-sm">
+                                                    <input type="text" class="custom-input mb-1" name="reviewer_name"
+                                                        placeholder="Name">
+                                                </div>
+                                                <div class="input-group input-group-sm">
+                                                    <input type="date" class="custom-input" name="reviewed_date">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="text-center d-print-none" id="draft_record_buttons">
+                        <div class="d-flex justify-content-center">
+                            <select name="record_status" class="form-select-sm mx-2 fs-5 my-3">
+                                <option value="0" selected>Save as - <span class="text-danger">Draft</span></option>
+                                <option value="1">Save as - <span class="text-primary">Final</span></option>
+                            </select>
+                            <button type="button" class="btn btn-success my-3 fs-5" name="submit_form">Save Record</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>    
+    
+    <script>
+        $(document).ready(function(){
+            // document.getElementById("changeThis");
+            $('#changeThis').text("Change content")
+        });
+    </script>
+    <script>
+        // <----------// Signature Area // -------->
+        $(function () {
+            $('.signature-pad').each(function (index) {
+                var uniqueId = 'signature-pad' + (index + 1);
+                $(this).attr('id', uniqueId);
+                $('#' + uniqueId).jSignature();
+
+                $('#' + uniqueId).on('change', function () {
+                    var signatureData = $(this).jSignature('getData', 'default');
+                    $(this).siblings('.signature-data-text').val(signatureData);
+
+                    var selectId = 'signOption' + (index + 1);
+                    if (signatureData && signatureData.length !== 0) {
+                        $('#' + selectId).prop('disabled', true);
+                    } else {
+                        $('#' + selectId).prop('disabled', false);
+                    }
+                });
+            });
+        })
+
+        // Reset the drawn signature
+        function resetSign(id) {
+            $('.clear-btn' + id).siblings('.signature-pad').jSignature('clear');
+            $('.clear-btn' + id).siblings('.signature-data-text').val('');
+            var selectId = 'signOption' + id;
+            $('#' + selectId).prop('disabled', false);
+        }
+
+        // Reset the uploaded signature image
+        function resetImage(id) {
+            $('#m-actual-image' + id).val('');
+            $('#actual-image-res' + id).removeAttr('src');
+            var selectId = 'signOption' + id;
+            $('#' + selectId).attr('disabled', false);
+            console.log(id)
+            console.log(selectId)
+        }
+
+        // Load image data from the file input and display it
+        function dataURLv(input, id) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                if (input.files[0].type.startsWith('image/')) {
+                    reader.onload = function (e) {
+                        $("#actual-image-res" + id).attr('src', e.target.result).css({
+                            "display": "block"
+                        });
+                        $("#clear-attachment-btn" + id).html(
+                            `<button class="mt-1 btn btn-flat btn-sm btn-danger" type="button" onclick="resetImage(${id})">Remove</button>`
+                        );
+                    };
+                    reader.readAsDataURL(input.files[0]);
+                }
+
+                var selectId = 'signOption' + id;
+                $('#' + selectId).prop('disabled', true);
+            } else {
+                var selectId = 'signOption' + id;
+                $('#' + selectId).prop('disabled', false);
+            }
+        }
+
+
+        function changeSigOption(id) {
+            var demovalue = $('#signOption' + id).val();
+            $('div.signature' + id).addClass('d-none');
+            $('#show' + demovalue + id).removeClass('d-none');
+        }
+        // <----------// Signature End // -------->
+    </script>
+</body>
+</html>
