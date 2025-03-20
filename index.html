@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
     <title></title>
-    
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jSignature/2.1.3/jSignature.min.js"></script>
@@ -48,117 +48,91 @@
         margin-top: 20px;
     }
 
-    .custom-input{
+	.custom-input{
         /* border: none; */
         border-radius: 4px;
         padding: 7px;
         border: 1px solid #c9c9c9;    
         outline: none;
         width: 100% !important;
-        transition: background 0.3s, box-shadow 0.3s;
+		    transition: background 0.3s, box-shadow 0.3s;
     }
 
-    .custom-input:focus {
-        background: #ffffff;
-        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-        border: 1px solid #007bff;
-    }
+	.custom-input:focus {
+		background: #ffffff;
+		box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+		border: 1px solid #007bff;
+	}
 
-    .table {
+	.table {
         border-color: #a7a7a7;
     }
 
-    .table th, .table td{
+	.table th, .table td{
         font-size: 14.5px;
     }
 
-    #container {
-        margin: 0 auto;
-    }
+	#container {
+		margin: 0 auto;
+	}
 
-    .container {
-        margin-top: 2rem;
-    }
+	.container {
+		margin-top: 2rem;
+	}
 
-    .header-table th, .align-center {
-        text-align: center;
-        vertical-align: middle;
-    }
-    .questionaires-section-table td {
-        text-align: center;
-        vertical-align: middle;
-    }
+	.header-table th, .align-center {
+		text-align: center;
+		vertical-align: middle;
+	}
+	.questionaires-section-table td {
+		text-align: center;
+		vertical-align: middle;
+	}
 
-    .signatory-table-section {
+	.signatory-table-section {
         padding: 0px 20%;
-    }
+	}
 
-    .signatory-table-section-2 {
+	.signatory-table-section-2 {
         padding: 0px 30%;
-    }
+	}
 
-    .custom-input-2 {
-        width: 50px;
-        border-top: transparent;
-        border-left: transparent;
-        border-right: transparent;
-        border-bottom: 1px solid #000;
-        outline: none;
-        text-align: center;
-    }
+	.custom-input-2 {
+		width: 50px;
+		border-top: transparent;
+		border-left: transparent;
+		border-right: transparent;
+		border-bottom: 1px solid #000;
+		outline: none;
+		text-align: center;
+	}
 
-    .custom-input-3 {
-        width: 200px;
-        border-top: transparent;
-        border-left: transparent;
-        border-right: transparent;
-        border-bottom: 1px solid #000;
-        outline: none;
-    }
+	.custom-input-3 {
+		width: 200px;
+		border-top: transparent;
+		border-left: transparent;
+		border-right: transparent;
+		border-bottom: 1px solid #000;
+		outline: none;
+	}
 
-    .custom-input-4 {
-        width: 80%;
-        border-top: transparent;
-        border-left: transparent;
-        border-right: transparent;
-        border-bottom: 1px solid #000;
-        outline: none;
-    }
+	.purpose-section-header {
+		display: none;
+	}
 
-    .comments {
-        display: block;
-        width: 100%;
-        height: 120px; 
-        border: none;
-        border-bottom: 1px solid #000;
-        outline: none;
-        resize: none; 
-        line-height: 30px; 
-        font-size: 16px;
-        background: repeating-linear-gradient(
-            white, white 28px, 
-            black 29px, black 30px
-        ); 
-        padding: 5px;
-    }
+	input[type="radio"] {
+		cursor: pointer;
+	}
+	@media print {
+		.container, .signatory-table-section, #body {
+			margin-top: 0px !important;
+			padding: 0px !important;
+		}
 
-    .purpose-section-header {
-        display: none;
-    }
-
-    input[type="radio"] {
-        cursor: pointer;
-    }
-    @media print {
-        .container, .signatory-table-section, #body {
-            margin-top: 0px !important;
-            padding: 0px !important;
-        }
-
-        .table-responsive {
-            overflow-x: hidden;
-        }
-    }
+		.table-responsive {
+			overflow-x: hidden;
+		}
+	}
 </style>
 <body>
     <div class="container">
@@ -166,1822 +140,197 @@
             <div id="body" class="pb-2">
                 <form autocomplete="off" method="POST" action="?" class="pb-3" id="main_form" enctype="multipart/form-data">
                     <div class="table-responsive">
-                        <!-- Header -->
-                        <table class="table table-bordered header-table mt-5">
-                            <thead>
-                                <tr>
-                                    <th rowspan="2" width="20%">
-                                        <img src="https://interlinkiq.com/uploads/avatar/527302%20-%20logo2.jpg" alt=""
-                                            width="200">
-                                    </th>
-                                    <th>
-                                        <strong>Allergen Assessment Check List</strong>
-                                    </th>
-                                    <th>
-                                        <span class="fw-normal">Issued Date</span> <br><strong>03/04/2024</strong>
-                                    </th>
-                                    <th rowspan="2">
-                                        <span class="fw-normal">Version No.</span> <br>
-                                        <strong>4</strong>
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <span class="fw-normal">Code</span> <br>
-                                        <strong>FO-04-01-03-2.8.1.</strong>
-                                    </th>
-                                    <th>
-                                        <span class="fw-normal">Supersedes Date</span> <br>
-                                        <strong>05/07/2021</strong>
-                                    </th>
-                                </tr>
-                            </thead>
-                        </table>
+                      <!-- Header Table -->
+                      <table class="table table-bordered header-table mt-5 mb-0">
+                        <thead>
+                          <tr>
+                            <th rowspan="2" width="20%">
+                              <img src="https://interlinkiq.com/uploads/avatar/527302%20-%20logo2.jpg" alt="" width="200">
+                            </th>
+                            <th><strong>Food Defense Assessment</strong></th>
+                            <th>
+                              <span class="fw-normal">Issued Date</span><br>
+                              <strong>03/25/2024</strong>
+                            </th>
+                            <th rowspan="2">
+                              <span class="fw-normal">Version No.</span><br>
+                              <strong>2</strong>
+                            </th>
+                          </tr>
+                          <tr>
+                            <th><strong>FO-01-00-01-2.5.1 ii</strong></th>
+                            <th>
+                              <span class="fw-normal">Supersedes Date</span><br>
+                              <strong>12/14/2017</strong>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody class="align-middle" style="border-top: none">
+                          <tr>
+                            <td>
+                              Date:
+                              <input type="date" class="w-75 custom-input-3" name="date">
+                            </td>
+                            <td>
+                              Name:
+                              <input type="text" class="w-75 custom-input-3" name="name">
+                            </td>
+                            <td colspan="2">
+                              Title:
+                              <input type="text" class="w-75 custom-input-3" name="title">
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
 
-                        <!-- Facility: -->
-                        <table class="table table-borderless">
-                            <tbody >
-                                <tr>
-                                    <td class="d-flex align-items-center gap-2">
-                                        Facility:
-                                        <input type="text" class="custom-input-4 flex-grow-1" name="facility">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="d-flex align-items-center gap-2">
-                                        Assessment Team: 
-                                        <input type="text" class="custom-input-4 flex-grow-1" name="assessment_team">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Products produced: <input type="text" class="custom-input-3" name="products_produced"></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                      <!-- Validation Type Section -->
+                      <table class="table table-bordered m-0">
+                        <tbody class="align-middle text-center">
+                            <tr style="border-top: none;">
+                                <td class="w-35">
+                                  VALIDATE:
+                                </td>
+                                <td class="w-15">
+                                  <input type="checkbox" name="prp"> PRP
+                                </td> 
+                                <td class="w-15">
+                                  <input type="checkbox" name="ccp"> CCP
+                                </td> 
+                                <td class="w-15" style="border-right: none;">
+                                  <input type="checkbox" name="gmp"> GMP
+                              </td>      
+                              <td class="w-40" style="border-left: none;">
+                                  Associated Document Code:
+                                  <input type="text" class="custom-input-3" name="document_code">
+                              </td>  
+                            </tr>
+                        </tbody>
+                      </table>
+                    
 
-                        <!-- Allergens: -->
-                        <table class="table table-borderless">
-                            <thead>
-                                <tr>
-                                    <td colspan="3"><strong>Allergens:</strong></td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td width="25%">
-                                        <input type="checkbox" name="allergen[]" value="Celery">
-                                        Celery (root/stalk/leaf)
-                                    </td>
-                                    <td width="25%">
-                                        <input type="checkbox" name="allergen[]" value="Milk">
-                                        Milk (cow)
-                                    </td>
-                                    <td width="25%">
-                                        <input type="checkbox" name="allergen[]" value="Soybeans">
-                                        Soybeans
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox" name="allergen[]" value="Crustacean">
-                                        Crustacean
-                                    </td>
-                                    <td>
-                                        <input type="checkbox" name="allergen[]" value="Mollusk">
-                                        Mollusk
-                                    </td>
-                                    <td>
-                                        <input type="checkbox" name="allergen[]" value="Sulfites">
-                                        Sulfites
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox" name="allergen[]" value="Egg">
-                                        Egg
-                                    </td>
-                                    <td>
-                                        <input type="checkbox" name="allergen[]" value="Peanuts">
-                                        Peanuts
-                                    </td>
-                                    <td>
-                                        <input type="checkbox" name="allergen[]" value="Tree nuts">
-                                        Tree nuts
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox" name="allergen[]" value="Fish">
-                                        Fish
-                                    </td>
-                                    <td>
-                                        <input type="checkbox" name="allergen[]" value="Seeds">
-                                        Seeds: Cotton, Poppy, Sesame, Sunflower
-                                    </td>
-                                    <td>
-                                        <input type="checkbox" name="allergen[]" value="Wheat">
-                                        Wheat
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                      <!-- Method/s Used to Validate the Program: -->
+                      <table class="table table-bordered m-0">
+                        <tbody class="align-middle text-center">
+                          <tr style="border-top: none; border-bottom: none;">
+                            <td style="border-right: none;" >Method/s Used to Validate the Program:</td>
+                            <td style="border-left: none;">
+                              <input type="text" class="w-75 custom-input-3" name="method_validation">
+                            </td>       
+                          </tr>
+                          <tr style="border-top: none;">
+                            <td colspan="8">
+                              <textarea name="method_validation_details" rows="4" class="w-100"></textarea>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <!-- Result of Validation: -->
+                      <table class="table table-bordered m-0">
+                        <tbody class="align-middle text-center">
+                          <tr style="border-top: none;">
+                            <td colspan="2" class="w-50">Result of Validation:</td>
+                            <td class="w-25">Program Validated?</td>       
+                            <td><input type="radio" name="program_validated" value="yes"> Yes</td>       
+                            <td><input type="radio" name="program_validated" value="no"> No</td>                                
+                          </tr>                            
+                          <tr>
+                            <td colspan="8">
+                              <textarea name="validation_results" rows="4" class="w-100"></textarea>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
 
-                        <!-- Do any products have cross contact labeling? -->
-                        <table class="table table-borderless" >
-                            <tbody>
-                                <tr>
-                                    <td colspan="4">Do any products have cross contact labeling: 
-                                        YES <input type="radio" name="cross_contact" value="YES"> 
-                                        NO <input type="radio" name="cross_contact" value="NO">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="4" class="ps-5 d-flex align-items-center gap-2">If so, which products: <input type="text" class="custom-input-4 flex-grow-1" name="which_products"></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="4">Pending projects that may change allergen profile?: 
-                                        YES <input type="radio" name="pending_projects" value="YES"> 
-                                        NO <input type="radio" name="pending_projects" value="NO">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="4" class="ps-5 d-flex align-items-center gap-2">If so, new or absent allergens: <input type="text" class="custom-input-4 flex-grow-1" name="new_absent_allergen"></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="4">This checklist has been designed for use in Manukan Vinegar (U.S.A.), Inc. manufacturing facilities to aid in the tracking and understanding of where allergens occur in the facility.</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                      <!-- Corrective Actions if Program was not Validated -->
+                      <table class="table table-bordered m-0">
+                        <tbody class="align-middle text-center">
+                          <tr style="border-top: none;">
+                            <td colspan="2" class="w-50">Corrective Actions if Program was not Validated</td>
+                            <td class="w-25">Program Validated after CA?</td>       
+                            <td><input type="radio" name="program_validated_after_ca" value="yes"> Yes</td>       
+                            <td><input type="radio" name="program_validated_after_ca" value="no"> No</td>                                
+                          </tr>                            
+                          <tr>
+                            <td colspan="8">
+                              <textarea name="corrective_actions" rows="4" class="w-100"></textarea>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
 
-                        <!-- Allergen Management -->
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr style="border: transparent;">
-                                    <th colspan="5" class="text-danger"><strong>Allergen Management</strong></th>
-                                </tr>
-                                <tr class="align-center">
-                                    <th width="35%">Question/Statement</th>
-                                    <th width="5%" class="text-center">YES</th>
-                                    <th width="5%" class="text-center">NO</th>
-                                    <th width="5%" class="text-center">N/A</th>
-                                    <th width="50%" class="text-center">Observation/Recommendation</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="align-middle">
-                                    <td>Has the Management review team read and understood Food Allergen Controls and Cross Contact Allergen Labeling?</td>
-                                    <td class="text-center">
-                                        <input type="radio" name="allergen_q1_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="allergen_q1_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="allergen_q1_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="allergen_q1_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <!-- Training -->
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr style="border: transparent;">
-                                    <th colspan="5" class="text-danger"><strong>Training</strong></th>
-                                </tr>
-                                <tr class="align-center">
-                                    <th width="35%">Question/Statement</th>
-                                    <th width="5%" class="text-center">YES</th>
-                                    <th width="5%" class="text-center">NO</th>
-                                    <th width="5%" class="text-center">N/A</th>
-                                    <th width="50%" class="text-center">Observation/Recommendation</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="align-middle">
-                                    <td>Allergen training is included in employee orientation</td>
-                                    <td class="text-center">
-                                        <input type="radio" name="training_q1_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="training_q1_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="training_q1_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="training_q1_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>Employees receive allergen training as part of HACCP training</td>
-                                    <td class="text-center">
-                                        <input type="radio" name="training_q2_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="training_q2_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="training_q2_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="training_q2_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>Employees receive allergen specific training in addition to HACCP training</td>
-                                    <td class="text-center">
-                                        <input type="radio" name="training_q3_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="training_q3_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="training_q3_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="training_q3_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>
-                                        All employees at this manufacturing facility have been trained and understand the site program(s) concerning Food Allergen Controls.
-                                        <ul>
-                                            <li>Training records are documented.</li>
-                                            <li>All training records are up to date.</li>
-                                            <li>All training records are signed and dated appropriately.</li>
-                                        </ul>
-                                    </td>                                    
-                                    <td class="text-center">
-                                        <input type="radio" name="training_q4_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="training_q4_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="training_q4_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="training_q4_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>
-                                        A system is in place to easily identify employees who miss training and to ensure that they receive the required training
-                                    </td>                                    
-                                    <td class="text-center">
-                                        <input type="radio" name="training_q5_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="training_q5_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="training_q5_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="training_q5_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>
-                                        The CCP training is documented.
-                                    </td>                                    
-                                    <td class="text-center">
-                                        <input type="radio" name="training_q6_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="training_q6_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="training_q6_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="training_q6_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>
-                                        Project and Site Engineers and Maintenance personnel have been trained in Sanitary Design. Training is documented and filed-as needed.
-                                    </td>                                    
-                                    <td class="text-center">
-                                        <input type="radio" name="training_q7_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="training_q7_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="training_q7_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="training_q7_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>
-                                        Maintenance receives training that includes equipment modification and controls.
-                                    </td>                                    
-                                    <td class="text-center">
-                                        <input type="radio" name="training_q8_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="training_q8_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="training_q8_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="training_q8_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>
-                                        Visitors and contractors receive allergen training related to traffic patterns, controls, and restrictions.
-                                    </td>                                    
-                                    <td class="text-center">
-                                        <input type="radio" name="training_q9_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="training_q9_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="training_q9_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="training_q9_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <!-- Additional Comments -->
-                        <table class="table table-borderless">
-                            <tbody>
-                                <tr class="align-middle">
-                                    <td>
-                                        Additional Comments
-                                        <textarea name="training_comments" class="comments"></textarea>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <!-- HACCP--Allergen Identification and Risk Assessment -->
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr style="border: transparent;">
-                                    <th colspan="5" class="text-danger"><strong>HACCP--Allergen Identification and Risk Assessment</strong></th>
-                                </tr>
-                                <tr class="align-center">
-                                    <th width="35%">Question/Statement</th>
-                                    <th width="5%" class="text-center">YES</th>
-                                    <th width="5%" class="text-center">NO</th>
-                                    <th width="5%" class="text-center">N/A</th>
-                                    <th width="50%" class="text-center">Observation/Recommendation</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="align-middle">
-                                    <td>
-                                        The HACCP plan is designed around:
-                                        <ul>
-                                            <li>Production Line</li>
-                                            <li>Product Line</li>
-                                        </ul>
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="haccp_q1_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="haccp_q1_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="haccp_q1_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="haccp_q1_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>
-                                        All allergens listed within the HACCP Plans are documented on:
-                                        <ul>
-                                            <li>Ingredient Specs.</li>
-                                            <li>Batch cards/sheets</li>
-                                            <li>Product Formulations</li>
-                                            <li>Finished Product specifications?</li>
-                                            <li>Product label specifications</li>
-                                        </ul>
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="haccp_q2_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="haccp_q2_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="haccp_q2_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="haccp_q2_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>
-                                        CCPs invoked to control allergens are:
-                                        <ul>
-                                            <li>Product flush</li>
-                                            <li>Product change-over</li>
-                                            <li>Rework controls</li>
-                                            <li>Label inspection and application</li>
-                                        </ul>
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="haccp_q3_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="haccp_q3_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="haccp_q3_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="haccp_q3_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>
-                                        The appropriate HACCP plans are utilized for:
-                                        <ul>
-                                            <li>Plant trials</li>
-                                            <li>Scale-ups</li>
-                                            <li>Commercial runs</li>
-                                        </ul>
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="haccp_q4_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="haccp_q4_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="haccp_q4_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="haccp_q4_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>
-                                        Are there other potential sources of allergens within the manufacturing facility?
-                                        <ul>
-                                            <li>Processing aids</li>
-                                            <li>Cross-contaminants within the Facility <br>
-                                            (cafeteria/lunchroom)</li>
-                                            <li>Packaging materials</li>
-                                        </ul>
-                                        Ingredient carrier
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="haccp_q5_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="haccp_q5_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="haccp_q5_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="haccp_q5_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>
-                                        Are latex gloves used in contact with products?
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="haccp_q6_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="haccp_q6_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="haccp_q6_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="haccp_q6_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <!-- Additional Comments -->
-                        <table class="table table-borderless">
-                            <tbody>
-                                <tr class="align-middle">
-                                    <td>
-                                        Additional Comments
-                                        <textarea name="haccp_comments" class="comments"></textarea>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <!-- Receiving and Handling -->
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr style="border: transparent;">
-                                    <th colspan="5" class="text-danger"><strong>Receiving and Handling</strong></th>
-                                </tr>
-                                <tr class="align-center">
-                                    <th width="35%">Question/Statement</th>
-                                    <th width="5%" class="text-center">YES</th>
-                                    <th width="5%" class="text-center">NO</th>
-                                    <th width="5%" class="text-center">N/A</th>
-                                    <th width="50%" class="text-center">Observation/Recommendation</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="align-middle">
-                                    <td>
-                                        There is a current list of allergens used within the site in the Receiving Dept.
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="receiving_handling_q1_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="receiving_handling_q1_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="receiving_handling_q1_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="receiving_handling_q1_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>
-                                        Upon receipt, allergenic ingredients are identified and labeled to immediately facilitate an allergen alert.
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="receiving_handling_q2_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="receiving_handling_q2_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="receiving_handling_q2_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="receiving_handling_q2_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>
-                                        Allergens are segregated from non-allergens in the receiving warehouse facility.
-                                        <ul>
-                                            <li>Area is visibly designated.</li>
-                                            <li>Allergens are stored below non-allergens.</li>
-                                        </ul>
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="receiving_handling_q3_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="receiving_handling_q3_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="receiving_handling_q3_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="receiving_handling_q3_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>
-                                        Allergen identification is in place throughout the process from receipt to labeled finished product on:
-                                        <ul>
-                                            <li>Ingredients</li>
-                                            <li>LMIs*/WIP</li>
-                                            <li>Hold-over</li>
-                                            <li>Rework</li>
-                                        </ul>
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="receiving_handling_q4_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="receiving_handling_q4_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="receiving_handling_q4_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="receiving_handling_q4_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>
-                                        Allergens stored in bulk
-                                        <ul>
-                                            <li>Are contained and tracked.</li>
-                                            <li>Are contained to manage cross-contact.</li>
-                                            <li>Have isolated weighing and transfer systems.</li>
-                                            <li>If a shared system exists, are proper controls in place to eliminate cross-contamination risk?</li>
-                                        </ul>
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="receiving_handling_q5_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="receiving_handling_q5_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="receiving_handling_q5_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="receiving_handling_q5_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>
-                                        Allergens packaged in single containers (pails, drums, barrels, bags, etc.)
-                                        <ul>
-                                            <li>Are containers reused in other production areas (salvage, cleaning, etc.)?</li>
-                                            <li>Are containers for recycling stored separately from other materials?</li>
-                                        </ul>                                        
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="receiving_handling_q6_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="receiving_handling_q6_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="receiving_handling_q6_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="receiving_handling_q6_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr style="border: transparent; padding-left: 0 !important;">
-                                    <td colspan="5">*LMI-- Locally Manufactured Ingredient – An interim product/ingredient.</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <!-- Additional Comments -->
-                        <table class="table table-borderless w-100">
-                            <tbody>
-                                <tr class="align-middle">
-                                    <td class="w-auto text-nowrap"><strong>Additional Comments</strong></td>
-                                    <td class="w-100">
-                                        <input type="text" name="receiving_handling_comments" class="custom-input-3 w-100">
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        
-                        <!-- Scheduling -->
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr style="border: transparent;">
-                                    <th colspan="6"><strong>Scheduling</strong></th>
-                                </tr>
-                                <tr class="align-center">
-                                    <th width="35%">Question/Statement</th>
-                                    <th width="5%" class="text-center">YES</th>
-                                    <th width="5%" class="text-center">NO</th>
-                                    <th width="5%" class="text-center">N/A</th>
-                                    <th width="30%" class="text-center">Observation/Recommendation</th>
-                                    <th width="20%" class="text-center">Responsibility</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="align-middle">
-                                    <td>
-                                        Allergen-containing products follow allergen-free products.
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="scheduling_q1_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="scheduling_q1_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="scheduling_q1_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="scheduling_q1_observation" class="custom-input" ></textarea>
-                                    </td>
-                                    <td>
-                                        <textarea name="scheduling_q1_responsibility" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>
-                                        An appropriate production matrix is readily available.
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="scheduling_q2_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="scheduling_q2_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="scheduling_q2_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="scheduling_q2_observation" class="custom-input" ></textarea>
-                                    </td>
-                                    <td>
-                                        <textarea name="scheduling_q2_responsibility" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>
-                                        The appropriate production matrix is adhered to. This is documented and filed
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="scheduling_q3_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="scheduling_q3_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="scheduling_q3_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="scheduling_q3_observation" class="custom-input" ></textarea>
-                                    </td>
-                                    <td>
-                                        <textarea name="scheduling_q3_responsibility" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        
-                        <!-- Work-in-process, LMI’s, WIP, Rework and Hold-over Controls -->
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr style="border: transparent;">
-                                    <th colspan="5" class="text-danger"><strong><u>Work-in-process, LMI’s, WIP, Rework and Hold-over Controls</u></strong></th>
-                                </tr>
-                                <tr class="align-center">
-                                    <th width="35%">Question/Statement</th>
-                                    <th width="5%" class="text-center">YES</th>
-                                    <th width="5%" class="text-center">NO</th>
-                                    <th width="5%" class="text-center">N/A</th>
-                                    <th width="50%" class="text-center">Observation/Recommendation</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="align-middle">
-                                    <td>Rework is handled as:
-                                        <ul>
-                                            <li>As <b>ONLY</b> exact into exact</li>
-                                            <li>Other product appropriately labeled</li>
-                                        </ul>                                        
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="work_process_q1_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="work_process_q1_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="work_process_q1_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="work_process_q1_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>Rework containers are labeled with
-                                        <ul>
-                                            <li>Product Description</li>
-                                            <li>Declared allergen</li>
-                                            <li>Date</li>
-                                        </ul>                                        
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="work_process_q2_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="work_process_q2_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="work_process_q2_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="work_process_q2_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>Rework containers are:
-                                        <ul>
-                                            <li>Tracked throughout the process.</li>
-                                            <li>Inventoried and reconciled.</li>
-                                        </ul>  
-                                        Segregated from non-allergens or other allergens.                                      
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="work_process_q3_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="work_process_q3_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="work_process_q3_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="work_process_q3_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>
-                                        Each unit (pallet, drum, tote, etc.) of allergen-containing material is identified with a color-coded allergen warning marking.
-                                    </td>                                    
-                                    <td class="text-center">
-                                        <input type="radio" name="work_process_q4_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="work_process_q4_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="work_process_q4_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="work_process_q4_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>
-                                        Effective rework/hold-over inventory controls are established and demonstrated.
-                                    </td>                                    
-                                    <td class="text-center">
-                                        <input type="radio" name="work_process_q5_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="work_process_q5_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="work_process_q5_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="work_process_q5_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>
-                                        Usage of rework/holdover/ is clearly documented to assure traceability.
-                                    </td>                                    
-                                    <td class="text-center">
-                                        <input type="radio" name="work_process_q6_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="work_process_q6_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="work_process_q6_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="work_process_q6_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>
-                                        Animal feed and waste containers with allergens handled and stored appropriately prior to exiting plant?
-                                    </td>                                    
-                                    <td class="text-center">
-                                        <input type="radio" name="work_process_q7_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="work_process_q7_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="work_process_q7_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="work_process_q7_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <!-- Additional Comments -->
-                        <table class="table table-borderless">
-                            <tbody>
-                                <tr class="align-middle">
-                                    <td>
-                                        Additional Comments
-                                        <textarea name="work_process_comments" class="comments"></textarea>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <!-- Traceability -->
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr style="border: transparent;">
-                                    <th colspan="5" class="text-danger"><strong>Traceability</strong></th>
-                                </tr>
-                                <tr class="align-center">
-                                    <th width="35%">Question/Statement</th>
-                                    <th width="5%" class="text-center">YES</th>
-                                    <th width="5%" class="text-center">NO</th>
-                                    <th width="5%" class="text-center">N/A</th>
-                                    <th width="50%" class="text-center">Observation/Recommendation</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="align-middle">
-                                    <td>The facility has documented procedures to ensure the traceability of:
-                                        <ul>
-                                            <li>Ingredients</li>
-                                            <li>Packaging materials</li>
-                                            <li>Work-in-process (LMIs/rework/hold-over)</li>
-                                            <li>Finished goods</li>
-                                            <li>Finished goods returned from the trade</li>
-                                        </ul>
-                                                                            
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="traceability_q1_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="traceability_q1_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="traceability_q1_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="traceability_q1_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>Mock recalls are conducted on regular basis and documented                                      
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="traceability_q2_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="traceability_q2_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="traceability_q2_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="traceability_q2_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <!-- Additional Comments -->
-                        <table class="table table-borderless">
-                            <tbody>
-                                <tr class="align-middle">
-                                    <td>
-                                        Additional Comments
-                                        <textarea name="traceability_comments" class="comments"></textarea>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <!-- Hold & Release -->
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr style="border: transparent;">
-                                    <th colspan="5" class="text-danger"><strong>Hold & Release</strong></th>
-                                </tr>
-                                <tr class="align-center">
-                                    <th width="35%">Question/Statement</th>
-                                    <th width="5%" class="text-center">YES</th>
-                                    <th width="5%" class="text-center">NO</th>
-                                    <th width="5%" class="text-center">N/A</th>
-                                    <th width="50%" class="text-center">Observation/Recommendation</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="align-middle">
-                                    <td>The site has a documented Hold and Release program in place                                   
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="hold_release_q1_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="hold_release_q1_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="hold_release_q1_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="hold_release_q1_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <!-- Additional Comments -->
-                        <table class="table table-borderless">
-                            <tbody>
-                                <tr class="align-middle">
-                                    <td>
-                                        Additional Comments
-                                        <textarea name="hold_release_comments" class="comments"></textarea>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <!-- Facility and Structure -->
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr style="border: transparent;">
-                                    <th colspan="5" class="text-danger"><strong>Facility and Structure</strong></th>
-                                </tr>
-                                <tr class="align-center">
-                                    <th width="35%">Question/Statement</th>
-                                    <th width="5%" class="text-center">YES</th>
-                                    <th width="5%" class="text-center">NO</th>
-                                    <th width="5%" class="text-center">N/A</th>
-                                    <th width="50%" class="text-center">Observation/Recommendation</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="align-middle">
-                                    <td>On areas where allergens and non or other allergens are manufactured there is:
-                                        <ul>
-                                            <li>Physical separation</li>
-                                            <li>The separation is sufficient to prevent cross-over of allergenic materials.</li>
-                                            <li>Air handling is sufficient to prevent the movement of air from allergen zones to non/other allergen areas?</li>
-                                            <li>Personnel fans are not directed away from allergen zones to non/other allergen areas?</li>
-                                            <li>Common pipes, valves, or equipment have been identified and are controlled.</li>
-                                        </ul>                               
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="facility_structure_q1_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="facility_structure_q1_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="facility_structure_q1_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="facility_structure_q1_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>Ceilings, walls, floors and fixtures are:
-                                        <ul>
-                                            <li>Free from cracks and crevices</li>
-                                            <li>Smooth</li>
-                                            <li>Easy to clean</li>
-                                        </ul>                                        
-                                        (Principles of Sanitary Design)
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="facility_structure_q2_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="facility_structure_q2_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="facility_structure_q2_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="facility_structure_q2_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <!-- Additional Comments -->
-                        <table class="table table-borderless">
-                            <tbody>
-                                <tr class="align-middle">
-                                    <td>
-                                        Additional Comments
-                                        <textarea name="facility_structure_comments" class="comments"></textarea>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <!-- Manufacturing Controls and Product Change-over -->
-                        <!-- Equipment -->
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr style="border: transparent;">
-                                    <th colspan="4" class="text-danger"><strong>Manufacturing Controls and Product Change-over</strong></th>
-                                </tr>
-                                <tr>
-                                    <th colspan="5" class="text-danger"><strong>Equipment</strong></th>
-                                </tr>
-                                <tr class="align-center">
-                                    <th width="35%">Question/Statement</th>
-                                    <th width="5%" class="text-center">YES</th>
-                                    <th width="5%" class="text-center">NO</th>
-                                    <th width="5%" class="text-center">N/A</th>
-                                    <th width="50%" class="text-center">Observation/Recommendation</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="align-middle">
-                                    <td>On lines where there is a common allergen, are any other allergens used on this line or equipment?          
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="equipment_q1_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="equipment_q1_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="equipment_q1_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="equipment_q1_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>If equipment is shared:
-                                        <ul>
-                                            <li>There are written cleaning procedures in place.</li>
-                                            <li>A product flush is used.</li>
-                                            <li>The appropriate CCPs are in place.</li>
-                                            <li>There is a post-cleaning inspection for each change-over.</li>
-                                            <li>There is a pre-operational inspection for each changeover.</li>
-                                            <li>It is documented.</li>
-                                        </ul>                                                               
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="equipment_q2_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="equipment_q2_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="equipment_q2_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="equipment_q2_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>A Brush Control Program is in place? <br>
-                                        (Sanitation Controls)                                                            
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="equipment_q3_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="equipment_q3_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="equipment_q3_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="equipment_q3_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>Utensils/Brushes/Containers/ vacuums, etc. are color-coded and/or labeled and stored separately in order to be dedicated for specific allergens. <br>
-                                        Is segregated storage available?                                                       
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="equipment_q4_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="equipment_q4_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="equipment_q4_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="equipment_q4_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>The appropriate changeover procedure is in place (product flush, cleaning protocol, etc.) <br><br>
-                                    The rationale/risk assessment for this approach is documented                                                   
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="equipment_q5_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="equipment_q5_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="equipment_q5_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="equipment_q5_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <!-- Additional Comments -->
-                        <table class="table table-borderless">
-                            <tbody>
-                                <tr class="align-middle">
-                                    <td>
-                                        Additional Comments
-                                        <textarea name="equipment_comments" class="comments"></textarea>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <!-- Manufacturing Controls and Product Change-over (con’t.) -->
-                        <!-- Product Changeovers -->
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr style="border: transparent;">
-                                    <th colspan="4" class="text-danger"><strong>Manufacturing Controls and Product Change-over (con’t.)</strong></th>
-                                </tr>
-                                <tr>
-                                    <th colspan="5" class="text-danger"><strong>Product Changeovers</strong></th>
-                                </tr>
-                                <tr class="align-center">
-                                    <th width="35%">Question/Statement</th>
-                                    <th width="5%" class="text-center">YES</th>
-                                    <th width="5%" class="text-center">NO</th>
-                                    <th width="5%" class="text-center">N/A</th>
-                                    <th width="50%" class="text-center">Observation/Recommendation</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="align-middle">
-                                    <td>There are:  
-                                        <ul>
-                                            <li>Post-Clean</li>
-                                            <li>Pre-Operational Inspections</li>
-                                            <li>Inspections.</li>
-                                        </ul>    
-                                                
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="product_changeovers_q1_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="product_changeovers_q1_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="product_changeovers_q1_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="product_changeovers_q1_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>All inspections are documented                                 
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="product_changeovers_q2_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="product_changeovers_q2_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="product_changeovers_q2_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="product_changeovers_q2_observation" class="custom-input" ></textarea>
-                                    </td>
-                            </tbody>
-                        </table>
-                        <!-- Additional Comments -->
-                        <table class="table table-borderless">
-                            <tbody>
-                                <tr class="align-middle">
-                                    <td>
-                                        Additional Comments
-                                        <textarea name="product_changeovers_comments" class="comments"></textarea>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        
-                        <!-- Cleaning Procedures -->
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th colspan="5" class="text-danger"><strong>Cleaning procedures</strong></th>
-                                </tr>
-                                <tr class="align-center">
-                                    <th width="35%">Question/Statement</th>
-                                    <th width="5%" class="text-center">YES</th>
-                                    <th width="5%" class="text-center">NO</th>
-                                    <th width="5%" class="text-center">N/A</th>
-                                    <th width="50%" class="text-center">Observation/Recommendation</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="align-middle">
-                                    <td>Cleaning procedures include:
-                                        <ul>
-                                            <li>Specific notation on whether to wet or dry clean</li>
-                                            <li>Steps/Instructions on “How to” clean</li>
-                                            <li>A list of tools for cleaning</li>
-                                            <li>A list of chemicals for cleaning and their strengths</li>
-                                            <li>PPE*</li>
-                                            <li>Frequency of cleaning and/or matrix</li>
-                                        </ul>                                                 
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="cleaning_procedures_q1_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="cleaning_procedures_q1_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="cleaning_procedures_q1_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="cleaning_procedures_q1_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>The equipment is easily accessible for cleaning and inspecting?                              
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="cleaning_procedures_q2_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="cleaning_procedures_q2_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="cleaning_procedures_q2_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="cleaning_procedures_q2_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>The criterion for inspection is “no visible product residue”?                            
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="cleaning_procedures_q3_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="cleaning_procedures_q3_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="cleaning_procedures_q3_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="cleaning_procedures_q3_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <!-- Additional Comments -->
-                        <table class="table table-borderless">
-                            <tbody>
-                                <tr class="align-middle">
-                                    <td>
-                                        Additional Comments
-                                        <textarea name="cleaning_procedures_comments" class="comments"></textarea>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <!-- Manufacturing Controls and Product Change-over (con’t.) -->
-                        <!-- Cleaning Procedures (con’t.)-->
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr style="border: transparent;">
-                                    <th colspan="4" class="text-danger"><strong>Manufacturing Controls and Product Change-over (con’t.)</strong></th>
-                                </tr>
-                                <tr>
-                                    <th colspan="5" class="text-danger"><strong>Cleaning Procedures (con’t.)</strong></th>
-                                </tr>
-                                <tr class="align-center">
-                                    <th width="35%">Question/Statement</th>
-                                    <th width="5%" class="text-center">YES</th>
-                                    <th width="5%" class="text-center">NO</th>
-                                    <th width="5%" class="text-center">N/A</th>
-                                    <th width="50%" class="text-center">Observation/Recommendation</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="align-middle">
-                                    <td>All Post-Cleaning/Pre-Op Inspections include looking in:
-                                        <ul>
-                                            <li>Cracks</li>
-                                            <li>Crevices</li>
-                                            <li>Corners</li>
-                                            <li>Complex assemblies</li>
-                                            <li>Floors</li>
-                                            <li>Places where products can accumulate</li>
-                                        </ul>                                 
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="cleaning_procedures_cont_q1_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="cleaning_procedures_cont_q1_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="cleaning_procedures_cont_q1_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="cleaning_procedures_cont_q1_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>Inspections are based on:
-                                        <ul>
-                                            <li>ATP / NEOGEN swabs</li>
-                                            <li>Visual inspection</li>
-                                        </ul>                 
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="cleaning_procedures_cont_q2_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="cleaning_procedures_cont_q2_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="cleaning_procedures_cont_q2_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="cleaning_procedures_cont_q2_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <!-- Additional Comments -->
-                        <table class="table table-borderless">
-                            <tbody>
-                                <tr class="align-middle">
-                                    <td>
-                                        Additional Comments
-                                        <textarea name="cleaning_procedures_cont_comments" class="comments"></textarea>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <!-- Processing -->
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th colspan="5" class="text-danger"><strong>Processing</strong></th>
-                                </tr>
-                                <tr class="align-center">
-                                    <th width="35%">Question/Statement</th>
-                                    <th width="5%" class="text-center">YES</th>
-                                    <th width="5%" class="text-center">NO</th>
-                                    <th width="5%" class="text-center">N/A</th>
-                                    <th width="50%" class="text-center">Observation/Recommendation</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="align-middle">
-                                    <td>Cross-contact is likely to occur from:
-                                        <ul>
-                                            <li>Allergen residuals</li>
-                                            <li>Surrounding equipment</li>
-                                            <li>Adjacent lines</li>
-                                            <li>Environmental factors</li>
-                                            <li>Maintenance activities</li>
-                                            <li>Outside contractor activities</li>
-                                        </ul>                                  
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="processing_q1_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="processing_q1_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="processing_q1_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="processing_q1_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>Unpackaged, exposed product is handled in a way that protects it against allergen cross-contact.                            
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="processing_q2_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="processing_q2_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="processing_q2_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="processing_q2_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>There are product conveyors that crossover other conveyors                          
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="processing_q3_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="processing_q3_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="processing_q3_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="processing_q3_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>Open vibratory conveyors are used to move product through production                        
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="processing_q4_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="processing_q4_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="processing_q4_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="processing_q4_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>If there is allergen and non- allergen product mixed it is disposed of:
-                                        <ul>
-                                            <li> As waste</li>
-                                            <li>As animal feed</li>
-                                            <li>Rework </li>
-                                        </ul>                         
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="processing_q5_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="processing_q5_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="processing_q5_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="processing_q5_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <!-- Additional Comments -->
-                        <table class="table table-borderless">
-                            <tbody>
-                                <tr class="align-middle">
-                                    <td>
-                                        Additional Comments
-                                        <textarea name="processing_comments" class="comments"></textarea>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <!-- Proper Labeling -->
-                        <!-- Packaging -->
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr style="border: transparent;">
-                                    <th colspan="5" class="text-danger"><strong><u>Proper Labeling</u></strong></th>
-                                </tr>
-                                <tr>
-                                    <th colspan="5"><strong>Packaging</strong></th>
-                                </tr>
-                                <tr class="align-center">
-                                    <th width="35%">Question/Statement</th>
-                                    <th width="5%" class="text-center">YES</th>
-                                    <th width="5%" class="text-center">NO</th>
-                                    <th width="5%" class="text-center">N/A</th>
-                                    <th width="50%" class="text-center">Observation/Recommendation</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="align-middle">
-                                    <td>There are procedures in place to detect mixed packaging or labels received from suppliers.                                   
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="packaging_q1_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="packaging_q1_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="packaging_q1_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="packaging_q1_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>Incoming packaging is inspected for supplier accuracy.                                     
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="packaging_q2_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="packaging_q2_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="packaging_q2_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="packaging_q2_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th colspan="5"><strong>Labeling</strong></th>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>There is a document that outlines the inspection of the finished product to ensure that allergens are appropriately labeled. i.e. product label matches product.                                     
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="labeling_q1_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="labeling_q1_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="labeling_q1_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="labeling_q1_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>Are any ingredients designated as “may contain” allergens?
-                                        <ul>
-                                            <li>This ingredient is identified on the finished product label?</li>
-                                        </ul>
-                                    </td>                                    
-                                    <td class="text-center">
-                                        <input type="radio" name="labeling_q2_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="labeling_q2_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="labeling_q2_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="labeling_q2_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>
-                                        There are procedures in place to:
-                                        <ul>
-                                            <li>Ensure that operators completely remove packaging and labels from the line during changeover.</li>
-                                            <li>Prevent mixing of unused packaging materials returned to storage.</li>
-                                        </ul>                                        
-                                    </td>                                    
-                                    <td class="text-center">
-                                        <input type="radio" name="labeling_q3_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="labeling_q3_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="labeling_q3_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="labeling_q3_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <!-- Additional Comments -->
-                        <table class="table table-borderless">
-                            <tbody>
-                                <tr class="align-middle">
-                                    <td>
-                                        Additional Comments
-                                        <textarea name="labeling_comments" class="comments"></textarea>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <!-- Traffic Patterns -->
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr style="border: transparent;">
-                                    <th colspan="5" class="text-danger"><strong>Traffic Patterns</strong></th>
-                                </tr>
-                                <tr class="align-center">
-                                    <th width="35%">Question/Statement</th>
-                                    <th width="5%" class="text-center">YES</th>
-                                    <th width="5%" class="text-center">NO</th>
-                                    <th width="5%" class="text-center">N/A</th>
-                                    <th width="50%" class="text-center">Observation/Recommendation</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="align-middle">
-                                    <td>Traffic patterns are controlled to minimize the cross-contact of allergens:
-                                        <ul>
-                                            <li>Employee traffic</li>
-                                            <li>Forklift traffic</li>
-                                            <li>Material handling equipment</li>
-                                        </ul>                                                                          
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="traffic_pattern_q1_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="traffic_pattern_q1_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="traffic_pattern_q1_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="traffic_pattern_q1_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>Is there signage to indicate allergens of concern in designated areas?                                     
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="traffic_pattern_q2_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="traffic_pattern_q2_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="traffic_pattern_q2_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="traffic_pattern_q2_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <!-- Additional Comments -->
-                        <table class="table table-borderless">
-                            <tbody>
-                                <tr class="align-middle">
-                                    <td>
-                                        Additional Comments
-                                        <textarea name="traffic_pattern_comments" class="comments"></textarea>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <!-- Best Practices -->
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr style="border: transparent;">
-                                    <th colspan="5" class="text-danger"><strong>Best Practices</strong></th>
-                                </tr>
-                                <tr class="align-center">
-                                    <th width="35%">Question/Statement</th>
-                                    <th width="5%" class="text-center">YES</th>
-                                    <th width="5%" class="text-center">NO</th>
-                                    <th width="5%" class="text-center">N/A</th>
-                                    <th width="50%" class="text-center">Observation/Recommendation</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="align-middle">
-                                    <td>This plant has some best practices for allergen control which would be beneficial in other production facilities                  
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="best_practices_q1_answer" value="YES">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="best_practices_q1_answer" value="NO">
-                                    </td>
-                                    <td class="text-center">
-                                        <input type="radio" name="best_practices_q1_answer" value="NA">
-                                    </td>
-                                    <td>
-                                        <textarea name="best_practices_q1_observation" class="custom-input" ></textarea>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <!-- Additional Comments -->
-                        <table class="table table-borderless">
-                            <tbody>
-                                <tr class="align-middle">
-                                    <td>
-                                        Additional Comments
-                                        <textarea name="best_practices_comments" class="comments"></textarea>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                      <!-- Signature Section -->
+                      <table class="table table-bordered m-0">
+                        <tbody class="align-middle text-center">
+                          <tr style="border-top: none;">
+                            <td class="w-50">
+                              Next Validation Date:
+                              <input type="date" class="w-25 custom-input-3" name="validation_date">
+                            </td>
+                            <td>
+                              Signature:
+                              <input type="text" class="w-50 custom-input-3" name="signature">
+                            </td>       
+                            <td>
+                              Date:
+                              <input type="date" class="w-75 custom-input-3" name="date_signed">
+                            </td>       
+                          </tr>  
+                        </tbody>
+                      </table>
+    
+                      <div class="signatory-table-section">
+                          <table class="table table-bordered">
+                              <tr class="custom-bg bg-light">
+                                  <th class="text-center">Reviewed By</th>
+                              </tr>
+                              <tr>
+                                  <td class="text-center">
+                                      <div class="m-3 mb-5" style="display:flex; justify-content:center;">
+                                          <div>
+                                              <select id="signOption2" onchange="changeSigOption(2)"
+                                                  class="mb-3 p-2 d-print-none">
+                                                  <option value="D">Select Signature Option</option>
+                                                  <option value="D">Draw Signature</option>
+                                                  <option value="U">Upload Signature</option>
+                                              </select>
+                                              <div id="showD2" class="signature2"
+                                                  style="display:flex; justify-content:center;margin-bottom: 10px;">
+                                                  <div class="signature-pad-container">
+                                                      <div class="signature-pad" id="signature-pad2"></div><br>
+                                                      <button type="button"
+                                                          class="btn btn-flat btn-sm clear-btn2 d-print-none sig-clearBtn"
+                                                          onclick="resetSign(2)">Clear</button>
+                                                      <textarea class="signature-data-text d-none"
+                                                          name="reviewer_draw_sign" value="" readonly></textarea>
+                                                  </div>
+                                              </div>
+                                              <div id="showU2" class="signature2 d-none mb-2">
+                                                  <input type="file" id="m-actual-image2" name="reviewer_img_sign"
+                                                      onchange="dataURLv(this, 2)" style="margin-bottom:7px;"
+                                                      accept="image/png, image/jpeg" /><br>
+                                                  <img id="actual-image-res2" width="220" height="80" src="#" /><br>
+                                                  <button class="btn btn-flat btn-sm btn-danger mt-1" type="button"
+                                                      onclick="resetImage(2)">Remove</button>
+                                              </div>
+  
+                                              <div class="input-group input-group-sm">
+                                                  <input type="text" class="custom-input mb-1" name="reviewer_name"
+                                                      placeholder="Name">
+                                              </div>
+                                              <div class="input-group input-group-sm">
+                                                  <input type="date" class="custom-input" name="reviewed_date">
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                              </tr>
+                          </table>
+                      </div>
+                    </div>
                 </form>
             </div>
         </div>
-    </div>  
+    </div>    
     <script>
         // <----------// Signature Area // -------->
         $(function () {
