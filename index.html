@@ -6,8 +6,6 @@
     <title></title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jSignature/2.1.3/jSignature.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
@@ -55,7 +53,7 @@
         border: 1px solid #c9c9c9;    
         outline: none;
         width: 100% !important;
-		    transition: background 0.3s, box-shadow 0.3s;
+		transition: background 0.3s, box-shadow 0.3s;
     }
 
 	.custom-input:focus {
@@ -139,270 +137,571 @@
         <div id="head">
             <div id="body" class="pb-2">
                 <form autocomplete="off" method="POST" action="?" class="pb-3" id="main_form" enctype="multipart/form-data">
-                    <div class="table-responsive">
-                      <!-- Header Table -->
-                      <table class="table table-bordered header-table mt-5 mb-0">
-                        <thead>
-                          <tr>
-                            <th rowspan="2" width="20%">
-                              <img src="https://interlinkiq.com/uploads/avatar/527302%20-%20logo2.jpg" alt="" width="200">
-                            </th>
-                            <th><strong>Food Defense Assessment</strong></th>
-                            <th>
-                              <span class="fw-normal">Issued Date</span><br>
-                              <strong>03/25/2024</strong>
-                            </th>
-                            <th rowspan="2">
-                              <span class="fw-normal">Version No.</span><br>
-                              <strong>2</strong>
-                            </th>
-                          </tr>
-                          <tr>
-                            <th><strong>FO-01-00-01-2.5.1 ii</strong></th>
-                            <th>
-                              <span class="fw-normal">Supersedes Date</span><br>
-                              <strong>12/14/2017</strong>
-                            </th>
-                          </tr>
-                        </thead>
-                        <tbody class="align-middle" style="border-top: none">
-                          <tr>
-                            <td>
-                              Date:
-                              <input type="date" class="w-75 custom-input-3" name="date">
+                <div class="table-responsive">
+                    <table class="table table-borderless header-table mt-5">
+                        <tr>
+                            <td style="text-align: center;">
+                            <img src="https://interlinkiq.com/uploads/avatar/527302%20-%20logo2.jpg" alt="" width="200">
                             </td>
-                            <td>
-                              Name:
-                              <input type="text" class="w-75 custom-input-3" name="name">
-                            </td>
-                            <td colspan="2">
-                              Title:
-                              <input type="text" class="w-75 custom-input-3" name="title">
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
+                        </tr>
+                    </table>
 
-                      <!-- Validation Type Section -->
-                      <table class="table table-bordered m-0">
-                        <tbody class="align-middle text-center">
-                            <tr style="border-top: none;">
-                                <td class="w-35">
-                                  VALIDATE:
+                    <table class="table table-borderless">
+                        <thead>
+                            <tr>
+                                <th colspan="3" class="text-center">
+                                    <h5><strong>Cyber Attack Incident Response Checklist</strong></h5>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="background: transparent; border: transparent;">
+                                <td colspan="3" class="pt-3 pb-2">
+                                    This form provides a structured checklist to document and track key actions taken during a cyber attack incident response. It ensures that each phase of the response process is completed and properly recorded.
                                 </td>
-                                <td class="w-15">
-                                  <input type="checkbox" name="prp"> PRP
-                                </td> 
-                                <td class="w-15">
-                                  <input type="checkbox" name="ccp"> CCP
-                                </td> 
-                                <td class="w-15" style="border-right: none;">
-                                  <input type="checkbox" name="gmp"> GMP
-                              </td>      
-                              <td class="w-40" style="border-left: none;">
-                                  Associated Document Code:
-                                  <input type="text" class="custom-input-3" name="document_code">
-                              </td>  
                             </tr>
                         </tbody>
-                      </table>
-                    
+                    </table>                    
 
-                      <!-- Method/s Used to Validate the Program: -->
-                      <table class="table table-bordered m-0">
-                        <tbody class="align-middle text-center">
-                          <tr style="border-top: none; border-bottom: none;">
-                            <td style="border-right: none;" >Method/s Used to Validate the Program:</td>
-                            <td style="border-left: none;">
-                              <input type="text" class="w-75 custom-input-3" name="method_validation">
-                            </td>       
-                          </tr>
-                          <tr style="border-top: none;">
-                            <td colspan="8">
-                              <textarea name="method_validation_details" rows="4" class="w-100"></textarea>
-                            </td>
-                          </tr>
+                    <table class="table table-bordered m-0">
+                        <thead style="background-color: #d1ecf1;">
+                            <tr class="text-center" >
+                                <th colspan="4" class="text-center">Incident Discovery and Confirmation</th>
+                            </tr>
+                            <tr class="text-center">
+                                <th width="5%">No.</th>
+                                <th>Process</th>
+                                <th width="20%">Team Member</th>
+                                <th width="15%">Time Log</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">1</td>
+                                <td>
+                                    How did the team first learn of the attack (security researcher, partner, employee, customer, auditor, internal security alert, etc.). Examine audit logs and security applications for unusual or suspicious account behavior or activities that indicate a potential attack, and confirm attack has transpired.
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="team_member_1" rows="3"></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="time_log_1" rows="3"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">2</td>
+                                <td>
+                                    Describe potential attackers, including capabilities, behaviors, and motivations that are known or expected.
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="team_member_2" rows="3"></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="time_log_2" rows="3"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">3</td>
+                                <td>
+                                    Identify access point and source of attack (endpoint, application, malware downloaded, etc.) and responsible party.
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="team_member_3" rows="3"></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="time_log_3" rows="3"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">4</td>
+                                <td>
+                                    Prepare an incident timeline to keep an ongoing record of when the attack occurred and subsequent milestones in analysis and response.
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="team_member_4" rows="3"></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="time_log_4" rows="3"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">5</td>
+                                <td>
+                                    Check for signatures, IP address ranges, files hashes, processes, executables names, URLs, and domain names of known malicious websites in your applications.
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="team_member_5" rows="3"></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="time_log_5" rows="3"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">6</td>
+                                <td>
+                                    Assess the scope of the damage and the risk to systems and privileged accounts upon discovery. Check to see if any privileged accounts have been used recently, whether any passwords have been changed, and what applications have been executed.
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="team_member_6" rows="3"></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="time_log_6" rows="3"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">7</td>
+                                <td>
+                                    Examine your list of information assets to identify which assets may have been compromised. Take note of the assets’ integrity as well as the evidence gathered.
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="team_member_7" rows="3"></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="time_log_7" rows="3"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">8</td>
+                                <td>
+                                    Diagram the path of the incident/attack to provide an “at-a-glance” view from the initial breach to escalation and movement tracked across the network.
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="team_member_8" rows="3"></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="time_log_8" rows="3"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">9</td>
+                                <td>
+                                    Collect meeting notes in a central repository to use in preparing communications with stakeholders.
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="team_member_9" rows="3"></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="time_log_9" rows="3"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">10</td>
+                                <td>
+                                    Inform employees regarding discovery. Analyze incident Indicators of Compromise (IOCs) with threat intelligence tools
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="team_member_10" rows="3"></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="time_log_10" rows="3"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">11</td>
+                                <td>
+                                    Potentially share information externally about breach discovery. To improve your chances of catching the attacker, you may choose to hold communications during this phase until the breach has been contained. If so, make sure that it complies with your legal requirements.
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="team_member_11" rows="3"></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="time_log_11" rows="3"></textarea>
+                                </td>
+                            </tr>
                         </tbody>
-                      </table>
-                      <!-- Result of Validation: -->
-                      <table class="table table-bordered m-0">
-                        <tbody class="align-middle text-center">
-                          <tr style="border-top: none;">
-                            <td colspan="2" class="w-50">Result of Validation:</td>
-                            <td class="w-25">Program Validated?</td>       
-                            <td><input type="radio" name="program_validated" value="yes"> Yes</td>       
-                            <td><input type="radio" name="program_validated" value="no"> No</td>                                
-                          </tr>                            
-                          <tr>
-                            <td colspan="8">
-                              <textarea name="validation_results" rows="4" class="w-100"></textarea>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
+                    </table>
 
-                      <!-- Corrective Actions if Program was not Validated -->
-                      <table class="table table-bordered m-0">
-                        <tbody class="align-middle text-center">
-                          <tr style="border-top: none;">
-                            <td colspan="2" class="w-50">Corrective Actions if Program was not Validated</td>
-                            <td class="w-25">Program Validated after CA?</td>       
-                            <td><input type="radio" name="program_validated_after_ca" value="yes"> Yes</td>       
-                            <td><input type="radio" name="program_validated_after_ca" value="no"> No</td>                                
-                          </tr>                            
-                          <tr>
-                            <td colspan="8">
-                              <textarea name="corrective_actions" rows="4" class="w-100"></textarea>
-                            </td>
-                          </tr>
+                    <table class="table table-bordered m-0">
+                        <thead style="background-color: #d1ecf1;">
+                            <tr class="text-center" style="border-top: none;">
+                                <th colspan="4" class="text-center">Incident Containment and Continuity</th>
+                            </tr>
+                            <tr class="text-center">
+                                <th width="5%">No.</th>
+                                <th>Process</th>
+                                <th width="20%">Team Member</th>
+                                <th width="15%">Time Log</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">1</td>
+                                <td>
+                                    Allow the technical and security team to utilize temporary privileged accounts to quickly access and monitor systems.
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="team_member_1" rows="3"></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="time_log_1" rows="3"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">2</td>
+                                <td>
+                                    Evidence must be safeguarded. Before performing any actions that may affect data integrity on the original media, make a backup of any compromised systems as soon as possible.
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="team_member_2" rows="3"></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="time_log_2" rows="3"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">3</td>
+                                <td>
+                                    Force multi-factor authentication or peer review to ensure privileges are being used appropriately.
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="team_member_3" rows="3"></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="time_log_3" rows="3"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">4</td>
+                                <td>
+                                    Change passwords for all users, service, application, and network accounts.
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="team_member_4" rows="3"></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="time_log_4" rows="3"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">5</td>
+                                <td>
+                                    To prevent malicious malware from being distributed by the attacker, increase the sensitivity of application security controls (allowing, denying, and restricting).
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="team_member_5" rows="3"></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="time_log_5" rows="3"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">6</td>
+                                <td>
+                                    Remove systems from production or take systems offline if needed.
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="team_member_6" rows="3"></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="time_log_6" rows="3"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">7</td>
+                                <td>
+                                    Inform employees regarding breach containment.
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="team_member_7" rows="3"></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="time_log_7" rows="3"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">8</td>
+                                <td>
+                                    Analyze, record, and confirm any instances of potential data exfiltration occurrences across the network.
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="team_member_8" rows="3"></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="time_log_8" rows="3"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">9</td>
+                                <td>
+                                    Potentially share information externally regarding breach containment (website updates, emails, social media posts, tech support bulletins, etc.).
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="team_member_9" rows="3"></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="time_log_9" rows="3"></textarea>
+                                </td>
+                            </tr>
                         </tbody>
-                      </table>
+                    </table>
 
-                      <!-- Signature Section -->
-                      <table class="table table-bordered m-0">
-                        <tbody class="align-middle text-center">
-                          <tr style="border-top: none;">
-                            <td class="w-50">
-                              Next Validation Date:
-                              <input type="date" class="w-25 custom-input-3" name="validation_date">
-                            </td>
-                            <td>
-                              Signature:
-                              <input type="text" class="w-50 custom-input-3" name="signature">
-                            </td>       
-                            <td>
-                              Date:
-                              <input type="date" class="w-75 custom-input-3" name="date_signed">
-                            </td>       
-                          </tr>  
+                    <table class="table table-bordered m-0">
+                        <thead style="background-color: #d1ecf1;">
+                            <tr class="text-center" style="border-top: none;">
+                                <th colspan="4" class="text-center">Eradication</th>
+                            </tr>
+                            <tr class="text-center">
+                                <th width="5%">No.</th>
+                                <th>Process</th>
+                                <th width="20%">Team Member</th>
+                                <th width="15%">Time Log</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">1</td>
+                                <td>
+                                    Close firewall ports and network connections. Test devices and applications to be sure any malicious code is removed.
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="team_member_1" rows="3"></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="time_log_1" rows="3"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">2</td>
+                                <td>
+                                    Compare data before and after the incident to ensure systems are reset properly.
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="team_member_2" rows="3"></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="time_log_2" rows="3"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">3</td>
+                                <td>
+                                    Inform employees regarding eradication.
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="team_member_3" rows="3"></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="time_log_3" rows="3"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">4</td>
+                                <td>
+                                    Potentially share information externally regarding eradication (website updates, emails, social media posts, tech support bulletins, etc.).
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="team_member_4" rows="3"></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="time_log_4" rows="3"></textarea>
+                                </td>
+                            </tr>
                         </tbody>
-                      </table>
-    
-                      <div class="signatory-table-section">
-                          <table class="table table-bordered">
-                              <tr class="custom-bg bg-light">
-                                  <th class="text-center">Reviewed By</th>
-                              </tr>
-                              <tr>
-                                  <td class="text-center">
-                                      <div class="m-3 mb-5" style="display:flex; justify-content:center;">
-                                          <div>
-                                              <select id="signOption2" onchange="changeSigOption(2)"
-                                                  class="mb-3 p-2 d-print-none">
-                                                  <option value="D">Select Signature Option</option>
-                                                  <option value="D">Draw Signature</option>
-                                                  <option value="U">Upload Signature</option>
-                                              </select>
-                                              <div id="showD2" class="signature2"
-                                                  style="display:flex; justify-content:center;margin-bottom: 10px;">
-                                                  <div class="signature-pad-container">
-                                                      <div class="signature-pad" id="signature-pad2"></div><br>
-                                                      <button type="button"
-                                                          class="btn btn-flat btn-sm clear-btn2 d-print-none sig-clearBtn"
-                                                          onclick="resetSign(2)">Clear</button>
-                                                      <textarea class="signature-data-text d-none"
-                                                          name="reviewer_draw_sign" value="" readonly></textarea>
-                                                  </div>
-                                              </div>
-                                              <div id="showU2" class="signature2 d-none mb-2">
-                                                  <input type="file" id="m-actual-image2" name="reviewer_img_sign"
-                                                      onchange="dataURLv(this, 2)" style="margin-bottom:7px;"
-                                                      accept="image/png, image/jpeg" /><br>
-                                                  <img id="actual-image-res2" width="220" height="80" src="#" /><br>
-                                                  <button class="btn btn-flat btn-sm btn-danger mt-1" type="button"
-                                                      onclick="resetImage(2)">Remove</button>
-                                              </div>
-  
-                                              <div class="input-group input-group-sm">
-                                                  <input type="text" class="custom-input mb-1" name="reviewer_name"
-                                                      placeholder="Name">
-                                              </div>
-                                              <div class="input-group input-group-sm">
-                                                  <input type="date" class="custom-input" name="reviewed_date">
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </td>
-                              </tr>
-                          </table>
-                      </div>
+                    </table>
+
+                    <table class="table table-bordered m-0">
+                        <thead style="background-color: #d1ecf1;">
+                            <tr class="text-center" style="border-top: none;">
+                                <th colspan="4" class="text-center">Recovery</th>
+                            </tr>
+                            <tr class="text-center">
+                                <th width="5%">No.</th>
+                                <th>Process</th>
+                                <th width="20%">Team Member</th>
+                                <th width="15%">Time Log</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">1</td>
+                                <td>
+                                    Download and apply security patches.
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="team_member_1" rows="3"></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="time_log_1" rows="3"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">2</td>
+                                <td>
+                                    Close network access and reset passwords.
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="team_member_2" rows="3"></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="time_log_2" rows="3"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">3</td>
+                                <td>
+                                    Conduct vulnerability analysis
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="team_member_3" rows="3"></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="time_log_3" rows="3"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">4</td>
+                                <td>
+                                    Return any systems that were taken offline to production.
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="team_member_4" rows="3"></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="time_log_4" rows="3"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">5</td>
+                                <td>
+                                    Inform employees regarding recovery.
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="team_member_4" rows="3"></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="time_log_4" rows="3"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">6</td>
+                                <td>
+                                    Share information externally regarding recovery (website updates, emails, social media posts, tech support bulletins, etc.).
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="team_member_4" rows="3"></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="time_log_4" rows="3"></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="table table-bordered m-0">
+                        <thead style="background-color: #d1ecf1;">
+                            <tr class="text-center" style="border-top: none;">
+                                <th colspan="4" class="text-center">Lessons Learned</th>
+                            </tr>
+                            <tr class="text-center">
+                                <th width="5%">No.</th>
+                                <th>Process</th>
+                                <th width="20%">Team Member</th>
+                                <th width="15%">Time Log</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">1</td>
+                                <td>
+                                    Review forensic evidence collected.
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="team_member_1" rows="3"></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="time_log_1" rows="3"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">2</td>
+                                <td>
+                                    Assess incident cost.
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="team_member_2" rows="3"></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="time_log_2" rows="3"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">3</td>
+                                <td>
+                                    Write an Executive Summary of the incident.
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="team_member_3" rows="3"></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="time_log_3" rows="3"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">4</td>
+                                <td>
+                                    Report to the executive team and auditors if required
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="team_member_4" rows="3"></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="time_log_4" rows="3"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">5</td>
+                                <td>
+                                    Implement additional training for everyone involved in incident response and all employees.
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="team_member_4" rows="3"></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="time_log_4" rows="3"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">6</td>
+                                <td>
+                                    Update incident response plan.
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="team_member_4" rows="3"></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="time_log_4" rows="3"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">7</td>
+                                <td>
+                                    Inform employees regarding lessons learned, additional training, etc.
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="team_member_4" rows="3"></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="time_log_4" rows="3"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">8</td>
+                                <td>
+                                    Potentially share information externally (website updates, emails, social media posts, tech support bulletins, etc.).
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="team_member_4" rows="3"></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="custom-input" name="time_log_4" rows="3"></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                     </div>
                 </form>
             </div>
         </div>
     </div>    
-    <script>
-        // <----------// Signature Area // -------->
-        $(function () {
-            $('.signature-pad').each(function (index) {
-                var uniqueId = 'signature-pad' + (index + 1);
-                $(this).attr('id', uniqueId);
-                $('#' + uniqueId).jSignature();
-
-                $('#' + uniqueId).on('change', function () {
-                    var signatureData = $(this).jSignature('getData', 'default');
-                    $(this).siblings('.signature-data-text').val(signatureData);
-
-                    var selectId = 'signOption' + (index + 1);
-                    if (signatureData && signatureData.length !== 0) {
-                        $('#' + selectId).prop('disabled', true);
-                    } else {
-                        $('#' + selectId).prop('disabled', false);
-                    }
-                });
-            });
-        })
-
-        // Reset the drawn signature
-        function resetSign(id) {
-            $('.clear-btn' + id).siblings('.signature-pad').jSignature('clear');
-            $('.clear-btn' + id).siblings('.signature-data-text').val('');
-            var selectId = 'signOption' + id;
-            $('#' + selectId).prop('disabled', false);
-        }
-
-        // Reset the uploaded signature image
-        function resetImage(id) {
-            $('#m-actual-image' + id).val('');
-            $('#actual-image-res' + id).removeAttr('src');
-            var selectId = 'signOption' + id;
-            $('#' + selectId).attr('disabled', false);
-            console.log(id)
-            console.log(selectId)
-        }
-
-        // Load image data from the file input and display it
-        function dataURLv(input, id) {
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
-
-                if (input.files[0].type.startsWith('image/')) {
-                    reader.onload = function (e) {
-                        $("#actual-image-res" + id).attr('src', e.target.result).css({
-                            "display": "block"
-                        });
-                        $("#clear-attachment-btn" + id).html(
-                            `<button class="mt-1 btn btn-flat btn-sm btn-danger" type="button" onclick="resetImage(${id})">Remove</button>`
-                        );
-                    };
-                    reader.readAsDataURL(input.files[0]);
-                }
-
-                var selectId = 'signOption' + id;
-                $('#' + selectId).prop('disabled', true);
-            } else {
-                var selectId = 'signOption' + id;
-                $('#' + selectId).prop('disabled', false);
-            }
-        }
-
-
-        function changeSigOption(id) {
-            var demovalue = $('#signOption' + id).val();
-            $('div.signature' + id).addClass('d-none');
-            $('#show' + demovalue + id).removeClass('d-none');
-        }
-        // <----------// Signature End // -------->
-    </script>
 </body>
 </html>
