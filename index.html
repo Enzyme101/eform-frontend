@@ -288,18 +288,26 @@
                         <table class="table table-borderless" >
                             <tbody>
                                 <tr>
-                                    <td colspan="4">Do any products have cross contact labeling: 
-                                        YES <input type="radio" name="cross_contact" value="YES"> 
-                                        NO <input type="radio" name="cross_contact" value="NO">
+                                    <td colspan="4">Do any products have cross contact labeling:
+                                        <span style="margin-left: 15px;">
+                                            <input type="radio" name="cross_contact" value="YES"> YES
+                                            <span style="margin-left: 10px;">
+                                                <input type="radio" name="cross_contact" value="NO"> NO
+                                            </span>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td colspan="4" class="ps-5 d-flex align-items-center gap-2">If so, which products: <input type="text" class="custom-input-4 flex-grow-1" name="which_products"></td>
                                 </tr>
                                 <tr>
-                                    <td colspan="4">Pending projects that may change allergen profile?: 
-                                        YES <input type="radio" name="pending_projects" value="YES"> 
-                                        NO <input type="radio" name="pending_projects" value="NO">
+                                    <td colspan="4">Pending projects that may change allergen profile?:  
+                                        <span style="margin-left: 15px;">
+                                            <input type="radio" name="pending_projects" value="YES"> YES
+                                            <span style="margin-left: 10px;">
+                                                <input type="radio" name="pending_projects" value="NO"> NO
+                                            </span>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -315,9 +323,9 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr style="border: transparent;">
-                                    <th colspan="5" class="text-danger"><strong>Allergen Management</strong></th>
+                                    <th colspan="5" class="text-danger text-center fs-5"><strong>Allergen Management</strong></th>
                                 </tr>
-                                <tr class="align-center">
+                                <tr class="align-center bg-light">
                                     <th width="35%">Question/Statement</th>
                                     <th width="5%" class="text-center">YES</th>
                                     <th width="5%" class="text-center">NO</th>
@@ -348,9 +356,9 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr style="border: transparent;">
-                                    <th colspan="5" class="text-danger"><strong>Training</strong></th>
+                                    <th colspan="5" class="text-danger text-center fs-5"><strong>Training</strong></th>
                                 </tr>
-                                <tr class="align-center">
+                                <tr class="align-center bg-light">
                                     <th width="35%">Question/Statement</th>
                                     <th width="5%" class="text-center">YES</th>
                                     <th width="5%" class="text-center">NO</th>
@@ -514,12 +522,14 @@
                             </tbody>
                         </table>
                         <!-- Additional Comments -->
-                        <table class="table table-borderless">
+                        <table class="table table-bordered">
                             <tbody>
+                                <tr class="bg-light">
+                                    <th>Additional Comments</th>
+                                </tr>
                                 <tr class="align-middle">
                                     <td>
-                                        Additional Comments
-                                        <textarea name="training_comments" class="comments"></textarea>
+                                        <textarea name="training_comments" rows="3" class="custom-input"></textarea>
                                     </td>
                                 </tr>
                             </tbody>
@@ -529,9 +539,9 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr style="border: transparent;">
-                                    <th colspan="5" class="text-danger"><strong>HACCP--Allergen Identification and Risk Assessment</strong></th>
+                                    <th colspan="5" class="text-danger text-center fs-5"><strong>HACCP--Allergen Identification and Risk Assessment</strong></th>
                                 </tr>
-                                <tr class="align-center">
+                                <tr class="align-center bg-light">
                                     <th width="35%">Question/Statement</th>
                                     <th width="5%" class="text-center">YES</th>
                                     <th width="5%" class="text-center">NO</th>
@@ -674,12 +684,14 @@
                             </tbody>
                         </table>
                         <!-- Additional Comments -->
-                        <table class="table table-borderless">
+                        <table class="table table-bordered">
                             <tbody>
+                                <tr class="bg-light">
+                                    <th>Additional Comments</th>
+                                </tr>
                                 <tr class="align-middle">
                                     <td>
-                                        Additional Comments
-                                        <textarea name="haccp_comments" class="comments"></textarea>
+                                        <textarea name="haccp_comments" rows="3" class="custom-input"></textarea>
                                     </td>
                                 </tr>
                             </tbody>
@@ -689,9 +701,9 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr style="border: transparent;">
-                                    <th colspan="5" class="text-danger"><strong>Receiving and Handling</strong></th>
+                                    <th colspan="5" class="text-danger text-center fs-5"><strong>Receiving and Handling</strong></th>
                                 </tr>
-                                <tr class="align-center">
+                                <tr class="align-center bg-light">
                                     <th width="35%">Question/Statement</th>
                                     <th width="5%" class="text-center">YES</th>
                                     <th width="5%" class="text-center">NO</th>
@@ -828,12 +840,14 @@
                             </tbody>
                         </table>
                         <!-- Additional Comments -->
-                        <table class="table table-borderless w-100">
+                        <table class="table table-bordered">
                             <tbody>
+                                <tr class="bg-light">
+                                    <th>Additional Comments</th>
+                                </tr>
                                 <tr class="align-middle">
-                                    <td class="w-auto text-nowrap"><strong>Additional Comments</strong></td>
-                                    <td class="w-100">
-                                        <input type="text" name="receiving_handling_comments" class="custom-input-3 w-100">
+                                    <td>
+                                        <textarea name="receiving_handling_comments" rows="3" class="custom-input"></textarea>
                                     </td>
                                 </tr>
                             </tbody>
@@ -845,7 +859,7 @@
                                 <tr style="border: transparent;">
                                     <th colspan="6"><strong>Scheduling</strong></th>
                                 </tr>
-                                <tr class="align-center">
+                                <tr class="align-center bg-light">
                                     <th width="35%">Question/Statement</th>
                                     <th width="5%" class="text-center">YES</th>
                                     <th width="5%" class="text-center">NO</th>
@@ -922,9 +936,9 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr style="border: transparent;">
-                                    <th colspan="5" class="text-danger"><strong><u>Work-in-process, LMI’s, WIP, Rework and Hold-over Controls</u></strong></th>
+                                    <th colspan="5" class="text-danger text-center fs-5"><strong>Work-in-process, LMI’s, WIP, Rework and Hold-over Controls</strong></th>
                                 </tr>
-                                <tr class="align-center">
+                                <tr class="align-center bg-light">
                                     <th width="35%">Question/Statement</th>
                                     <th width="5%" class="text-center">YES</th>
                                     <th width="5%" class="text-center">NO</th>
@@ -1066,12 +1080,14 @@
                             </tbody>
                         </table>
                         <!-- Additional Comments -->
-                        <table class="table table-borderless">
+                        <table class="table table-bordered">
                             <tbody>
+                                <tr class="bg-light">
+                                    <th>Additional Comments</th>
+                                </tr>
                                 <tr class="align-middle">
                                     <td>
-                                        Additional Comments
-                                        <textarea name="work_process_comments" class="comments"></textarea>
+                                        <textarea name="work_process_comments" rows="3" class="custom-input"></textarea>
                                     </td>
                                 </tr>
                             </tbody>
@@ -1081,9 +1097,9 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr style="border: transparent;">
-                                    <th colspan="5" class="text-danger"><strong>Traceability</strong></th>
+                                    <th colspan="5" class="text-danger text-center fs-5"><strong>Traceability</strong></th>
                                 </tr>
-                                <tr class="align-center">
+                                <tr class="align-center bg-light">
                                     <th width="35%">Question/Statement</th>
                                     <th width="5%" class="text-center">YES</th>
                                     <th width="5%" class="text-center">NO</th>
@@ -1135,12 +1151,14 @@
                             </tbody>
                         </table>
                         <!-- Additional Comments -->
-                        <table class="table table-borderless">
+                        <table class="table table-bordered">
                             <tbody>
+                                <tr class="bg-light">
+                                    <th>Additional Comments</th>
+                                </tr>
                                 <tr class="align-middle">
                                     <td>
-                                        Additional Comments
-                                        <textarea name="traceability_comments" class="comments"></textarea>
+                                        <textarea name="traceability_comments" rows="3" class="custom-input"></textarea>
                                     </td>
                                 </tr>
                             </tbody>
@@ -1150,9 +1168,9 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr style="border: transparent;">
-                                    <th colspan="5" class="text-danger"><strong>Hold & Release</strong></th>
+                                    <th colspan="5" class="text-danger text-center fs-5"><strong>Hold & Release</strong></th>
                                 </tr>
-                                <tr class="align-center">
+                                <tr class="align-center bg-light">
                                     <th width="35%">Question/Statement</th>
                                     <th width="5%" class="text-center">YES</th>
                                     <th width="5%" class="text-center">NO</th>
@@ -1180,12 +1198,14 @@
                             </tbody>
                         </table>
                         <!-- Additional Comments -->
-                        <table class="table table-borderless">
+                        <table class="table table-bordered">
                             <tbody>
+                                <tr class="bg-light">
+                                    <th>Additional Comments</th>
+                                </tr>
                                 <tr class="align-middle">
                                     <td>
-                                        Additional Comments
-                                        <textarea name="hold_release_comments" class="comments"></textarea>
+                                        <textarea name="hold_release_comments" rows="3" class="custom-input"></textarea>
                                     </td>
                                 </tr>
                             </tbody>
@@ -1195,9 +1215,9 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr style="border: transparent;">
-                                    <th colspan="5" class="text-danger"><strong>Facility and Structure</strong></th>
+                                    <th colspan="5" class="text-danger text-center fs-5"><strong>Facility and Structure</strong></th>
                                 </tr>
-                                <tr class="align-center">
+                                <tr class="align-center bg-light">
                                     <th width="35%">Question/Statement</th>
                                     <th width="5%" class="text-center">YES</th>
                                     <th width="5%" class="text-center">NO</th>
@@ -1254,12 +1274,14 @@
                             </tbody>
                         </table>
                         <!-- Additional Comments -->
-                        <table class="table table-borderless">
+                        <table class="table table-bordered">
                             <tbody>
+                                <tr class="bg-light">
+                                    <th>Additional Comments</th>
+                                </tr>
                                 <tr class="align-middle">
                                     <td>
-                                        Additional Comments
-                                        <textarea name="facility_structure_comments" class="comments"></textarea>
+                                        <textarea name="facility_structure_comments" rows="3" class="custom-input"></textarea>
                                     </td>
                                 </tr>
                             </tbody>
@@ -1270,12 +1292,12 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr style="border: transparent;">
-                                    <th colspan="4" class="text-danger"><strong>Manufacturing Controls and Product Change-over</strong></th>
+                                    <th colspan="5" class="text-danger text-center fs-5"><strong>Manufacturing Controls and Product Change-over</strong></th>
                                 </tr>
                                 <tr>
                                     <th colspan="5" class="text-danger"><strong>Equipment</strong></th>
                                 </tr>
-                                <tr class="align-center">
+                                <tr class="align-center bg-light">
                                     <th width="35%">Question/Statement</th>
                                     <th width="5%" class="text-center">YES</th>
                                     <th width="5%" class="text-center">NO</th>
@@ -1378,12 +1400,14 @@
                             </tbody>
                         </table>
                         <!-- Additional Comments -->
-                        <table class="table table-borderless">
+                        <table class="table table-bordered">
                             <tbody>
+                                <tr class="bg-light">
+                                    <th>Additional Comments</th>
+                                </tr>
                                 <tr class="align-middle">
                                     <td>
-                                        Additional Comments
-                                        <textarea name="equipment_comments" class="comments"></textarea>
+                                        <textarea name="equipment_comments" rows="3" class="custom-input"></textarea>
                                     </td>
                                 </tr>
                             </tbody>
@@ -1394,12 +1418,12 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr style="border: transparent;">
-                                    <th colspan="4" class="text-danger"><strong>Manufacturing Controls and Product Change-over (con’t.)</strong></th>
+                                    <th colspan="5" class="text-danger text-center fs-5"><strong>Manufacturing Controls and Product Change-over (con’t.)</strong></th>
                                 </tr>
                                 <tr>
-                                    <th colspan="5" class="text-danger"><strong>Product Changeovers</strong></th>
+                                    <th colspan="5" class="text-danger text-center fs-5"><strong>Product Changeovers</strong></th>
                                 </tr>
-                                <tr class="align-center">
+                                <tr class="align-center bg-light">
                                     <th width="35%">Question/Statement</th>
                                     <th width="5%" class="text-center">YES</th>
                                     <th width="5%" class="text-center">NO</th>
@@ -1448,12 +1472,14 @@
                             </tbody>
                         </table>
                         <!-- Additional Comments -->
-                        <table class="table table-borderless">
+                        <table class="table table-bordered">
                             <tbody>
+                                <tr class="bg-light">
+                                    <th>Additional Comments</th>
+                                </tr>
                                 <tr class="align-middle">
                                     <td>
-                                        Additional Comments
-                                        <textarea name="product_changeovers_comments" class="comments"></textarea>
+                                        <textarea name="product_changeovers_comments" rows="3" class="custom-input"></textarea>
                                     </td>
                                 </tr>
                             </tbody>
@@ -1463,9 +1489,9 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th colspan="5" class="text-danger"><strong>Cleaning procedures</strong></th>
+                                    <th colspan="5" class="text-danger text-center fs-5"><strong>Cleaning procedures</strong></th>
                                 </tr>
-                                <tr class="align-center">
+                                <tr class="align-center bg-light">
                                     <th width="35%">Question/Statement</th>
                                     <th width="5%" class="text-center">YES</th>
                                     <th width="5%" class="text-center">NO</th>
@@ -1533,12 +1559,14 @@
                             </tbody>
                         </table>
                         <!-- Additional Comments -->
-                        <table class="table table-borderless">
+                        <table class="table table-bordered">
                             <tbody>
+                                <tr class="bg-light">
+                                    <th>Additional Comments</th>
+                                </tr>
                                 <tr class="align-middle">
                                     <td>
-                                        Additional Comments
-                                        <textarea name="cleaning_procedures_comments" class="comments"></textarea>
+                                        <textarea name="cleaning_procedures_comments" rows="3" class="custom-input"></textarea>
                                     </td>
                                 </tr>
                             </tbody>
@@ -1549,12 +1577,12 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr style="border: transparent;">
-                                    <th colspan="4" class="text-danger"><strong>Manufacturing Controls and Product Change-over (con’t.)</strong></th>
+                                    <th colspan="5" class="text-danger text-center fs-5"><strong>Manufacturing Controls and Product Change-over (con’t.)</strong></th>
                                 </tr>
                                 <tr>
-                                    <th colspan="5" class="text-danger"><strong>Cleaning Procedures (con’t.)</strong></th>
+                                    <th colspan="5" class="text-danger text-center fs-5"><strong>Cleaning Procedures (con’t.)</strong></th>
                                 </tr>
-                                <tr class="align-center">
+                                <tr class="align-center bg-light">
                                     <th width="35%">Question/Statement</th>
                                     <th width="5%" class="text-center">YES</th>
                                     <th width="5%" class="text-center">NO</th>
@@ -1610,12 +1638,14 @@
                             </tbody>
                         </table>
                         <!-- Additional Comments -->
-                        <table class="table table-borderless">
+                        <table class="table table-bordered">
                             <tbody>
+                                <tr class="bg-light">
+                                    <th>Additional Comments</th>
+                                </tr>
                                 <tr class="align-middle">
                                     <td>
-                                        Additional Comments
-                                        <textarea name="cleaning_procedures_cont_comments" class="comments"></textarea>
+                                        <textarea name="cleaning_procedures_cont_comments" rows="3" class="custom-input"></textarea>
                                     </td>
                                 </tr>
                             </tbody>
@@ -1624,9 +1654,9 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th colspan="5" class="text-danger"><strong>Processing</strong></th>
+                                    <th colspan="5" class="text-danger text-center fs-5"><strong>Processing</strong></th>
                                 </tr>
-                                <tr class="align-center">
+                                <tr class="align-center bg-light">
                                     <th width="35%">Question/Statement</th>
                                     <th width="5%" class="text-center">YES</th>
                                     <th width="5%" class="text-center">NO</th>
@@ -1731,12 +1761,14 @@
                             </tbody>
                         </table>
                         <!-- Additional Comments -->
-                        <table class="table table-borderless">
+                        <table class="table table-bordered">
                             <tbody>
+                                <tr class="bg-light">
+                                    <th>Additional Comments</th>
+                                </tr>
                                 <tr class="align-middle">
                                     <td>
-                                        Additional Comments
-                                        <textarea name="processing_comments" class="comments"></textarea>
+                                        <textarea name="processing_comments" rows="3" class="custom-input"></textarea>
                                     </td>
                                 </tr>
                             </tbody>
@@ -1747,12 +1779,12 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr style="border: transparent;">
-                                    <th colspan="5" class="text-danger"><strong><u>Proper Labeling</u></strong></th>
+                                    <th colspan="5" class="text-danger text-center fs-5"><strong>Proper Labeling</strong></th>
                                 </tr>
                                 <tr>
                                     <th colspan="5"><strong>Packaging</strong></th>
                                 </tr>
-                                <tr class="align-center">
+                                <tr class="align-center bg-light">
                                     <th width="35%">Question/Statement</th>
                                     <th width="5%" class="text-center">YES</th>
                                     <th width="5%" class="text-center">NO</th>
@@ -1855,12 +1887,14 @@
                             </tbody>
                         </table>
                         <!-- Additional Comments -->
-                        <table class="table table-borderless">
+                        <table class="table table-bordered">
                             <tbody>
+                                <tr class="bg-light">
+                                    <th>Additional Comments</th>
+                                </tr>
                                 <tr class="align-middle">
                                     <td>
-                                        Additional Comments
-                                        <textarea name="labeling_comments" class="comments"></textarea>
+                                        <textarea name="labeling_comments" rows="3" class="custom-input"></textarea>
                                     </td>
                                 </tr>
                             </tbody>
@@ -1870,9 +1904,9 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr style="border: transparent;">
-                                    <th colspan="5" class="text-danger"><strong>Traffic Patterns</strong></th>
+                                    <th colspan="5" class="text-danger text-center fs-5"><strong>Traffic Patterns</strong></th>
                                 </tr>
-                                <tr class="align-center">
+                                <tr class="align-center bg-light">
                                     <th width="35%">Question/Statement</th>
                                     <th width="5%" class="text-center">YES</th>
                                     <th width="5%" class="text-center">NO</th>
@@ -1921,12 +1955,14 @@
                             </tbody>
                         </table>
                         <!-- Additional Comments -->
-                        <table class="table table-borderless">
+                        <table class="table table-bordered">
                             <tbody>
+                                <tr class="bg-light">
+                                    <th>Additional Comments</th>
+                                </tr>
                                 <tr class="align-middle">
                                     <td>
-                                        Additional Comments
-                                        <textarea name="traffic_pattern_comments" class="comments"></textarea>
+                                        <textarea name="traffic_pattern_comments" rows="3" class="custom-input"></textarea>
                                     </td>
                                 </tr>
                             </tbody>
@@ -1936,9 +1972,9 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr style="border: transparent;">
-                                    <th colspan="5" class="text-danger"><strong>Best Practices</strong></th>
+                                    <th colspan="5" class="text-danger text-center fs-5"><strong>Best Practices</strong></th>
                                 </tr>
-                                <tr class="align-center">
+                                <tr class="align-center bg-light">
                                     <th width="35%">Question/Statement</th>
                                     <th width="5%" class="text-center">YES</th>
                                     <th width="5%" class="text-center">NO</th>
@@ -1966,12 +2002,14 @@
                             </tbody>
                         </table>
                         <!-- Additional Comments -->
-                        <table class="table table-borderless">
+                        <table class="table table-bordered">
                             <tbody>
+                                <tr class="bg-light">
+                                    <th>Additional Comments</th>
+                                </tr>
                                 <tr class="align-middle">
                                     <td>
-                                        Additional Comments
-                                        <textarea name="best_practices_comments" class="comments"></textarea>
+                                        <textarea name="best_practices_comments" rows="3" class="custom-input"></textarea>
                                     </td>
                                 </tr>
                             </tbody>
