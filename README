@@ -12,5 +12,5 @@
 
 git clone https://github.com/Enzyme101/eform-frontend.git
 cd eform-frontend
-git branch -M formName-frontend-yourName
+git branch -b formName-frontend-yourName
 git push -u origin formName-frontend-yourName
