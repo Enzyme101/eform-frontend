@@ -135,7 +135,7 @@
 	}
 </style>
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <div id="head">
             <div id="body" class="pb-2">
                 <form autocomplete="off" method="POST" action="?" class="pb-3" id="main_form" enctype="multipart/form-data">
@@ -148,24 +148,24 @@
                                             width="200">
                                     </th>
                                     <th>
-                                        <strong>Food Defense Assessment</strong>
+                                        <strong>Waste Disposal Log</strong>
                                     </th>
                                     <th>
-                                        <span class="fw-normal">Issued Date</span> <br><strong>04/05/2024</strong>
+                                        <span class="fw-normal">Issued Date</span> <br><strong>9/4/2020</strong>
                                     </th>
                                     <th rowspan="2">
                                         <span class="fw-normal">Version No.</span> <br>
-                                        <strong>3</strong>
+                                        <strong>2</strong>
                                     </th>
                                 </tr>
                                 <tr>
                                     <th>
                                         <span class="fw-normal">Code</span> <br>
-                                        <strong>FO-08-00-01-2.7.1</strong>
+                                        <strong>FO-05-00-01-11.9.1</strong>
                                     </th>
                                     <th>
                                         <span class="fw-normal">Supersedes Date</span> <br>
-                                        <strong>08/04/2017</strong>
+                                        <strong>10/10/2017</strong>
                                     </th>
                                 </tr>
                             </thead>
@@ -173,101 +173,69 @@
     
                         <table class="table table-bordered">
                             <tbody>
-                                <tr style="background: transparent; border: transparent;">
-                                    <th colspan="4"
-                                        class="text-capitalize fw-bolder fs-5 pt-5 text-center">
-                                        <strong>Exterior Security</strong><br><br>
-                                    </th>
-                                </tr>
-    
-                                <tr style="border: transparent; padding-left: 0 !important;">
-                                    <td class="px-0 pb-3 text-start"
-                                        colspan="4">
+                                <tr>
+                                    <td class="px-3 text-start" colspan="7">
                                         <div>
-                                            1. What food defense measures does your plant have in place for the exterior of the building?
+                                            For solid waste, the bill from waste vendor serves as documentation
                                         </div>
                                     </td>
                                 </tr>
                                 <tr class="bg-light text-center">
-                                    <th></th>
-                                    <th width="10%">Yes</th>
-                                    <th width="10%">No</th>
-                                    <th width="10%">N/A</th>
+                                    <th width="5%"></th>
+                                    <th width="15%">Type of Waste</th>
+                                    <th width="15%">Date Disposed of</th>
+                                    <th width="15%">Disposed By</th>
+                                    <th width="15%">Verified By</th>
+                                    <th width="15%">Corrective Action</th>
+                                    <th width="15%">Verified By</th>
                                 </tr>
-    
-                                <tr class="align-center">
-                                    <td></td>
+                        
+                                <tr class="align-center table-row">
                                     <td>
-                                        <input type="radio" name="compliance[]" value="YES"> Yes <br>
+                                        <button type="button" class="btn btn-danger btn-sm w-100 remove-row">Remove</button>
                                     </td>
                                     <td>
-                                        <input type="radio" name="compliance[]" value="No"> No <br>
+                                        <input type="text" class="custom-input" name="waste_type[]">
                                     </td>
                                     <td>
-                                        <input type="radio" name="compliance[]" value="N/A"> N/A <br>
+                                        <input type="date" class="custom-input" name="date_disposed[]">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="custom-input" name="disposed_by[]">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="custom-input" name="verified_by[]">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="custom-input" name="corrective_action[]">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="custom-input" name="verified_by[]">
                                     </td>
                                 </tr>
-                            </tbody>
-                        </table>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn btn-primary btn-sm w-100" id="add-row">Add</button>
+                                    </td>
+                                    <td colspan="6">
 
-                        <table class="table table-bordered">
-                            <tbody>
-                            <tr class="bg-light">
-                                <th>Comment</th>
-                            </tr>
-                            <tr class="align-center">
-                                <td>
-                                    <textarea name="comments[]" row="3" class="custom-input"></textarea>
-                                </td>
-                            </tr>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
+                        
+                        <div class="text-center mb-3">
+                            
+                        </div>
+
+
     
                         <div class="signatory-table-section">
                             <table class="table table-bordered">
                                 <tr class="custom-bg bg-light">
-                                    <th class="text-center">Conducted By</th>
                                     <th class="text-center">Reviewed By</th>
                                 </tr>
                                 <tr>
-                                    <td class="text-center">
-                                        <div class="m-3 mb-5" style="display:flex; justify-content:center;">
-                                            <div>
-                                                <select id="signOption1" onchange="changeSigOption(1)"
-                                                    class="mb-3 p-2 d-print-none">
-                                                    <option value="D">Select Signature Option</option>
-                                                    <option value="D">Draw Signature</option>
-                                                    <option value="U">Upload Signature</option>
-                                                </select>
-                                                <div id="showD1" class="signature1"
-                                                    style="display:flex; justify-content:center;margin-bottom: 10px;">
-                                                    <div class="signature-pad-container">
-                                                        <div class="signature-pad" id="signature-pad1"></div><br>
-                                                        <button type="button"
-                                                            class="btn btn-flat btn-sm clear-btn clear-btn1 d-print-none"
-                                                            onclick="resetSign(1)">Clear</button>
-                                                        <textarea class="signature-data-text d-none"
-                                                            name="conductor_draw_sign" value="" readonly></textarea>
-                                                    </div>
-                                                </div>
-                                                <div id="showU1" class="signature1 d-none mb-2">
-                                                    <input type="file" id="m-actual-image1" name="conductor_img_sign"
-                                                        onchange="dataURLv(this, 1)" style="margin-bottom:7px;"
-                                                        accept="image/png, image/jpeg" /><br>
-                                                    <img id="actual-image-res1" width="220" height="80" src="#" /><br>
-                                                    <button class="btn btn-flat btn-sm btn-danger mt-1" id="imageRes1"
-                                                        type="button" onclick="resetImage(1)">Remove</button>
-                                                </div>
-                                                <div class="input-group input-group-sm">
-                                                    <input type="text" class="custom-input mb-1" name="conductor_name"
-                                                        placeholder="Name">
-                                                </div>
-                                                <div class="input-group input-group-sm">
-                                                    <input type="date" class="custom-input" name="conducted_date">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
                                     <td class="text-center">
                                         <div class="m-3 mb-5" style="display:flex; justify-content:center;">
                                             <div>
@@ -396,6 +364,61 @@
             $('#show' + demovalue + id).removeClass('d-none');
         }
         // <----------// Signature End // -------->
+
+        // <----------// Add/Remove row Area // -------->
+        $(document).ready(function() {
+            let rowCount = 1;
+            
+            // Add new row
+            $('#add-row').click(function() {
+            rowCount++;
+
+            const newRow = `
+            <tr class="align-center table-row">
+                <td>
+                    <button type="button" class="btn btn-danger btn-sm w-100 remove-row">Remove</button>
+                </td>
+                <td>
+                    <input type="text" class="custom-input" name="waste_type[]">
+                </td>
+                <td>
+                    <input type="date" class="custom-input" name="date_disposed[]">
+                </td>
+                <td>
+                    <input type="text" class="custom-input" name="disposed_by[]">
+                </td>
+                <td>
+                    <input type="text" class="custom-input" name="verified_by[]">
+                </td>
+                <td>
+                    <input type="text" class="custom-input" name="corrective_action[]">
+                </td>
+                <td>
+                    <input type="text" class="custom-input" name="verified_by[]">
+                </td>
+            </tr>
+            `;
+
+            $('.table-row:last').after(newRow);
+        });
+            
+            // Remove row
+            $(document).on('click', '.remove-row', function() {
+                if ($('.table-row').length > 1) {
+                    $(this).closest('tr').remove();
+                    // Reindex the radio button names if needed
+                    $('.table-row').each(function(index) {
+                        $(this).find('input[type="radio"]').attr('name', `compliance[${index}]`);
+                    });
+                    rowCount--;
+                } else {
+                    alert("You need to have at least one row.");
+                }
+            });
+        
+        });
+        // <----------// Add/Remove row End // -------->
     </script>
+    
 </body>
 </html>
