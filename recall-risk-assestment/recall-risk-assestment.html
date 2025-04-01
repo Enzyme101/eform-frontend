@@ -159,7 +159,16 @@ table {
     text-align: left;
     font-weight: bold;
 }
-
+table {
+            width: 100%;
+            border-collapse: collapse; /* Ensures borders are collapsed into a single border */
+            margin-top: 20px;
+        }
+        td {
+            border: 1px solid black; /* Black border */
+            padding: 15px;          /* Padding inside the cell */
+            background-color: #f9f9f9; /* Light background color */
+        }
 </style>
 <body>
     <div class="container">
@@ -171,36 +180,44 @@ table {
                     width="200">
             </th>
             <td class="title-cell">
-              Sampling, Inspection and Analysis Form
+              RECALL RISK ASSESSMENT
             </td>
             <td>
               <span class="label">Issued Date</span><br>
-              <span class="value">03/17/2022</span>
+              <span class="value">03/06/2024</span>
             </td>
           </tr>
           <tr>
             <td>
               <span class="label">Code</span><br>
-              <span class="value">FO-05-01-01-2.5.4</span>
+              <span class="value">FO-04-01-01-2.6.3. i.</span>
             </td>
             <td>
               <span class="label">Supersedes</span><br>
-              <span class="value">01/20/2021</span>
+              <span class="value">12/22/2017</span>
             </td>
+            
           </tr>
         </table>
-        <div class="mt-4 d-flex justify-content-between align-items-center">
-            <h5 class="mb-0"><strong>Recall Hazard/Risk Analysis</strong></h5>
-            <div>
-                <label for="dateNotified"><strong>Date Notified:</strong></label>
-                <input type="date" id="dateNotified" class="custom-input-3 ms-2">
-            </div>
-        </div>
-        
-        <p class="mt-2"><strong>Using this Form:</strong></p>
-        <p>
-            The decision to recall can be somewhat subjective at times. There are some situations where the hazard is known to be potentially life threatening, and the decision to recall is clear. In other situations it may be necessary to separate public perception of risk from scientific analysis of risk, and the decision to recall can be more difficult. This form is designed to clarify the thought process when making a decision to recall, and to provide a record of recall decisions for future reference.
-        </p>
+        <div class="mt-4 d-flex justify-content-center">
+    <h5 class="mb-0"><strong>Recall Hazard/Risk Analysis</strong></h5>
+</div>
+
+<div class="d-flex justify-content-between align-items-center mt-2">
+    <p class="mb-0"><strong>Using this Form:</strong></p>
+    <div>
+        <label for="dateNotified" class="me-2"><strong>Date Notified:</strong></label>
+        <input type="date" id="dateNotified" class="custom-input-3">
+    </div>
+</div>
+
+<table>
+  <tr>
+      <td>
+          The decision to recall can be somewhat subjective at times. There are some situations where the hazard is known to be potentially life threatening, and the decision to recall is clear. In other situations it may be necessary to separate public perception of risk from scientific analysis of risk, and the decision to recall can be more difficult. This form is designed to clarify the thought process when making a decision to recall, and to provide a record of recall decisions for future reference.
+      </td>
+  </tr>
+</table>
         
         <div class="section-spacer"></div>
         
