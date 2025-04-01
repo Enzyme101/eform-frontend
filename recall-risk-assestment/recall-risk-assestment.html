@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jSignature/2.1.3/jSignature.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<style type="text/css">
+    #company_logo_img {
+    object-fit: contain !important;
+}
+
+::selection,
+::-moz-selection {
+    background-color: #E13300;
+    color: white;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    margin: 40px;
+    padding: 20px;
+    color: #4F5155;
+}
+
+#container {
+    margin: 0 auto;
+    border: 1px solid #D0D0D0;
+    box-shadow: 0 0 8px #D0D0D0;
+    min-height: 90vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.table {
+    border-color: #a7a7a7;
+}
+
+.table th, .table td,
+.header-table th, .header-table td,
+.content-table th, .content-table td {
+    border: 1px solid #000;
+    padding: 10px;
+    vertical-align: middle;
+    font-size: 14.5px;
+}
+
+.header-table, .content-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #000;
+}
+
+.header-table th, .header-table td,
+.header-table th, .align-center {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.questionaires-section-table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.content-table th {
+    background-color: #f2f2f2;
+}
+
+.content-table td {
+    text-align: left;
+    padding: 8px 10px;
+}
+
+
+.custom-input {
+    border-radius: 4px;
+    padding: 7px;
+    border: 1px solid #c9c9c9;    
+    outline: none;
+    width: 100% !important;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.custom-input:focus {
+    background: #ffffff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    border: 1px solid #007bff;
+}
+
+.custom-input-2 {
+    width: 50px;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom: 1px solid #000;
+    outline: none;
+    text-align: center;
+}
+
+.custom-input-3 {
+    width: 200px;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom: 1px solid #000;
+    outline: none;
+}
+
+
+.section-spacer {
+    height: 20px;
+}
+
+
+.logo-cell {
+    width: 20%;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+}
+
+.title-cell {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.label {
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.value {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.review-info {
+    margin-top: 20px;
+    text-align: left;
+    font-weight: bold;
+}
+
+</style>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <table class="header-table">
+          <tr>
+            <th rowspan="2" width="20%">
+                <img src="https://interlinkiq.com/uploads/avatar/527302%20-%20logo2.jpg" alt=""
+                    width="200">
+            </th>
+            <td class="title-cell">
+              Sampling, Inspection and Analysis Form
+            </td>
+            <td>
+              <span class="label">Issued Date</span><br>
+              <span class="value">03/17/2022</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="label">Code</span><br>
+              <span class="value">FO-05-01-01-2.5.4</span>
+            </td>
+            <td>
+              <span class="label">Supersedes</span><br>
+              <span class="value">01/20/2021</span>
+            </td>
+          </tr>
+        </table>
+        <div class="mt-4 d-flex justify-content-between align-items-center">
+            <h5 class="mb-0"><strong>Recall Hazard/Risk Analysis</strong></h5>
+            <div>
+                <label for="dateNotified"><strong>Date Notified:</strong></label>
+                <input type="date" id="dateNotified" class="custom-input-3 ms-2">
+            </div>
+        </div>
+        
+        <p class="mt-2"><strong>Using this Form:</strong></p>
+        <p>
+            The decision to recall can be somewhat subjective at times. There are some situations where the hazard is known to be potentially life threatening, and the decision to recall is clear. In other situations it may be necessary to separate public perception of risk from scientific analysis of risk, and the decision to recall can be more difficult. This form is designed to clarify the thought process when making a decision to recall, and to provide a record of recall decisions for future reference.
+        </p>
+        
+        <div class="section-spacer"></div>
+        
+ <!-- Company and Product Information Table -->
+<table class="content-table mt-4">
+    <colgroup>
+      <col style="width: 40%;">
+      <col style="width: 60%;">
+    </colgroup>
+    <tbody>
+      <tr>
+        <td><strong>1. Brand/Product Name (Label)</strong></td>
+        <td><input type="text" class="custom-input" placeholder="Enter brand/product name"></td>
+      </tr>
+      <tr>
+        <td><strong>2. Company Contact Details</strong></td>
+        <td><input type="text" class="custom-input" placeholder="Enter company contact details"></td>
+      </tr>
+      <tr>
+        <td><strong>3. Contact Person</strong></td>
+        <td><input type="text" class="custom-input" placeholder="Enter contact person"></td>
+      </tr>
+      <tr>
+        <td colspan="2"><strong>4. Product Information</strong></td>
+      </tr>
+      <tr>
+        <td>What batch (es) is suspected?</td>
+        <td><input type="text" class="custom-input" placeholder="Enter batch(es)"></td>
+      </tr>
+      <tr>
+        <td>Lot#?</td>
+        <td><input type="text" class="custom-input" placeholder="Enter Lot#"></td>
+      </tr>
+      <tr>
+        <td>Item#?</td>
+        <td><input type="text" class="custom-input" placeholder="Enter Item#"></td>
+      </tr>
+      <tr>
+        <td>PO#?</td>
+        <td><input type="text" class="custom-input" placeholder="Enter PO#"></td>
+      </tr>
+      <tr>
+        <td>SO#?</td>
+        <td><input type="text" class="custom-input" placeholder="Enter SO#"></td>
+      </tr>
+      <tr>
+        <td>Quantity of product</td>
+        <td><input type="text" class="custom-input" placeholder="Enter quantity"></td>
+      </tr>
+      <tr>
+        <td>Use-by or best before date?</td>
+        <td><input type="date" class="custom-input"></td>
+      </tr>
+      
+      <!-- Add this part inside the table, spanning both columns -->
+      <tr>
+        <td colspan="2">
+          <div style="text-align: center;">
+            <p style="color: red; font-weight: bold; margin-bottom: 10px;">
+              Is the entire product still in company/distribution control (not yet with consumers)?
+            </p>
+            <label style="display: block; margin-bottom: 5px;">
+              <input type="radio" name="control_status" value="yes">
+              Yes – Product Hold or Withdrawal (see Note 1)
+            </label>
+            <label style="display: block;">
+              <input type="radio" name="control_status" value="no">
+              No – Recall possible, proceed with risk analysis
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2"><strong>5. Details of Hazard/Non Compliance</strong></td>
+      </tr>
+      <tr>
+        <td>
+          <label><input type="checkbox" name="hazard[]" value="microbiological"> Microbiological contamination</label><br>
+          <label><input type="checkbox" name="hazard[]" value="chemical"> Chemical contamination</label><br>
+          <label><input type="checkbox" name="hazard[]" value="foreign"> Foreign matter</label><br>
+          <label><input type="checkbox" name="hazard[]" value="allergen"> Undeclared allergen</label><br>
+          <label><input type="checkbox" name="hazard[]" value="labelling"> Labelling incorrect</label><br>
+          <label><input type="checkbox" name="hazard[]" value="other"> Other</label>
+        </td>
+        <tr>
+            <td><strong>Has any testing been done?</strong></td>
+            <td>
+              <input type="text" class="custom-input" placeholder="Enter testing info">
+            </td>
+          </tr>
+          
+          <!-- Row for Regulatory input -->
+          <tr>
+            <td><strong>Regulatory Limit or Standard</strong></td>
+            <td>
+              <input type="text" class="custom-input" placeholder="Enter details">
+            </td>
+          </tr>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <div style="text-align: center;">
+            <p style="color: red; font-weight: bold; margin-bottom: 10px;">
+              Is the entire product still in company/distribution control (not yet with consumers)?
+            </p>
+            <label style="display: block; margin-bottom: 5px;">
+              <input type="radio" name="control_status" value="yes">
+              Yes – recall possible, proceed with risk analysis
+            </label>
+            <label style="display: block;">
+              <input type="radio" name="control_status" value="no">
+              No – recall not required, unless other factors indicate otherwise (see section 10).<br>
+
+              Company’s own commercial risk to recall or not.<br>
+              
+              Corrective action to prevent reoccurrence to be undertaken and documented.
+            </label>
+          </div>
+        </td>
+      </tr>
+      <!-- New Distribution Data Section -->
+      <tr>
+        <td colspan="2"><strong>6. Distribution Data (Note 2)</strong></td>
+      </tr>
+      <tr>
+        <td>Where is product sold?</td>
+        <td><input type="text" class="custom-input" placeholder="Enter sales location(s)"></td>
+      </tr>
+      <tr>
+        <td>Has product entered the distribution chain?</td>
+        <td><input type="text" class="custom-input" placeholder="Enter distribution details"></td>
+      </tr>
+      <tr>
+        <td>Approximately how much product has been sold?</td>
+        <td><input type="text" class="custom-input" placeholder="Enter product quantity sold"></td>
+      </tr>
+      <tr>
+        <td>Has product been exported (if yes, to where)?</td>
+        <td><input type="text" class="custom-input" placeholder="Enter export details"></td>
+      </tr>
+      <tr>
+        <td colspan="2"><strong>7. Consumption Information (Note 3)</strong></td>
+      </tr>
+      <tr>
+        <td>How is this product commonly used (e.g. eaten immediately, stored for a few days, stored for a long period of time in freezer/refrigerator)</td>
+        <td><input type="text" class="custom-input" placeholder="Enter product usage details"></td>
+      </tr>
+      <tr>
+        <td>Salad bar, as a topping of a product or ingredient of another product?</td>
+        <td><input type="text" class="custom-input" placeholder="Enter additional product usage"></td>
+      </tr>
+      <tr>
+        <td>How much of this product can be eaten and how often?</td>
+        <td><input type="text" class="custom-input" placeholder="Enter consumption frequency and amount"></td>
+      </tr>
+      <tr>
+        <td>Added to Ready-To-Eat Product?</td>
+        <td>
+            <label style="margin-right: 15px;">
+                <input type="radio" name="ready_to_eat" value="yes"> Yes
+            </label>
+            <label>
+                <input type="radio" name="ready_to_eat" value="no"> No
+            </label>
+        </td>
+      </tr>
+      <tr>
+        <td>What did the person eat in the last 48 hrs?</td>
+        <td><input type="text" class="custom-input" placeholder="Enter food consumed in last 48 hours"></td>
+      </tr>
+      <tr>
+        <td colspan="2"><strong>8. Consumer/Medical Reporting (Note 4)</strong></td>
+      </tr>
+      <tr>
+        <td>Have there been consumer complaints relating to this product?</td>
+        <td><textarea class="custom-input" rows="3" placeholder="Describe consumer complaints"></textarea></td>
+      </tr>
+      <tr>
+        <td>Any reports of illness? If Yes, follow section 11</td>
+        <td><textarea class="custom-input" rows="3" placeholder="Describe any illness reports"></textarea></td>
+      </tr>
+      <tr>
+        <td colspan="2"><strong>9. Expert Opinion (Note 5)</strong></td>
+      </tr>
+      <tr>
+        <td>Note experts consulted, and results of consultation.</td>
+        <td><textarea class="custom-input" rows="5" placeholder="Enter details of expert consultation"></textarea></td>
+      </tr>
+      <tr>
+        <td colspan="2"><strong>10. Any other relevant factors</strong></td>
+      </tr>
+      <tr>
+        <td>This section should be used to record
+
+            anything else that influences the recall
+            
+            decision.</td>
+        <td><textarea class="custom-input" rows="5" placeholder="Enter details of expert consultation"></textarea></td>
+      </tr>
+      <td colspan="2">
+        <div style="text-align: center;">
+          <p style="color: red; font-weight: bold; margin-bottom: 10px;">
+            Hazard/Risk Assessment indicates Recall Required?
+          </p>
+          <label style="display: block; margin-bottom: 5px;">
+            <input type="radio" name="control_status" value="yes">
+            Yes 
+          </label>
+          <label style="display: block;">
+            <input type="radio" name="control_status" value="no">
+            No 
+          </label>
+          <label style="display: block;">
+            <input type="radio" name="control_status" value="no">
+            Maybe – insufficient information to make accurate scientific assessment.<br> Precautionary principle to
+be used.
+          </label>
+        </div>
+      </td>
+    </tr>
+    <tr>
+        <td colspan="2" style="background-color: teal; color: white; padding: 10px;">
+          <strong>Precautionary Principle:</strong>
+          Where assessment of available information indicates the possibility of harmful effects on health but scientific uncertainty exists, assume the product presents a risk to human health and take appropriate control action.
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2"><strong>Final recall decision (including the extent of the finalised scope of the recall (batches, distribution etc)) and key reasons:</strong></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <textarea name="final_decision" rows="6" style="width: 100%; padding: 10px; font-size: 14px;"></textarea>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+    </tbody>
+  </table>
+  
+  
+  
+</body>
+</html>
